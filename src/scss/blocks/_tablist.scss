@@ -1,0 +1,33 @@
+[role="tablist"] {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+[role="tablist"] li,
+[role="tablist"] a {
+  display: inline-block;
+}
+
+[role="tablist"] a {
+  color: get-color("violet");
+  text-decoration: none;
+  display: inline-block;
+  pointer-events: auto;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: get-size("200") get-size("300");
+  font-size: 1rem;
+  @include apply-utility("weight", "bold");
+  position: relative;
+  border: 1px solid transparent;
+}
+
+[role="tablist"] [aria-selected] {
+  color: get-color("white");
+  background: get-color("violet");
+  border-color: get-color("violet");
+
+  &:focus {
+    outline-offset: -5px;
+  }
+}

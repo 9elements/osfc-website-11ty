@@ -9,7 +9,7 @@
     <div class="tabbed">
       <ul class="cluster">
         {% for day in schedule.days %}
-          <li> <a href="#day-{{day.date}}" class="">{{day.date}}</a></li>
+          <li> <a href="#day-{{day.date}}" class="">{{day.date | dateFilter }}</a></li>
         {% endfor %}
       </ul>
       {# Create a Schedule for every day #}
