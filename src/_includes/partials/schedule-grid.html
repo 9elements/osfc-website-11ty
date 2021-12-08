@@ -1,4 +1,5 @@
 <div class="schedule" style="
+  grid-template-columns: minmax(min-content, 12ch) repeat({{ schedule.rooms.length }}, 1fr);
   grid-template-rows:
     [head] auto
     {% for i in range(0, hourCount + 1) %}
@@ -25,7 +26,7 @@
     {{ day.date }}
   </div>
 
-  {# Set Hours & Divider#}
+  {# Set Hours & Divider #}
   {% for i in range(0, hourCount + 1) %}
     {% set currentHour = i + firstHour|int %}
     {% if currentHour > 23 %}
@@ -67,7 +68,7 @@
     {% if day.rooms[room.name] %}
       {# Insert Talks #}
       {% for talk in day.rooms[room.name] %}
-        {% set talkHour = talk.start.slice(0, 2)%}
+        {% set talkHour = talk.start.slice(0, 2) %}
         {% set talkMinute = talk.start.slice(3, 5) %}
         {% set fiveCount = (talk.duration.slice(0,2) * 12) + (talk.duration.slice(3,5) / 5) %}
         <article class="schedule__event grid-event" style="

@@ -1,7 +1,5 @@
 const Cache = require("@11ty/eleventy-cache-assets");
 
-const EVENT = "osfc2021";
-
 /**
  * Grabs the event data from pretalx
  */

@@ -1,6 +1,5 @@
 .schedule {
   display: grid;
-  grid-template-columns: minmax(min-content, 12ch) 1fr 1fr;
   gap: 1px 1rem;
 
   &__hour {
