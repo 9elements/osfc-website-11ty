@@ -1,0 +1,17 @@
+.schedule {
+  display: grid;
+  grid-template-columns: minmax(min-content, 12ch) 1fr 1fr;
+  gap: 1px 1rem;
+
+  &__hour {
+    grid-row-end: span 12;
+    grid-column: 1;
+    padding: 0.5rem;
+  }
+
+  &__divider {
+    background: #ccc;
+    height: 1px;
+    grid-column: 1 / -1;
+  }
+}

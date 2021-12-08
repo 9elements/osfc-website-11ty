@@ -1,0 +1,25 @@
+/* --------------------------------- */
+/* Utility Classes for Child-Spacing */
+
+.stack-base-xx {
+  margin-top: var(--stack-space, 1em);
+}
+
+@each $key, $value in $gorko-size-scale {
+  #{".stack-" + $key + " > * + *"} {
+    @extend .stack-base-xx;
+  }
+
+  #{".stack-" + $key + " > *"} {
+    --stack-space: #{$value};
+  }
+}
+
+/* -------------------------------- */
+/* Utility Classes for Self-Spacing */
+
+@each $key, $value in $gorko-size-scale {
+  #{".my-stack-space-" + $key} {
+    --stack-space: #{$value};
+  }
+}

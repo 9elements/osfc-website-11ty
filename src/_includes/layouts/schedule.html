@@ -1,0 +1,55 @@
+{% extends "layouts/base.html" %} {% block content %}
+
+<section>
+  <div class="wrapper | stack-300">
+    <h1 class="text-400 sm:text-500 md:text-600 leading-tight">
+      Schedule {{ year }}!!
+    </h1>
+
+    {# Create a Schedule for every day #}
+    {% for day in schedule.days %}
+      {# Calculate Size of Grid by getting first and final hour #}
+      {% set firstHour = "23" %}
+      {% set lastHour = "" %}
+      {% set hourCount = "" %}
+      {% for room in schedule.rooms %}
+        {# Check if there are events on this day in the particular room #}
+        {% if day.rooms[room.name] %}
+          {% for talk in day.rooms[room.name] %}
+            {# Get starting hour of the first event #}
+            {% if loop.first %}
+              {% if talk.start.slice(0, 2) < firstHour %}
+                {% set firstHour = talk.start.slice(0, 2) %}
+              {% endif %}
+            {% endif %}
+
+            {# Get starting hour of last event #}
+            {% if loop.last %}
+              {% if (talk.start.slice(0, 2) > lastHour) and (lastHour != "00") %}
+                {% set lastHour = talk.start.slice(0, 2) %}
+              {% endif %}
+            {% endif %}
+
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+
+      {# Last staring hour could be after midnight #}
+      {% if lastHour < firstHour %}
+        {% set hourCount = (24 - firstHour) %}
+      {% else %}
+        {% set hourCount = lastHour - firstHour %}
+      {% endif %}
+
+      {# Now that we know the beginning and and of the schedule, we #}
+      {# can set up our grid #}
+      {% include "partials/schedule-grid.html" %}
+
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+{%endblock %}

@@ -1,0 +1,35 @@
+{
+  "name": "ubmc",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
+    "production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-cache-assets": "^2.3.0",
+    "@sindresorhus/slugify": "^2.1.0",
+    "concurrently": "^6.1.0",
+    "get-google-fonts": "^1.2.2",
+    "gorko": "^0.8.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svgmin": "^4.1.0",
+    "html-minifier": "^4.0.0",
+    "markdown-it": "^10.0.0",
+    "moment": "^2.29.1",
+    "sass": "^1.32.12",
+    "string": "^3.3.3"
+  },
+  "devDependencies": {
+    "gulp-minify": "^3.1.0",
+    "gulp-svgstore": "^7.0.1"
+  }
+}

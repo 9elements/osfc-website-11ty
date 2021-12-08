@@ -1,0 +1,7 @@
+{% if talks.length %}
+<ul>
+  {% for talk in talks %}
+    <li><a href="talks/{{ talk.title | slug }}">{{ talk.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}

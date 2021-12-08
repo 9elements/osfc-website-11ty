@@ -1,0 +1,95 @@
+/// BASE SIZE
+/// All calculations are based on this. It’s recommended that
+/// you keep it at 1rem because that is the root font size. You
+/// can set it to whatever you like and whatever unit you like.
+///
+$gorko-base-size: 1rem;
+
+/// SIZE SCALE
+/// This is a Major Third scale that powers all the utilities that
+/// it is relevant for (font-size, margin, padding). All items are
+/// calcuated off the base size, so change that and cascade across
+/// your whole project.
+///
+$gorko-size-scale: (
+  "200": $gorko-base-size * 0.8,
+  "300": $gorko-base-size,
+  "400": $gorko-base-size * 1.25,
+  "500": $gorko-base-size * 1.875,
+  "600": $gorko-base-size * 2.25,
+  "700": $gorko-base-size * 3,
+  "major": $gorko-base-size * 5.625,
+);
+
+/// COLORS
+/// Colors are shared between backgrounds and text by default.
+/// You can also use them to power borders, fills or shadows, for example.
+///
+$gorko-colors: (
+  "violet": #4f51a9,
+  "light-blue": #80d5eb,
+  "white": #ffffff,
+  "light-gray": #f1f1f1,
+  "dark-gray": #4a4a4a,
+  "peach": #f96360,
+);
+
+/// CORE CONFIG
+/// This powers everything from utility class generation to breakpoints
+/// to enabling/disabling pre-built components/utilities.
+///
+$gorko-config: (
+  "css-vars": (
+    "color": $gorko-colors,
+  ),
+  "bg": (
+    "items": "color",
+    "css-vars": true,
+    "output": "standard",
+    "property": "background-color",
+  ),
+  "color": (
+    "items": "color",
+    "css-vars": true,
+    "output": "standard",
+    "property": "color",
+  ),
+  "font": (
+    "items": (
+      "base":
+        '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+      "headline": '"rimouski_bd", sans-serif',
+    ),
+    "output": "standard",
+    "property": "font-family",
+  ),
+  "text": (
+    "items": $gorko-size-scale,
+    "output": "responsive",
+    "property": "font-size",
+  ),
+  "leading": (
+    "items": (
+      "flat": "1.1",
+      "tight": "1.2",
+      "loose": "1.7",
+    ),
+    "output": "standard",
+    "property": "line-height",
+  ),
+  "weight": (
+    "items": (
+      "light": "300",
+      "regular": "400",
+      "medium": "500",
+      "bold": "700",
+    ),
+    "output": "standard",
+    "property": "font-weight",
+  ),
+  "breakpoints": (
+    "md": "(min-width: 36em)",
+    "lg": "(min-width: 64em)",
+    "xl": "(min-width: 80em)",
+  ),
+);

@@ -1,0 +1,54 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+
+{% set talk = pagination.items[0] %}
+
+<section id="intro" class="intro">
+  <div class="wrapper stack-300">
+    <h1 class="text-400 sm:text-500 md:text-600 leading-tight">
+      {{ talk.title }}
+    </h1>
+    <p>
+      <span class="weight-bold">
+        {{ talk.slot.room.en }},
+        <time datetime="{{ talk.slot.start | w3DateFilter }}">{{ talk.slot.start | dateFilter}}</time>
+      </span>
+      <span>
+        {{ helpers.getDuration(talk.slot.start, talk.slot.end) }}
+      </span>
+    </p>
+
+    {% if talk.abstract %}
+      <hr>
+      <div class="stack-300">
+        {{ talk.abstract | markdownFilter | safe }}
+      </div>
+      <hr>
+    {% endif %}
+
+
+    {% if talk.speakers.length > 1 %}
+      <h2>Speakers</h2>
+      <ul>
+        {% for speaker in talk.speakers %}
+          <li>
+            <h3>{{ speaker.name }}</h3>
+            {% if speaker.avatar %}
+              <img style="width:50px; height:50px; object-fit: cover;" src="{{ speaker.avatar }}" alt="">
+            {% endif %}
+            {% if speaker.biography %}<p>{{ speaker.biography }}</p>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% elif talk.speakers.length > 0 %}
+      <h2>Speaker: {{ talk.speakers[0].name }}</h2>
+      {% if talk.speaker[0].avatar %}
+        <img style="width:50px; height:50px; object-fit: cover;" src="{{ talk.speaker[0].avatar }}" alt="">
+      {% endif %}
+      <p>{{ talk.speakers[0].biography }}</p>
+    {% endif %}
+  </div>
+
+</section>
+
+{%endblock %}
