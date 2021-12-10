@@ -6,11 +6,13 @@
       Schedule {{ year }}
     </h1>
     <div class="tabbed">
-      <ul class="cluster tablist">
-        {% for day in schedule.days %}
-          <li><a href="#day-{{day.date}}" class="text-300 md:text-400">{{day.date | dateFilter }}</a></li>
-        {% endfor %}
-      </ul>
+      <div class="tabbed__header | bg-peach">
+        <ul class="cluster tablist">
+          {% for day in schedule.days %}
+            <li><a href="#day-{{day.date}}" class="text-300 md:text-400">{{day.date | dateFilter }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
       {# Create a Schedule for every day #}
       {% for day in schedule.days %}
         {# Calculate Size of Grid by getting first and final hour #}
@@ -48,7 +50,7 @@
 
         {# Now that we know the beginning and and of the schedule, we #}
         {# can set up our grid #}
-        <section id="day-{{day.date}}" class="stack-500">
+        <section id="day-{{day.date}}" class="bg-white stack-500">
           <h2 class="weight-black uppercase text-800">{{ day.date | dateFilter }}</h2>
           {% include "partials/schedule-grid.html" %}
         </section>

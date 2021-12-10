@@ -21,7 +21,6 @@
   background: get-color("violet");
   color: get-color("white");
   border-color: get-color("violet");
-  border-bottom-color: get-color("light-gray");
 
   &:focus {
     outline-offset: -5px;
