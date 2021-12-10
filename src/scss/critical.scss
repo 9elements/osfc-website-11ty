@@ -8,7 +8,7 @@
 
 body {
   line-height: 1.5;
-  @include apply-utility("font", "base");
+  font-family: "Roboto", sans-serif;
   background: get-color("light-gray");
   color: get-color("dark-gray");
   transition: background-color 0.3s ease-out;
@@ -32,7 +32,6 @@ h1,
 h2,
 h3,
 h4 {
-  @include apply-utility("font", "headline");
   @include apply-utility("weight", "bold");
 }
 
@@ -69,8 +68,10 @@ h4 {
 
 // Utilities
 @import "utilities/sr-only";
+@import "utilities/uppercase";
 
 // Blocks
 @import "blocks/grid-event";
+@import "blocks/rhomb-image";
 @import "blocks/schedule";
 @import "blocks/tablist";

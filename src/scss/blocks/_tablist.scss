@@ -1,31 +1,27 @@
-[role="tablist"] {
+.tablist {
   padding: 0;
+  list-style: none;
   margin-bottom: 1rem;
+  --cluster-gap: 0.5rem;
 }
 
-[role="tablist"] li,
-[role="tablist"] a {
-  display: inline-block;
-}
-
-[role="tablist"] a {
+.tablist a {
   color: get-color("violet");
   text-decoration: none;
   display: inline-block;
   pointer-events: auto;
   cursor: pointer;
-  border-radius: 4px;
   padding: get-size("200") get-size("300");
-  font-size: 1rem;
   @include apply-utility("weight", "bold");
   position: relative;
   border: 1px solid transparent;
 }
 
 [role="tablist"] [aria-selected] {
-  color: get-color("white");
   background: get-color("violet");
+  color: get-color("white");
   border-color: get-color("violet");
+  border-bottom-color: get-color("light-gray");
 
   &:focus {
     outline-offset: -5px;

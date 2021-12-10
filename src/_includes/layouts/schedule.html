@@ -1,15 +1,14 @@
 {% extends "layouts/base.html" %} {% block content %}
 
 <section>
-  <div class="wrapper | stack-300">
-    <h1 class="text-400 sm:text-500 md:text-600 leading-tight">
+  <div class="wrapper | stack-700">
+    <h1 class="fluid-text-800-major weight-black uppercase leading-tight color-peach">
       Schedule {{ year }}
     </h1>
-
     <div class="tabbed">
-      <ul class="cluster">
+      <ul class="cluster tablist">
         {% for day in schedule.days %}
-          <li> <a href="#day-{{day.date}}" class="">{{day.date | dateFilter }}</a></li>
+          <li><a href="#day-{{day.date}}" class="text-300 md:text-400">{{day.date | dateFilter }}</a></li>
         {% endfor %}
       </ul>
       {# Create a Schedule for every day #}
@@ -49,7 +48,8 @@
 
         {# Now that we know the beginning and and of the schedule, we #}
         {# can set up our grid #}
-        <section id="day-{{day.date}}">
+        <section id="day-{{day.date}}" class="stack-500">
+          <h2 class="weight-black uppercase text-800">{{ day.date | dateFilter }}</h2>
           {% include "partials/schedule-grid.html" %}
         </section>
 
