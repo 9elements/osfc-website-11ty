@@ -1,0 +1,29 @@
+.content {
+  h2 {
+    text-align: center;
+  }
+  &__body {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem;
+    max-width: 80ch;
+
+    p {
+      font-size: clamp(
+        1.125rem,
+        calc(1.125rem + 8 * (100vw - 62.5rem) / 1000),
+        1.5rem
+      );
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-size: get-size("800");
+    }
+
+    a {
+      color: get-color("peach");
+      text-decoration: none;
+    }
+  }
+}
