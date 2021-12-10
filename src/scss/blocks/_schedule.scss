@@ -1,6 +1,15 @@
 .schedule {
+  --schedule-first-column: 4ch;
+
   display: grid;
-  gap: 1px 1rem;
+  gap: 2px 1rem;
+  max-width: 100%;
+  overflow-x: auto;
+
+  @include media-query("md") {
+    --schedule-first-column: 8ch;
+    overflow-x: visible;
+  }
 
   &__hour {
     grid-row-end: span 12;
@@ -12,5 +21,15 @@
     background: #ccc;
     height: 1px;
     grid-column: 1 / -1;
+  }
+
+  &__room {
+    grid-row-start: head;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    margin-bottom: 0.5rem;
   }
 }

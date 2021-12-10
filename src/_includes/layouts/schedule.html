@@ -50,8 +50,8 @@
 
         {# Now that we know the beginning and and of the schedule, we #}
         {# can set up our grid #}
-        <section id="day-{{day.date}}" class="bg-white stack-500">
-          <h2 class="weight-black uppercase text-800">{{ day.date | dateFilter }}</h2>
+        <section id="day-{{day.date}}" class="tabbed__body | bg-white stack-500">
+          <h2 class="tabbed__headline | color-white bg-peach weight-black uppercase text-700 leading-flat">{{ day.date | dateFilter }}</h2>
           {% include "partials/schedule-grid.html" %}
         </section>
 

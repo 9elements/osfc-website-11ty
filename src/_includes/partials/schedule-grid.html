@@ -1,5 +1,5 @@
 <div class="schedule" style="
-  grid-template-columns: minmax(min-content, 12ch) repeat({{ schedule.rooms.length }}, 1fr);
+  grid-template-columns: var(--schedule-first-column, 4ch) repeat({{ schedule.rooms.length }}, 1fr);
   grid-template-rows:
     [head] auto
     {% for i in range(0, hourCount + 1) %}
@@ -14,9 +14,8 @@
     ;">
 
   {# Day to upper left Cell #}
-  <div class="bg-peach color-white" style="
+  <div class="bg-white color-dark-gray" style="
     grid-row-start: head;
-    font-weight: bold;
     padding: 0.5rem;
     position: sticky;
     top: 0;
@@ -33,7 +32,7 @@
     {% endif %}
 
     {# Hour #}
-    <div class="schedule__hour" style="
+    <div class="schedule__hour | text-300 md:text-400" style="
         grid-row-start: slice-{{ helpers.trailingZeroes(currentHour, 2) }}-00;
         " aria-hidden="true">
       {{ helpers.trailingZeroes(currentHour, 2) }}:00
@@ -51,14 +50,8 @@
     {% set roomCount = loop.index %}
 
     {# Set Room as Headline #}
-    <div class="bg-peach color-white weight-black uppercase" style="
-        grid-row-start: head;
-        text-align: center;
-        padding: 0.5rem;
-        position: sticky;
-        z-index: 2;
-        top: 0;
-        margin-bottom: 0.5rem;
+    <div class="schedule__room | bg-white color-dark-gray weight-black uppercase md:text-500 leading-tight" style="
+
         grid-column: {{ roomCount + 1 }};">
       {{room.name}}
     </div>

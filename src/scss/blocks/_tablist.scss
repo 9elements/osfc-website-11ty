@@ -1,3 +1,28 @@
+.tabbed {
+  border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 64 64'%3E%3Cpath fill='%23F96360' fill-rule='evenodd' d='M26 0H0v64h64V0H38v27.5a14 14 0 1 1-12 0V0Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  border-image-slice: 100% 0 0 0;
+  border-image-repeat: round;
+  border-width: 3rem 0 0 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+
+  &__header {
+    padding: get-size("400");
+  }
+
+  &__body {
+    padding: get-size("400");
+  }
+
+  &__headline {
+    margin: -1rem -1rem 1rem;
+    padding: 1rem;
+    border-top: 1px dashed;
+    text-align: center;
+  }
+}
+
 .tablist {
   padding: 0;
   list-style: none;
@@ -6,7 +31,7 @@
 }
 
 .tablist a {
-  color: get-color("violet");
+  color: get-color("white");
   text-decoration: none;
   display: inline-block;
   pointer-events: auto;
