@@ -28,9 +28,23 @@ module.exports = async () => {
       }
     );
 
+    let speakers = await Cache(
+      `https://talks.osfc.io/api/events/osfc2020/speakers/?limit=200`,
+      {
+        duration: "1d", // 1 day
+        type: "json",
+        headers: {
+          Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4",
+        },
+      }
+    );
+
+    speakers.results.sort((a, b) => (a.name > b.name ? 1 : -1));
+
     return {
       schedule: schedule.schedule.conference,
       talks: talks.results,
+      speakers: speakers.results,
     };
   } catch (error) {
     console.log(error);

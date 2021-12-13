@@ -1,0 +1,43 @@
+{% extends "layouts/base.html" %} {% block content %}
+
+<section>
+  <div class="wrapper | stack-700">
+    <h1 class="fluid-text-800-major weight-black uppercase leading-tight color-peach">
+      Speakers {{ year }}
+    </h1>
+
+    <div class="auto-grid" style="--auto-grid-min-size: 25rem; --auto-grid-gap: 2rem;" >
+      {% for speaker in speakers %}
+        <div class="speaker | stack-300 bg-white" style="padding: 1rem;">
+          <h2 class="text-400 sm:text-500 md:text-600 leading-tight">
+            <a href="/{{year}}/speakers/{{ speaker.name | slugify }}">{{ speaker.name }}</a>
+          </h2>
+          <div>
+            {% if speaker.avatar %}
+              <img style="width:70px; height:70px; object-fit: cover; float: left; margin: 0 1rem 1rem 0;" src="{{ speaker.avatar }}" alt="">
+            {% endif %}
+            <div class="stack-300">
+              {% if speaker.biography %}
+                  {{ speaker.biography | markdownFilter | safe }}
+              {% endif %}
+            </div>
+          </div>
+          <h3 style="clear: left;">Talks:</h3>
+          <ul>
+            {% for submission in speaker.submissions %}
+              {% for talk in talks %}
+                {% if talk.code == submission %}
+                  <li><a href="/{{year}}/talks/{{talk.title | slugify }}">{{ talk.title }}</a></li>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+
+</section>
+
+{%endblock %}

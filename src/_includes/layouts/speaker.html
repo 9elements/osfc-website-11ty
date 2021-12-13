@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+
+{% set speaker = pagination.items[0] %}
+
+<section id="intro" class="intro">
+  <div class="wrapper stack-300">
+    <h1 class="text-400 sm:text-500 md:text-600 leading-tight">
+      {{ speaker.name }}
+    </h1>
+
+
+    {% if speaker.avatar %}
+      <img style="width:70px; height:70px; object-fit: cover;" src="{{ speaker.avatar }}" alt="">
+    {% endif %}
+    {% if speaker.biography %}
+      <hr>
+      <div class="stack-300">
+        {{ speaker.biography | markdownFilter | safe }}
+      </div>
+      <hr>
+    {% endif %}
+  </div>
+
+</section>
+
+{%endblock %}
