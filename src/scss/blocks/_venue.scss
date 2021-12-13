@@ -1,0 +1,43 @@
+.venue {
+  position: relative;
+  min-height: 50vw;
+
+  &__beam {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    width: 200vw;
+    left: 0;
+    top: -30vh;
+  }
+  &__text {
+    max-width: 60ch;
+    position: relative;
+    z-index: 999;
+    padding: 1rem;
+
+    &::before {
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      top: -3vw;
+      width: 90vw;
+      height: 12vw;
+      background: url(/images/beams/deco-line-01.svg);
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      content: "";
+      z-index: 999;
+
+      @include media-query("md") {
+        left: -1vw;
+        width: 45vw;
+        height: 8vw;
+      }
+
+      @include media-query("lg") {
+        left: -5vw;
+      }
+    }
+  }
+}

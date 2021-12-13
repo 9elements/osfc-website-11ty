@@ -8,8 +8,10 @@
     </clipPath>
   </defs>
 </svg>
-<div class="stack-800">
+
+<div class="stack-major">
   <section id="intro" class="intro">
+  <div class="triangle" aria-hidden="true"></div>
     <div class="wrapper">
       <h1 class="hero__logo intro__branding">
         <svg class="intro__branding-svg" viewBox="0 0 844 431">
@@ -60,9 +62,9 @@
     </div>
   </section>
 
-  <section id="mission">
+  <section id="mission" class="my-stack-space-major">
     <div class="wrapper">
-      <div class="stack-300">
+      <div class="stack-300 bg-light-gray mission">
         <h2 class="color-peach weight-black fluid-text-800-major uppercase leading-flat">Mission</h2>
         <p class="color-peach weight-bold text-700 leading-tight">Change the way of firmware development, collaborate with
           others and share knowledge.</p>
@@ -71,18 +73,19 @@
           with changing use cases and strict security requirements, it's more important than ever to take open-source
           firmware development to the next level. That's why we're inviting you to the Open Source Firmware Conference.
         </p>
+        <a href="#" class="button">View Submissions</a>
       </div>
     </div>
   </section>
 
-  <section id="venue">
+  <section id="venue" class="venue">
+    <img alt="" class="venue__beam" src="/images/beams/beam-01.svg">
     <div class="wrapper">
-      <div class="stack-300">
+      <div class="stack-300 venue__text bg-light-gray">
         <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Venue</h2>
         <p class="fluid-text-400-500">OSFC goes virtual this year again. We are going to meet online at our event platform
           including everything you know from a traditional conference like a stage, session rooms, exhibition booths and
           live meeting areas. The talks will be scheduled from afternoon to midnight, Central European Time.</p>
-        <a href="https://talks.osfc.io/osfc2021/featured/" class="button">View submissions</a>
       </div>
     </div>
   </section>
@@ -95,7 +98,6 @@
           {% for rhombItem in collections.projects %}
             {% include "partials/rhomb-image.html" %}
           {% endfor %}
-
         </div>
       </div>
     </div>
@@ -105,7 +107,7 @@
     <div class="wrapper">
       <div class="stack-300">
         <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Organizer</h2>
-                <div class="rhomb-grid">
+        <div class="rhomb-grid">
           {% for rhombItem in collections.organizer %}
             {% include "partials/rhomb-image.html" %}
           {% endfor %}
@@ -114,7 +116,7 @@
       </div>
     </div>
   </section>
-  
+
   <section id="sponsors">
     <div class="wrapper">
       <div class="stack-300">
