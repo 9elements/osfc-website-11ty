@@ -1,4 +1,25 @@
 .content {
+  background-image: url(/images/beams/beam-05.svg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+
+  &::before {
+    pointer-events: none;
+    position: absolute;
+    right: -10%;
+    top: 40%;
+    width: 24.02vw;
+    height: 40.2vw;
+    background: url(/images/beams/deco-line-02.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
   h2 {
     text-align: center;
   }
@@ -7,18 +28,22 @@
     margin-right: auto;
     padding: 3rem;
     max-width: 80ch;
+    box-shadow: 0 6px 22px 0 rgb(0 0 0 / 17%);
 
-    p {
-      font-size: clamp(
-        1.125rem,
-        calc(1.125rem + 8 * (100vw - 62.5rem) / 1000),
-        1.5rem
-      );
+    p,
+    li {
+      font-size: get-size("500");
     }
 
     h3 {
       text-transform: uppercase;
-      font-size: get-size("800");
+      font-size: get-size("700");
+      color: get-color("black");
+      line-height: 1.3;
+    }
+
+    p + h3 {
+      margin-top: 2rem;
     }
 
     a {
