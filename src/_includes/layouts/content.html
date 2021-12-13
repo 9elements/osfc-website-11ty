@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<div class="stack-800"> 
+<section id="content" class="content">
+    <div class="wrapper">
+      <div class="stack-800">
+        <h2 class="color-peach weight-black fluid-text-800-major uppercase leading-flat">{{title}}</h2>
+        <div class="content__body bg-white">
+        {{content | safe }}</div>
+      </div>
+    </div>
+</section>
+
+</div>
+
+{%endblock %}
