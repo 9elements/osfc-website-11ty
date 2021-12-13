@@ -22,10 +22,36 @@ $gorko-size-scale: (
   /* 112 */ "major": $gorko-base-size * 7
 );
 
+$fluid-min-width: 480;
+$fluid-max-width: 1440;
+$fluid-bp: calc((100vw - ($fluid-min-width / 16 * 1rem)) / ($fluid-max-width - $fluid-min-width));
+
 $fluid-size-scale: (
-  "500-600":
-    clamp(1.125rem, calc(1.125rem + 8 * (100vw - 62.5rem) / 1000), 1.5rem),
-  "800-major": clamp($gorko-base-size * 2.75, 11vw, $gorko-base-size * 7),
+  "400-500": clamp(
+    map-get($gorko-size-scale, "400"),
+    calc(map-get($gorko-size-scale, "400") + 2 * $fluid-bp),
+    map-get($gorko-size-scale, "500")
+    ),
+  "500-600": clamp(
+    map-get($gorko-size-scale, "500"),
+    calc(map-get($gorko-size-scale, "500") + 6 * $fluid-bp),
+    map-get($gorko-size-scale, "600")
+    ),
+  "600-700": clamp(
+    map-get($gorko-size-scale, "600"),
+    calc(map-get($gorko-size-scale, "600") + 8 * $fluid-bp),
+    map-get($gorko-size-scale, "700")
+    ),
+  "700-800": clamp(
+    map-get($gorko-size-scale, "700"),
+    calc(map-get($gorko-size-scale, "700") + 12 * $fluid-bp),
+    map-get($gorko-size-scale, "800")
+    ),
+  "800-major": clamp(
+    map-get($gorko-size-scale, "800"),
+    calc(map-get($gorko-size-scale, "800") + 68 * $fluid-bp),
+    map-get($gorko-size-scale, "major")
+    ),
 );
 /// COLORS
 /// Colors are shared between backgrounds and text by default.
