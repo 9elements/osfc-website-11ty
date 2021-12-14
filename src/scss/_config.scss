@@ -12,6 +12,7 @@ $gorko-base-size: 1rem;
 /// your whole project.
 ///
 $gorko-size-scale: (
+  /* 4  */ "100": $gorko-base-size * 0.25,
   /* 10 */ "200": $gorko-base-size * 0.625,
   /* 14 */ "300": $gorko-base-size * 0.875,
   /* 16 */ "400": $gorko-base-size,
@@ -24,33 +25,41 @@ $gorko-size-scale: (
 
 $fluid-min-width: 480;
 $fluid-max-width: 1440;
-$fluid-bp: calc((100vw - ($fluid-min-width / 16 * 1rem)) / ($fluid-max-width - $fluid-min-width));
+$fluid-bp: calc(
+  (100vw - ($fluid-min-width / 16 * 1rem)) /
+    ($fluid-max-width - $fluid-min-width)
+);
 
 $fluid-size-scale: (
-  "400-500": clamp(
-    map-get($gorko-size-scale, "400"),
-    calc(map-get($gorko-size-scale, "400") + 2 * $fluid-bp),
-    map-get($gorko-size-scale, "500")
+  "400-500":
+    clamp(
+      map-get($gorko-size-scale, "400"),
+      calc(map-get($gorko-size-scale, "400") + 2 * $fluid-bp),
+      map-get($gorko-size-scale, "500")
     ),
-  "500-600": clamp(
-    map-get($gorko-size-scale, "500"),
-    calc(map-get($gorko-size-scale, "500") + 6 * $fluid-bp),
-    map-get($gorko-size-scale, "600")
+  "500-600":
+    clamp(
+      map-get($gorko-size-scale, "500"),
+      calc(map-get($gorko-size-scale, "500") + 6 * $fluid-bp),
+      map-get($gorko-size-scale, "600")
     ),
-  "600-700": clamp(
-    map-get($gorko-size-scale, "600"),
-    calc(map-get($gorko-size-scale, "600") + 8 * $fluid-bp),
-    map-get($gorko-size-scale, "700")
+  "600-700":
+    clamp(
+      map-get($gorko-size-scale, "600"),
+      calc(map-get($gorko-size-scale, "600") + 8 * $fluid-bp),
+      map-get($gorko-size-scale, "700")
     ),
-  "700-800": clamp(
-    map-get($gorko-size-scale, "700"),
-    calc(map-get($gorko-size-scale, "700") + 12 * $fluid-bp),
-    map-get($gorko-size-scale, "800")
+  "700-800":
+    clamp(
+      map-get($gorko-size-scale, "700"),
+      calc(map-get($gorko-size-scale, "700") + 12 * $fluid-bp),
+      map-get($gorko-size-scale, "800")
     ),
-  "800-major": clamp(
-    map-get($gorko-size-scale, "800"),
-    calc(map-get($gorko-size-scale, "800") + 68 * $fluid-bp),
-    map-get($gorko-size-scale, "major")
+  "800-major":
+    clamp(
+      map-get($gorko-size-scale, "800"),
+      calc(map-get($gorko-size-scale, "800") + 68 * $fluid-bp),
+      map-get($gorko-size-scale, "major")
     ),
 );
 /// COLORS

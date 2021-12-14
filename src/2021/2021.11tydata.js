@@ -31,7 +31,7 @@ module.exports = async () => {
     );
 
     const speakers = await Cache(
-      `https://talks.osfc.io/api/events/osfc2021/speakers/?limit=200`,
+      `https://talks.osfc.io/api/events/osfc2020/speakers/?limit=200`,
       {
         duration: "1d", // 1 day
         type: "json",

@@ -1,0 +1,33 @@
+.jump-navigation {
+  padding: 0 0.5rem;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+
+  a {
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+
+    &:focus-visible {
+      outline-color: get-color("violet");
+      outline-offset: -5px;
+    }
+  }
+
+  &__date {
+    display: none;
+
+    @include media-query("md") {
+      display: inline;
+    }
+  }
+
+  &__day-count {
+    @include media-query("md") {
+      display: none;
+    }
+  }
+}

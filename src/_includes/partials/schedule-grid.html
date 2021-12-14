@@ -67,14 +67,23 @@
                   grid-row-end: span {{fiveCount}};
                   grid-column: {{ roomCount + 1 }};
                   ">
-          <div class="grid-event__body">
-            <h3 class="leading-tight text-300 md:text-400">
+          <div class="grid-event__body | stack-100 | leading-tight">
+            <h3 class="weight-bold text-300 md:text-400">
               {{talk.title}}
             </h3>
+            <p class="grid-event__subline | text-300">
+              {% for person in talk.persons %}
+                {% if loop.first %}
+                  {{ person.public_name }}
+                {% else %}
+                  , {{ person.public_name }}
+                {% endif %}
+              {% endfor %}
+            </p>
           </div>
-          <div class="grid-event__time | bg-violet text-300 md:text-400 leading-flat">
-            <span class="weight-bold">{{talk.start}}</span>
-            <span>{{ (talk.duration.slice(0,2)|int * 12) + (talk.duration.slice(3, 5)|int) }}min</span>
+          <div class="grid-event__time | bg-violet leading-tight">
+            <span class="weight-bold text-300 md:text-400">{{talk.start}}</span>
+            <span class="text-300">{{ (talk.duration.slice(0,2)|int * 12) + (talk.duration.slice(3, 5)|int) }}min</span>
           </div>
           {# Only add link, if there is an abstract #}
           {% if talk.abstract %}
