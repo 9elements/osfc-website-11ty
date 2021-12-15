@@ -5,7 +5,7 @@
 <section>
   <div class="wrapper | stack-700">
     <h1 class="fluid-text-800-major weight-black uppercase leading-tight color-peach">
-      Talklist {{ year }}
+      Talks {{ year }}!
     </h1>
     <ul class="jump-navigation | bg-peach">
       {% for day in schedule.days %}
@@ -19,7 +19,7 @@
     <div class="stack-800">
       {% for day in schedule.days %}
 
-        <section id="day-{{day.date}}" class="stack-400">
+        <section id="day-{{day.date}}" class="jump-navigation-target | stack-400">
           <h2 class="weight-black color-violet uppercase fluid-text-700-800 leading-flat">{{ day.date | dateFilter }}</h2>
           <div class="stack-600">
             {% for room in schedule.rooms %}
@@ -28,7 +28,7 @@
                   <h3 class="weight-black uppercase fluid-text-500-600 leading-flat">{{room.name}}</h3>
                   <div class="stack-100">
                     {% for talk in day.rooms[room.name] %}
-                      <article class="bg-white" style="padding: 0.5rem 1rem;">
+                      <article class="talk-card {% if talk.abstract %}talk-card--linked{% endif %}" style="padding: 0.5rem 1rem;">
                         <h4 class="weight-bold text-300 md:text-400">
                           {{talk.title}}
                         </h4>
@@ -39,6 +39,11 @@
                             {% else %}, {{ person.public_name }}{% endif %}
                           {% endfor %}
                         </p>
+                        {% if talk.abstract %}
+                          <a class="talk-card__link" href="/{{ year }}/talks/{{ talk.title | slugify }}">
+                            <span class="sr-only">Talk details: {{talk.title}}</span>
+                          </a>
+                        {% endif %}
                       </article>
                     {% endfor %}
                   </div>

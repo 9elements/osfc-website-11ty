@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   position: sticky;
   top: 0;
+  z-index: 2;
 
   a {
     text-decoration: none;
@@ -30,4 +31,8 @@
       display: none;
     }
   }
+}
+
+.jump-navigation-target {
+  scroll-margin-top: 3rem;
 }

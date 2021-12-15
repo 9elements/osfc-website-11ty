@@ -1,0 +1,12 @@
+.speaker-card {
+  display: flex;
+  gap: 1rem;
+
+  &__image {
+    flex-shrink: 0;
+  }
+
+  &__body {
+    padding: 1rem;
+  }
+}

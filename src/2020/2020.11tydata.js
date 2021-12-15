@@ -18,7 +18,7 @@ module.exports = async () => {
     );
 
     const talks = await Cache(
-      `https://pretalx.com/api/events/osfc2020/talks/?limit=200`,
+      `https://pretalx.com/api/events/osfc2020/submissions/?format=json&limit=200`,
       {
         duration: "1d", // 1 day
         type: "json",
@@ -26,6 +26,11 @@ module.exports = async () => {
           Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4",
         },
       }
+    );
+
+    const confirmedTalks = talks.results.filter(
+      (talk) => talk.state === "confirmed"
+      // (talk) => talk.state === "confirmed" && talk.is_featured
     );
 
     let speakers = await Cache(
@@ -41,10 +46,31 @@ module.exports = async () => {
 
     speakers.results.sort((a, b) => (a.name > b.name ? 1 : -1));
 
+    const videos = await Cache(
+      `https://cfp.osfc.io/api/events/osfc2020/p/vimeo/`,
+      {
+        duration: "1d", // 1 day
+        type: "json",
+        headers: {
+          Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4",
+        },
+      }
+    );
+
+    const newVideos = videos.results.map((video) => {
+      return {
+        ...video,
+        vimeo_id: video.vimeo_link.substring(
+          video.vimeo_link.lastIndexOf("/") + 1
+        ),
+      };
+    });
+
     return {
       schedule: schedule.schedule.conference,
-      talks: talks.results,
+      talks: confirmedTalks,
       speakers: speakers.results,
+      videos: newVideos,
     };
   } catch (error) {
     console.log(error);

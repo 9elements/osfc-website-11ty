@@ -1,6 +1,5 @@
+const util = require("util");
 const Cache = require("@11ty/eleventy-cache-assets");
-
-const EVENT = "osfc2021";
 
 /**
  * Grabs the event data from pretalx
@@ -20,7 +19,8 @@ module.exports = async () => {
     );
 
     const talks = await Cache(
-      `https://pretalx.com/api/events/osfc2021/talks/?limit=200`,
+      //`https://pretalx.com/api/events/osfc2021/talks/?limit=200`,
+      `https://pretalx.com/api/events/osfc2021/submissions/?format=json&limit=200`,
       {
         duration: "1d", // 1 day
         type: "json",
@@ -30,8 +30,13 @@ module.exports = async () => {
       }
     );
 
+    const confirmedTalks = talks.results.filter(
+      (talk) => talk.state === "confirmed"
+      // (talk) => talk.state === "confirmed" && talk.is_featured
+    );
+
     const speakers = await Cache(
-      `https://talks.osfc.io/api/events/osfc2020/speakers/?limit=200`,
+      `https://talks.osfc.io/api/events/osfc2021/speakers/?limit=200`,
       {
         duration: "1d", // 1 day
         type: "json",
@@ -43,11 +48,31 @@ module.exports = async () => {
 
     speakers.results.sort((a, b) => (a.name > b.name ? 1 : -1));
 
-    //console.log(util.inspect(response.schedule, { depth: 1000, colors: true }));
+    const videos = await Cache(
+      `https://cfp.osfc.io/api/events/osfc2021/p/vimeo/`,
+      {
+        duration: "1d", // 1 day
+        type: "json",
+        headers: {
+          Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4",
+        },
+      }
+    );
+
+    const newVideos = videos.results.map((video) => {
+      return {
+        ...video,
+        vimeo_id: video.vimeo_link.substring(
+          video.vimeo_link.lastIndexOf("/") + 1
+        ),
+      };
+    });
+
     return {
       schedule: schedule.schedule.conference,
-      talks: talks.results,
+      talks: confirmedTalks,
       speakers: speakers.results,
+      videos: newVideos,
     };
   } catch (error) {
     console.log(error);

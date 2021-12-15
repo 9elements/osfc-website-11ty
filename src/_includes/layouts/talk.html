@@ -8,6 +8,12 @@
     <h1 class="text-400 sm:text-500 md:text-600 leading-tight">
       {{ talk.title }}
     </h1>
+    {% for video in videos %}
+      {% if video.submission == talk.code %}
+        <iframe src="https://player.vimeo.com/video/{{video.vimeo_id}}?h=7a191cc612&color=4f51a9" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      {% endif %}
+    {% endfor %}
+
     <p>
       <span class="weight-bold">
         {{ talk.slot.room.en }},
@@ -25,7 +31,19 @@
       </div>
       <hr>
     {% endif %}
-
+    {% if talk.resources %}
+      <h2>Resources:</h2>
+      <ul>
+      {% for resource in talk.resources %}
+        <li>
+          <a href="https://talks.osfc.io{{resource.resource}}">
+            {{ resource.description }}
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+      <hr>
+    {% endif %}
 
     {% if talk.speakers.length > 1 %}
       <h2>Speakers</h2>
