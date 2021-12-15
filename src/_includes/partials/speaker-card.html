@@ -1,11 +1,6 @@
-<div class="speaker-card | bg-white">
+<div class="speaker-card {% if sepakerCardCondensed %}speaker-card--condensed{% endif %} | bg-white">
   <a class="speaker-card__image" href="/{{year}}/speakers/{{ speaker.name | slugify }}">
-    {% if speaker.avatar %}
-      <img src="{{ helpers.gravatarSize(speaker.avatar, 400) }}" alt="{{ speaker.name }}">
-    {% else %}
-      <img src="/images/avatar-0{{ [1,2,3] | random}}.webp" alt=""
-      aria-hidden="true">
-    {% endif %}
+    {% avatar src=speaker.avatar, name=speaker.name, size="224" %}
   </a>
   <div class="speaker-card__body | stack-200">
     <h2 class="speaker-card__name | fluid-text-500-600 leading-tight weight-bold uppercase">

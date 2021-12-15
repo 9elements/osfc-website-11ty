@@ -5,13 +5,14 @@
 
 <section id="intro" class="intro">
   <div class="wrapper stack-300">
-    <h1 class="fluid-text-800-major color-black uppercase weight-bold leading-flat">
+
+    <h1 class="fluid-text-800-major color-black uppercase weight-black leading-flat">
       {{ speaker.name }}
     </h1>
 
     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
       {% if speaker.avatar %}
-        <img style="width:280px; height:280px; object-fit: cover;" src="{{ helpers.gravatarSize(speaker.avatar, 400) }}" alt="{{ speaker.name }}">
+        {% avatar src=speaker.avatar, name=speaker.name, size=280 %}
       {% endif %}
       {% if speaker.biography %}
         <div class="stack-300 | fluid-text-400-500" style="flex-basis: 50%; flex-grow: 1; max-width: 60ch;">

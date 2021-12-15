@@ -5,11 +5,15 @@
   overflow: hidden;
   box-shadow: 0 0.25rem 1rem rgba(get-color("black"), 0.1);
 
+  &--condensed {
+    --image-size: 10rem;
+  }
+
   &__image {
     flex-shrink: 0;
     flex-grow: 1;
-    flex-basis: 14rem;
-    height: 14rem;
+    flex-basis: var(--image-size, 14rem);
+    height: var(--image-size, 14rem);
 
     img {
       height: 100%;
@@ -50,11 +54,11 @@
     }
 
     li {
-      padding-bottom: 0.375rem;
+      padding-bottom: 0.3125rem;
     }
 
     li + li {
-      padding-top: 0.375rem;
+      padding-top: 0.3125rem;
       border-top: 1px solid rgba(get-color("black"), 0.1);
     }
   }

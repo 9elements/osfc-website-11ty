@@ -20,6 +20,7 @@ $gorko-size-scale: (
   /* 24 */ "600": $gorko-base-size * 1.5,
   /* 32 */ "700": $gorko-base-size * 2,
   /* 44 */ "800": $gorko-base-size * 2.75,
+  /* 72 */ "900": $gorko-base-size * 4.5,
   /* 112 */ "major": $gorko-base-size * 7
 );
 
@@ -60,6 +61,12 @@ $fluid-size-scale: (
       map-get($gorko-size-scale, "700"),
       calc(map-get($gorko-size-scale, "700") + 12 * $fluid-bp),
       map-get($gorko-size-scale, "800")
+    ),
+  "800-900":
+    clamp(
+      map-get($gorko-size-scale, "800"),
+      calc(map-get($gorko-size-scale, "800") + 28 * $fluid-bp),
+      map-get($gorko-size-scale, "900")
     ),
   "800-major":
     clamp(

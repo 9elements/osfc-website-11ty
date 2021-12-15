@@ -5,16 +5,16 @@
 
 <section id="intro" class="intro">
   <div class="wrapper stack-300">
-    <h1 class="fluid-text-700-800 leading-flat uppercase color-black">
+    <h1 class="fluid-text-800-900 leading-flat uppercase color-black weight-black">
       {{ talk.title }}
     </h1>
-    {% for video in videos %}
-      {% if video.submission == talk.code %}
-        <iframe src="https://player.vimeo.com/video/{{video.vimeo_id}}?h=7a191cc612&color=4f51a9" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      {% endif %}
-    {% endfor %}
-
-    <p>
+    <p class="my-stack-space-100">
+      by
+      {% for speaker in talk.speakers %}
+        <a href="/{{year}}/speakers/{{ speaker.name | slugify }}">{{ speaker.name }}</a>{{ ", " if not loop.last else "" }}
+      {% endfor %}
+    </p>
+    <p class="my-stack-space-100">
       <span class="weight-bold">
         {{ talk.slot.room.en }},
         <time datetime="{{ talk.slot.start | w3DateFilter }}">{{ talk.slot.start | dateFilter}}</time>
@@ -23,6 +23,13 @@
         {{ helpers.getDuration(talk.slot.start, talk.slot.end) }}
       </span>
     </p>
+
+    {% for video in videos %}
+      {% if video.submission == talk.code %}
+        <iframe src="https://player.vimeo.com/video/{{video.vimeo_id}}?h=7a191cc612&color=4f51a9" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      {% endif %}
+    {% endfor %}
+
 
     {% if talk.abstract %}
       <hr>
@@ -48,7 +55,8 @@
 
     <h2 class="sr-only">Speakers</h2>
     {% if talk.speakers %}
-      <div class="auto-grid" style="--auto-grid-min-size: 25rem; --auto-grid-gap: 2rem;" >
+      <div class="auto-grid" style="--auto-grid-min-size: 18rem; --auto-grid-gap: 2rem;" >
+        {% set sepakerCardCondensed = true %}
         {% for speaker in talk.speakers %}
           {% include "partials/speaker-card.html" %}
         {% endfor %}
