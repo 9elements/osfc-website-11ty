@@ -5,7 +5,7 @@
 
 <section id="intro" class="intro">
   <div class="wrapper stack-300">
-    <h1 class="text-400 sm:text-500 md:text-600 leading-tight">
+    <h1 class="fluid-text-700-800 leading-flat uppercase color-black">
       {{ talk.title }}
     </h1>
     {% for video in videos %}
@@ -31,7 +31,7 @@
       </div>
       <hr>
     {% endif %}
-    {% if talk.resources %}
+    {% if talk.resources.length > 0 %}
       <h2>Resources:</h2>
       <ul>
       {% for resource in talk.resources %}
@@ -45,25 +45,14 @@
       <hr>
     {% endif %}
 
-    {% if talk.speakers.length > 1 %}
-      <h2>Speakers</h2>
-      <ul>
+
+    <h2 class="sr-only">Speakers</h2>
+    {% if talk.speakers %}
+      <div class="auto-grid" style="--auto-grid-min-size: 25rem; --auto-grid-gap: 2rem;" >
         {% for speaker in talk.speakers %}
-          <li>
-            <h3>{{ speaker.name }}</h3>
-            {% if speaker.avatar %}
-              <img style="width:50px; height:50px; object-fit: cover;" src="{{ speaker.avatar }}" alt="">
-            {% endif %}
-            {% if speaker.biography %}<p>{{ speaker.biography }}</p>{% endif %}
-          </li>
+          {% include "partials/speaker-card.html" %}
         {% endfor %}
-      </ul>
-    {% elif talk.speakers.length > 0 %}
-      <h2>Speaker: {{ talk.speakers[0].name }}</h2>
-      {% if talk.speaker[0].avatar %}
-        <img style="width:50px; height:50px; object-fit: cover;" src="{{ talk.speaker[0].avatar }}" alt="">
-      {% endif %}
-      <p>{{ talk.speakers[0].biography }}</p>
+      </div>
     {% endif %}
   </div>
 

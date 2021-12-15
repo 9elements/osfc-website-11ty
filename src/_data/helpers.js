@@ -91,4 +91,12 @@ module.exports = {
     while (s.length < size) s = "0" + s;
     return s;
   },
+  gravatarSize(url, size) {
+    let newUrl = url;
+    if (url.includes("https://www.gravatar.com")) {
+      newUrl += "?s=";
+      newUrl += size;
+    }
+    return newUrl;
+  },
 };
