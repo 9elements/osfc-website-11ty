@@ -33,13 +33,6 @@ body {
   }
 }
 
-.mission {
-  max-width: 70ch;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3rem;
-}
-
 a:not([class]) {
   color: currentColor;
   //text-decoration-color: get-color('quinary');
@@ -101,9 +94,9 @@ h4 {
 // Blocks
 @import "blocks/avatar";
 @import "blocks/button";
-@import "blocks/content";
 @import "blocks/grid-event";
 @import "blocks/jump-navigation";
+@import "blocks/plain-html";
 @import "blocks/rhomb-grid";
 @import "blocks/rhomb-image";
 @import "blocks/schedule";
@@ -113,3 +106,6 @@ h4 {
 @import "blocks/tablist";
 @import "blocks/talk-card";
 @import "blocks/video";
+
+// Pages
+@import "pages/home";

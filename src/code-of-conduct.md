@@ -1,6 +1,6 @@
 ---
 title: "Code of Conduct"
-layout: "layouts/content.html"
+layout: "layouts/plain.html"
 ---
 
 ### CODE OF CONDUCT
