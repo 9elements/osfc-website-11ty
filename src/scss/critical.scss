@@ -68,6 +68,7 @@ h4 {
 @import "layout/wrapper";
 
 // Utilities
+@import "utilities/aspect-ratio";
 @import "utilities/sr-only";
 @import "utilities/uppercase";
 
@@ -79,6 +80,9 @@ h4 {
 @import "blocks/rhomb-grid";
 @import "blocks/rhomb-image";
 @import "blocks/schedule";
+@import "blocks/shadow-box";
 @import "blocks/speaker-card";
+@import "blocks/speaker-pill";
 @import "blocks/tablist";
 @import "blocks/talk-card";
+@import "blocks/video";

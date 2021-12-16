@@ -8,12 +8,11 @@
     <h1 class="fluid-text-800-900 leading-flat uppercase color-black weight-black">
       {{ talk.title }}
     </h1>
-    <p class="my-stack-space-100">
-      by
-      {% for speaker in talk.speakers %}
-        <a href="/{{year}}/speakers/{{ speaker.name | slugify }}">{{ speaker.name }}</a>{{ ", " if not loop.last else "" }}
-      {% endfor %}
-    </p>
+    <div class="cluster" style="--cluster-gap: 0.5rem;">
+    {% for speaker in talk.speakers %}
+      {% include "partials/speaker-pill.html" %}
+    {% endfor %}
+    </div>
     <p class="my-stack-space-100">
       <span class="weight-bold">
         {{ talk.slot.room.en }},
@@ -26,17 +25,17 @@
 
     {% for video in videos %}
       {% if video.submission == talk.code %}
-        <iframe src="https://player.vimeo.com/video/{{video.vimeo_id}}?h=7a191cc612&color=4f51a9" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <div class="video" style="--aspect-ratio:16/9;">
+          <iframe src="https://player.vimeo.com/video/{{video.vimeo_id}}?h=7a191cc612&color=4f51a9" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
       {% endif %}
     {% endfor %}
 
 
     {% if talk.abstract %}
-      <hr>
-      <div class="stack-300">
+      <div class="stack-300 shadow-box | fluid-text-400-500">
         {{ talk.abstract | markdownFilter | safe }}
       </div>
-      <hr>
     {% endif %}
     {% if talk.resources.length > 0 %}
       <h2>Resources:</h2>
@@ -50,17 +49,6 @@
       {% endfor %}
       </ul>
       <hr>
-    {% endif %}
-
-
-    <h2 class="sr-only">Speakers</h2>
-    {% if talk.speakers %}
-      <div class="auto-grid" style="--auto-grid-min-size: 18rem; --auto-grid-gap: 2rem;" >
-        {% set sepakerCardCondensed = true %}
-        {% for speaker in talk.speakers %}
-          {% include "partials/speaker-card.html" %}
-        {% endfor %}
-      </div>
     {% endif %}
   </div>
 
