@@ -3,11 +3,19 @@
  * Sets a max width, adds a consisten gutter and horizontally
  * centers the contents
  */
-.wrapper {
-  max-width: 75rem;
-  padding: 0 get-size("300");
+[class*="wrapper-"] {
+  max-width: var(--wrapper-width);
   margin-left: auto;
   margin-right: auto;
+  padding: 0 get-size("300");
   position: relative;
   z-index: 3;
+}
+
+.wrapper-l {
+  --wrapper-width: 75rem;
+}
+
+.wrapper-s {
+  --wrapper-width: 80ch;
 }
