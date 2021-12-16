@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-layout: "layouts/content.html"
+layout: "layouts/plain.html"
 ---
 
 osfc.io ist ein Service von 9elements Agency GmbH

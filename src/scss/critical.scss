@@ -12,6 +12,25 @@ body {
   background: get-color("light-gray");
   color: get-color("dark-gray");
   transition: background-color 0.3s ease-out;
+  overflow-x: hidden;
+}
+
+.triangle {
+  --deco-border-width: 175vw;
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: var(--deco-border-width) var(--deco-border-width) 0 0;
+  border-color: get-color("violet") transparent transparent transparent;
+  //transition: border-width 0.3s ease-out;
+
+  @include media-query("lg") {
+    --deco-border-width: 130vw;
+  }
 }
 
 a:not([class]) {
@@ -74,9 +93,10 @@ h4 {
 
 // Blocks
 @import "blocks/avatar";
-@import "blocks/content";
+@import "blocks/button";
 @import "blocks/grid-event";
 @import "blocks/jump-navigation";
+@import "blocks/plain-html";
 @import "blocks/rhomb-grid";
 @import "blocks/rhomb-image";
 @import "blocks/schedule";
@@ -86,3 +106,6 @@ h4 {
 @import "blocks/tablist";
 @import "blocks/talk-card";
 @import "blocks/video";
+
+// Pages
+@import "pages/home";

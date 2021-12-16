@@ -8,8 +8,10 @@
     </clipPath>
   </defs>
 </svg>
-<div class="stack-800">
+
+<div class="stack-major">
   <section id="intro" class="intro">
+  <div class="triangle" aria-hidden="true"></div>
     <div class="wrapper">
       <h1 class="hero__logo intro__branding">
         <svg class="intro__branding-svg" viewBox="0 0 844 431">
@@ -60,9 +62,9 @@
     </div>
   </section>
 
-  <section id="mission">
+  <section id="mission" class="my-stack-space-major mission">
     <div class="wrapper">
-      <div class="stack-300">
+      <div class="stack-300 bg-light-gray mission__text">
         <h2 class="color-peach weight-black fluid-text-800-major uppercase leading-flat">Mission</h2>
         <p class="color-peach weight-bold text-700 leading-tight">Change the way of firmware development, collaborate with
           others and share knowledge.</p>
@@ -71,23 +73,46 @@
           with changing use cases and strict security requirements, it's more important than ever to take open-source
           firmware development to the next level. That's why we're inviting you to the Open Source Firmware Conference.
         </p>
+        <a href="#" class="button">View Submissions</a>
+      </div>
+      <div class="rhomb-image">
+      {% set projectSize = 330 %}
+      {% set projectOffset = 0 %}
+        <svg class="rhomb-image__svg" viewBox="0 0 330 330" aria-label="">
+          <polygon class="rhomb-image__border" fill="#fff" stroke-width="14" stroke="#fff"
+            points="7 188 7 142 142 7 188 7 323 142 323 188 188 323 142 323"></polygon>
+          <image clip-path="url(#oct-clip)" height="{{ projectSize }}" width="{{ projectSize }}"
+            x="{{ projectOffset }}" y="{{ projectOffset }}"
+            xlink:href="/images/organizer/9e_cc_logo.svg"></image>
+        </svg>
       </div>
     </div>
   </section>
 
-  <section id="venue">
+  <section id="venue" class="venue">
+    <img alt="" class="venue__beam" src="/images/beams/beam-01.svg" aria-hidden="true">
     <div class="wrapper">
-      <div class="stack-300">
+      <div class="stack-300 venue__text bg-light-gray">
         <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Venue</h2>
         <p class="fluid-text-400-500">OSFC goes virtual this year again. We are going to meet online at our event platform
           including everything you know from a traditional conference like a stage, session rooms, exhibition booths and
           live meeting areas. The talks will be scheduled from afternoon to midnight, Central European Time.</p>
-        <a href="https://talks.osfc.io/osfc2021/featured/" class="button">View submissions</a>
+      </div>
+      <div class="rhomb-image">
+      {% set projectSize = 330 %}
+      {% set projectOffset = 0 %}
+        <svg class="rhomb-image__svg" viewBox="0 0 330 330" aria-label="">
+          <polygon class="rhomb-image__border" fill="#fff" stroke-width="14" stroke="#fff"
+            points="7 188 7 142 142 7 188 7 323 142 323 188 188 323 142 323"></polygon>
+          <image clip-path="url(#oct-clip)" height="{{ projectSize }}" width="{{ projectSize }}"
+            x="{{ projectOffset }}" y="{{ projectOffset }}"
+            xlink:href="/images/oscar_join.svg"></image>
+        </svg>
       </div>
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="projects">
     <div class="wrapper">
       <div class="stack-300">
         <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Projects</h2>
@@ -95,27 +120,29 @@
           {% for rhombItem in collections.projects %}
             {% include "partials/rhomb-image.html" %}
           {% endfor %}
-
         </div>
       </div>
     </div>
   </section>
 
-  <section id="organizer">
+  <section id="organizer" class="organizer">
     <div class="wrapper">
-      <div class="stack-300">
+      <div class="stack-800">
         <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Organizer</h2>
-                <div class="rhomb-grid">
+        <div class="rhomb-grid">
           {% for rhombItem in collections.organizer %}
             {% include "partials/rhomb-image.html" %}
           {% endfor %}
-
         </div>
       </div>
     </div>
   </section>
-  
-  <section id="sponsors">
+
+  <section id="sponsors" class="sponsors">
+      <img alt="" class="sponsors__beam" src="/images/beams/beam-05.svg" aria-hidden="true"> 
+      <img alt="" class="sponsors__beam sponsors__beam--1" src="/images/beams/small_grey_stripe_left.svg" aria-hidden="true"> 
+      <img alt="" class="sponsors__beam sponsors__beam--2" src="/images/beams/big_grey_stripe_left.svg" aria-hidden="true">
+
     <div class="wrapper">
       <div class="stack-300">
         <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Sponsors</h2>
@@ -127,7 +154,7 @@
     <div class="wrapper">
       <div class="stack-300">
         <h2 class="color-peach weight-black fluid-text-800-major uppercase leading-flat">Newsletter</h2>
-        <p class="text-600">Join our newsletter to get the latest news about the conference. Also, we’ll notify you once we open our CFP and the tickets are available. </p>
+        <p class="text-600">Join our newsletter to get the latest news about the conference. Also, we'll notify you once we open our CFP and the tickets are available. </p>
       </div>
     </div>
   </section>

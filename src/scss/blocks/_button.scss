@@ -1,0 +1,11 @@
+.button {
+  display: inline-block;
+  background: get-color("peach");
+  text-decoration: none;
+  color: get-color("white");
+  padding: get-size("400");
+  font-size: get-size("400");
+  @include apply-utility("weight", "bold");
+  @include apply-utility("leading", "flat");
+  text-transform: uppercase;
+}

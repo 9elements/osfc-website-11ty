@@ -1,17 +1,20 @@
-.content {
-  background-image: url(/images/beams/beam-05.svg);
-  background-position: top right;
-  background-repeat: no-repeat;
-  background-size: 100vw;
-  overflow: hidden;
-  min-height: 100vh;
+.plain-html {
   position: relative;
+
+  &__beam {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    width: 100vw;
+    left: 0;
+    top: -10vh;
+  }
 
   &::before {
     pointer-events: none;
     position: absolute;
-    right: -10%;
-    top: 40%;
+    right: -0.75rem;
+    top: 50%;
     width: 24.02vw;
     height: 40.2vw;
     background: url(/images/beams/deco-line-02.svg);
