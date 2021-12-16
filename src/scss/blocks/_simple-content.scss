@@ -1,0 +1,28 @@
+.simple-content {
+  position: relative;
+
+  &__beam {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    width: 100vw;
+    left: 0;
+    top: -10vh;
+  }
+
+  &::before {
+    pointer-events: none;
+    position: absolute;
+    right: -0.75rem;
+    top: 50%;
+    width: 24.02vw;
+    height: 40.2vw;
+    background: url(/images/beams/deco-line-02.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    content: "";
+  }
+  h2 {
+    text-align: center;
+  }
+}
