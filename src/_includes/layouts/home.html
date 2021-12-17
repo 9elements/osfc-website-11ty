@@ -144,17 +144,34 @@
       <img alt="" class="sponsors__beam sponsors__beam--2" src="/images/beams/big_grey_stripe_left.svg" aria-hidden="true">
 
     <div class="wrapper-l">
-      <div class="stack-300">
+      <div class="stack-800">
         <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Sponsors</h2>
+        <div class="scroll-gallery">
+          {% for item in collections.sponsors %}
+          {% if item.data.link %}
+          <a href="{{ item.data.link }}" target="_blank">
+          {% endif %}
+          <div class="scroll-gallery__image bg-white">
+          <img src="/images/{{item.data.tags}}/{{ item.data.image }}" alt="">
+          </div>
+          {% if item.data.link %}
+          </a>
+          {% endif %}
+                  {% endfor %}
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section id="newsletter">
+  <section id="newsletter" class="newsletter">
     <div class="wrapper-l">
-      <div class="stack-300">
+      <div class="stack-800">
         <h2 class="color-peach weight-black fluid-text-800-major uppercase leading-flat">Newsletter</h2>
+        <div class="wrapper-s stack-800">
         <p class="text-600">Join our newsletter to get the latest news about the conference. Also, we'll notify you once we open our CFP and the tickets are available. </p>
+        <a href="#" class="button">Subscribe</a>
+        </div>
       </div>
     </div>
   </section>

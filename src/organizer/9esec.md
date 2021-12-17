@@ -1,5 +1,6 @@
 ---
 name: "9elements Cyber Security"
-image: "coreboot.svg"
+image: "9e_cc_logo.svg"
 link: "https://9esec.io/"
+size: "l"
 ---

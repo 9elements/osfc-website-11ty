@@ -20,7 +20,7 @@
         points="7 188 7 142 142 7 188 7 323 142 323 188 188 323 142 323"></polygon>
       <image clip-path="url(#oct-clip)" height="{{ projectSize }}" width="{{ projectSize }}"
         x="{{ projectOffset }}" y="{{ projectOffset }}"
-        xlink:href="/images/projects/{{ rhombItem.data.image }}"></image>
+        xlink:href="/images/{{rhombItem.data.tags}}/{{ rhombItem.data.image }}"></image>
     </svg>
     {% if rhombItem.data.link %}
       </a>

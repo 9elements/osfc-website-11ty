@@ -1,5 +1,5 @@
 ---
 name: "Google"
-image: "coreboot.svg"
+image: "google.png"
 link: "https://www.google.com/"
 ---
