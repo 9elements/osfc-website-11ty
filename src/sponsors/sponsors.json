@@ -1,4 +1,6 @@
 {
-  "permalink": false,
-  "tags": "sponsors"
+  "tags": "sponsors",
+  "layout": "layouts/sponsor.html",
+  "permalink": "/sponsors/{{ name | slugify }}/index.html",
+  "title": "Sponsors"
 }

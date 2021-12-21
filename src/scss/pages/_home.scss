@@ -129,6 +129,7 @@
 .sponsors {
   margin-top: 30rem;
   position: relative;
+  text-align: right;
 
   &__beam {
     position: absolute;
@@ -153,6 +154,7 @@
     scroll-snap-type: x mandatory;
 
     &__image {
+      position: relative;
       margin-bottom: 1rem;
       scroll-snap-align: start;
       aspect-ratio: 1;
@@ -166,6 +168,12 @@
         width: 100%;
         aspect-ratio: 1;
         object-fit: contain;
+      }
+
+      p {
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     }
     // Scrollbar style

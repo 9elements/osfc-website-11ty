@@ -1,0 +1,26 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<div class="stack-major"> 
+    <section >
+        <div class="wrapper-l">
+            <div class="stack-800">
+                <div class="wrapper-s stack-300">
+                    <a href="/">< Back</a>
+                    <div class="plain-html shadow-box stack-300">
+                        <img src="/images/sponsors/{{image}}" alt="">
+                        <p>{{sponsor}} Sponsor</p>
+                        {{content | safe }}
+                        <a style="display: inline-block" href="{{link}}">{{name}} ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "partials/newsletter.html" %}
+
+
+</div>
+
+{%endblock %}
