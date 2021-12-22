@@ -62,11 +62,11 @@
     </div>
   </section>
 
-  <section id="mission" class="my-stack-space-major mission">
+  <section id="mission" class="mission">
     <div class="wrapper-l">
       <div class="stack-300 shadow-box bg-light-gray mission__text">
         <h2 class="color-peach weight-black fluid-text-800-major uppercase leading-flat">Mission</h2>
-        <p class="color-peach weight-bold text-700 leading-tight">Change the way of firmware development, collaborate with
+        <p class="color-peach weight-bold fluid-text-600-700 leading-tight">Change the way of firmware development, collaborate with
           others and share knowledge.</p>
         <p class="fluid-text-500-600">Closed source firmware development has been the de-facto standard for the
           electronics industry since its inception. That didn't change even when open-source took off in other areas. Now,
@@ -139,25 +139,27 @@
   </section>
 
   <section id="sponsors" class="sponsors">
-      <img alt="" class="sponsors__beam" src="/images/beams/beam-05.svg" aria-hidden="true"> 
-      <img alt="" class="sponsors__beam sponsors__beam--1" src="/images/beams/small_grey_stripe_left.svg" aria-hidden="true"> 
-      <img alt="" class="sponsors__beam sponsors__beam--2" src="/images/beams/big_grey_stripe_left.svg" aria-hidden="true">
-
+    <img alt="" class="sponsors__beam" src="/images/beams/beam-05.svg" aria-hidden="true"> 
+    <img alt="" class="sponsors__beam sponsors__beam--1" src="/images/beams/small_grey_stripe_left.svg" aria-hidden="true"> 
+    <img alt="" class="sponsors__beam sponsors__beam--2" src="/images/beams/big_grey_stripe_left.svg" aria-hidden="true">
     <div class="wrapper-l">
-      <div class="stack-300">
+      <div class="stack-800">
         <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Sponsors</h2>
+        <div class="scroll-gallery">
+          {% for item in collections.sponsors %}
+          <a href="{{ item.url }}">
+          <div class="scroll-gallery__image bg-white">
+            <img src="/images/{{item.data.tags}}/{{ item.data.image }}" alt="Company logo of {{item.data.name}}">
+            <p>{{item.data.sponsor}} Sponsor</p>
+          </div>
+          </a>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="newsletter">
-    <div class="wrapper-l">
-      <div class="stack-300">
-        <h2 class="color-peach weight-black fluid-text-800-major uppercase leading-flat">Newsletter</h2>
-        <p class="text-600">Join our newsletter to get the latest news about the conference. Also, we'll notify you once we open our CFP and the tickets are available. </p>
-      </div>
-    </div>
-  </section>
+  {% include "partials/newsletter.html" %}
 </div>
 
 {%endblock %}

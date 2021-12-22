@@ -1,8 +1,19 @@
 .mission {
+  margin-top: get-size("800");
+
+  @include media-query("md") {
+    margin-top: get-size("major");
+  }
+
   .rhomb-image {
+    display: none;
     &__svg {
       width: 18rem;
       margin-left: auto;
+    }
+
+    @include media-query("lg") {
+      display: block;
     }
   }
 
@@ -11,7 +22,7 @@
     max-width: 70ch;
     margin-left: auto;
     margin-right: auto;
-    padding: 3rem;
+    padding: min(5%, 3rem);
   }
 }
 
@@ -25,7 +36,16 @@
     z-index: 2;
     width: 200vw;
     left: 0;
-    top: -30vh;
+    top: 28vh;
+    // left: 50%;
+    // top: 118%;
+    // -webkit-transform: translateX(-50%) translateY(-100%);
+    // transform: translateX(-50%) translateY(-100%);
+
+    @include media-query("lg") {
+      width: 200vw;
+      top: -30vh;
+    }
   }
   &__text {
     max-width: 60ch;
@@ -75,7 +95,7 @@
     position: absolute;
     right: -0.75rem;
     top: -25rem;
-    width: 24.02vw;
+    width: 20.02vw;
     height: 40.2vw;
     background: url(/images/beams/deco-line-02.svg);
     background-size: 100% auto;
@@ -86,7 +106,7 @@
     pointer-events: none;
     position: absolute;
     left: -0.75rem;
-    top: 2rem;
+    top: -2rem;
     width: 35.02vw;
     height: 50.2vw;
     background: url(/images/beams/deco-line-03.svg);
@@ -103,7 +123,7 @@
     pointer-events: none;
     position: absolute;
     right: -0.75rem;
-    top: -13rem;
+    top: -10rem;
     width: 38.02vw;
     height: 60.2vw;
     background: url(/images/beams/deco-line-05.svg);
@@ -116,7 +136,7 @@
     pointer-events: none;
     position: absolute;
     left: -2rem;
-    top: -4rem;
+    top: 2rem;
     width: 50.02vw;
     height: 70.2vw;
     background: url(/images/beams/deco-line-04.svg);
@@ -129,6 +149,7 @@
 .sponsors {
   margin-top: 30rem;
   position: relative;
+  text-align: right;
 
   &__beam {
     position: absolute;
@@ -144,5 +165,48 @@
     &--2 {
       top: 30vh;
     }
+  }
+
+  .scroll-gallery {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    &__image {
+      position: relative;
+      margin-bottom: 1rem;
+      scroll-snap-align: start;
+      aspect-ratio: 1;
+      max-width: 100%;
+      max-height: 100%;
+      width: 15rem;
+      height: 15rem;
+      padding: 1rem;
+
+      img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+
+      p {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    // Scrollbar style
+    &::-webkit-scrollbar {
+      height: 0.5rem;
+    }
+  }
+}
+
+.newsletter {
+  text-align: center;
+
+  .button {
+    font-size: get-size("600");
   }
 }

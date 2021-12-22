@@ -1,0 +1,29 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<svg style="width: 0; height: 0; display: block; opacity: 0;">
+  <defs>
+    <clipPath id="oct-clip">
+      <polygon points="7 188 7 142 142 7 188 7 323 142 323 188 188 323 142 323"></polygon>
+    </clipPath>
+  </defs>
+</svg>
+<div class="stack-major">
+
+  <section id="team" class="team">
+    <div class="wrapper-l">
+      <div class="stack-300">
+        <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Team</h2>
+        <div class="rhomb-grid">
+          {% for rhombItem in collections.team %}
+            {% include "partials/rhomb-image.html" %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+
+{%endblock %}
