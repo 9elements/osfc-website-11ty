@@ -6,14 +6,14 @@
   }
 
   .rhomb-image {
-    display: none;
     &__svg {
       width: 18rem;
-      margin-left: auto;
-    }
+      margin-inline: auto;
 
-    @include media-query("lg") {
-      display: block;
+      @include media-query("lg") {
+        margin-inline: unset;
+        margin-left: auto;
+      }
     }
   }
 
@@ -34,17 +34,13 @@
     position: absolute;
     pointer-events: none;
     z-index: 2;
-    width: 200vw;
-    left: 0;
-    top: 28vh;
-    // left: 50%;
-    // top: 118%;
-    // -webkit-transform: translateX(-50%) translateY(-100%);
-    // transform: translateX(-50%) translateY(-100%);
+    width: clamp(70rem, 233vw, 90rem);
+    right: 0;
+    top: 15rem;
+    max-width: none;
 
     @include media-query("lg") {
-      width: 200vw;
-      top: -30vh;
+      top: -20rem;
     }
   }
   &__text {
@@ -56,7 +52,7 @@
     &::before {
       pointer-events: none;
       position: absolute;
-      left: 0;
+      left: -12rem;
       top: -3vw;
       width: 90vw;
       height: 12vw;
@@ -79,17 +75,35 @@
 
   .rhomb-image {
     &__svg {
-      width: 28rem;
-      margin-left: auto;
+      width: 18rem;
+      margin-inline: auto;
+
+      @include media-query("md") {
+        width: 24rem;
+        margin-inline: unset;
+        margin-left: auto;
+      }
+
+      @include media-query("lg") {
+        width: 28rem;
+      }
     }
   }
 }
 
 .projects {
   position: relative;
-  margin-top: 30rem;
-  text-align: right;
+  text-align: center;
+  margin-top: 12rem;
 
+  @include media-query("md") {
+    margin-top: 22rem;
+    text-align: right;
+  }
+  @include media-query("lg") {
+    margin-top: 30rem;
+    text-align: right;
+  }
   &::before {
     pointer-events: none;
     position: absolute;
@@ -101,6 +115,11 @@
     background-size: 100% auto;
     background-repeat: no-repeat;
     content: "";
+    display: none;
+
+    @include media-query("lg") {
+      display: block;
+    }
   }
   &::after {
     pointer-events: none;
@@ -113,57 +132,102 @@
     background-size: 100% auto;
     background-repeat: no-repeat;
     content: "";
+    display: none;
+
+    @include media-query("lg") {
+      display: block;
+    }
   }
 }
 
 .organizer {
   position: relative;
+  text-align: center;
+
+  @include media-query("lg") {
+    text-align: left;
+  }
 
   &::before {
     pointer-events: none;
     position: absolute;
     right: -0.75rem;
     top: -10rem;
-    width: 38.02vw;
-    height: 60.2vw;
+    width: 28.02rem;
+    height: 60.2rem;
     background: url(/images/beams/deco-line-05.svg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     content: "";
+    display: none;
+
+    @include media-query("lg") {
+      display: block;
+    }
   }
 
   &::after {
     pointer-events: none;
     position: absolute;
-    left: -2rem;
-    top: 2rem;
-    width: 50.02vw;
-    height: 70.2vw;
+    left: -26rem;
+    top: -11.5rem;
+    width: 40.02rem;
+    height: 70.2rem;
     background: url(/images/beams/deco-line-04.svg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     content: "";
+
+    @include media-query("md") {
+      left: -20rem;
+    }
+
+    @include media-query("lg") {
+      left: -2rem;
+      top: 2rem;
+    }
   }
 }
 
 .sponsors {
-  margin-top: 30rem;
   position: relative;
-  text-align: right;
+  text-align: center;
+  margin-top: 12rem;
+
+  @include media-query("lg") {
+    margin-top: 30rem;
+    text-align: right;
+  }
 
   &__beam {
     position: absolute;
     pointer-events: none;
     z-index: 2;
-    left: 0;
-    top: -5vh;
+    width: clamp(70rem, 233vw, 90rem);
+    right: 0;
+    top: 15rem;
+    max-width: none;
+
+    @include media-query("lg") {
+      top: -5vh;
+    }
 
     &--1 {
       top: -5vh;
+      display: none;
+
+      @include media-query("lg") {
+        display: block;
+      }
     }
 
     &--2 {
       top: 30vh;
+      display: none;
+
+      @include media-query("lg") {
+        display: block;
+      }
     }
   }
 
