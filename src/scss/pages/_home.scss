@@ -34,9 +34,9 @@
     position: absolute;
     pointer-events: none;
     z-index: 2;
-    width: clamp(70rem, 233vw, 90rem);
+    width: clamp(70rem, 233vw, 100%);
     right: 0;
-    top: 15rem;
+    top: 17rem;
     max-width: none;
 
     @include media-query("lg") {
@@ -52,7 +52,7 @@
     &::before {
       pointer-events: none;
       position: absolute;
-      left: -12rem;
+      left: -6rem;
       top: -3vw;
       width: 90vw;
       height: 12vw;
@@ -94,7 +94,7 @@
 .projects {
   position: relative;
   text-align: center;
-  margin-top: 12rem;
+  margin-top: 14rem;
 
   @include media-query("md") {
     margin-top: 22rem;
@@ -164,14 +164,19 @@
     @include media-query("lg") {
       display: block;
     }
+
+    @include media-query("xl") {
+      width: 33.02rem;
+      top: -5rem;
+    }
   }
 
   &::after {
     pointer-events: none;
     position: absolute;
-    left: -26rem;
-    top: -11.5rem;
-    width: 40.02rem;
+    left: -25rem;
+    top: -7.75rem;
+    width: 38.02rem;
     height: 70.2rem;
     background: url(/images/beams/deco-line-04.svg);
     background-size: 100% auto;
@@ -185,6 +190,10 @@
     @include media-query("lg") {
       left: -2rem;
       top: 2rem;
+    }
+
+    @include media-query("xl") {
+      width: 42.02rem;
     }
   }
 }
@@ -214,6 +223,7 @@
 
     &--1 {
       top: -5vh;
+      left: 0;
       display: none;
 
       @include media-query("lg") {
@@ -223,6 +233,7 @@
 
     &--2 {
       top: 30vh;
+      left: 0;
       display: none;
 
       @include media-query("lg") {
