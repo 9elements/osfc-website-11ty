@@ -117,7 +117,8 @@
       <div class="stack-300">
         <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Projects</h2>
         <div class="rhomb-grid">
-          {% for rhombItem in collections.projects %}
+          {% set projectList = helpers.sortCollectionByArray(collections.projects,dataSorting.projects, 'name') %}
+          {% for rhombItem in projectList %}
             {% include "partials/rhomb-image.html" %}
           {% endfor %}
         </div>
@@ -130,7 +131,8 @@
       <div class="stack-800">
         <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Organizer</h2>
         <div class="rhomb-grid">
-          {% for rhombItem in collections.organizer %}
+         {% set organizerList = helpers.sortCollectionByArray(collections.organizer,dataSorting.organizer, 'name') %}
+          {% for rhombItem in organizerList %}
             {% include "partials/rhomb-image.html" %}
           {% endfor %}
         </div>
@@ -146,7 +148,8 @@
       <div class="stack-800">
         <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Sponsors</h2>
         <div class="scroll-gallery">
-          {% for item in collections.sponsors %}
+          {% set sponsorList = helpers.sortCollectionByArray(collections.sponsors,dataSorting.sponsors, 'name') %}
+          {% for item in sponsorList %}
           <a href="{{ item.url }}">
           <div class="scroll-gallery__image bg-white">
             <img src="/images/{{item.data.tags}}/{{ item.data.image }}" alt="Company logo of {{item.data.name}}">
