@@ -12,7 +12,6 @@ body {
   background: get-color("light-gray");
   color: get-color("dark-gray");
   transition: background-color 0.3s ease-out;
-  overflow-x: hidden;
 }
 
 .triangle {
@@ -70,7 +69,7 @@ h4 {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: get-color("light-gray");
   border: 1px solid get-color("violet");
   border-radius: 0.25rem;
 }
@@ -78,6 +77,12 @@ h4 {
 ::-webkit-scrollbar-thumb {
   background-color: get-color("violet");
   border-radius: 0.25rem;
+}
+
+.site-wrap {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 // Layout

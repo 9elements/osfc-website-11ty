@@ -29,14 +29,19 @@
   </head>
 
   <body>
-    <div class="stack-major" style="overflow: hidden;">
-      {% include "partials/site-head.html" %}
+    <div class="site-wrap">
+      {% if triangle %}
+        <div class="triangle" aria-hidden="true"></div>
+      {% endif %}
+      <div class="stack-major" style="overflow: hidden;">
+        {% include "partials/site-head.html" %}
 
-      <main tabindex="-1" id="main-content">
-        {% block content %}{% endblock %}
-      </main>
+        <main tabindex="-1" id="main-content">
+          {% block content %}{% endblock %}
+        </main>
 
-      {% include "partials/site-foot.html" %}
+        {% include "partials/site-foot.html" %}
+      </div>
     </div>
     <script src="/scripts/dark-light-switch.js"></script>
     <script src="/scripts/gsap.min.js"></script>
