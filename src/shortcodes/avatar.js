@@ -2,16 +2,19 @@ const Cache = require("@11ty/eleventy-cache-assets");
 const sharp = require("sharp");
 const fs = require("fs");
 const fsExtra = require("fs-extra");
+const slugify = require("../filters/slugify");
 
 const isProduction = process.env.NODE_ENV === "production";
 
-const randomNumber = () =>
-  Date.now() + "-" + Math.random().toFixed(6).substring(2);
+const uniqueFileName = (prefix) =>
+  `${prefix ? slugify(prefix) : Date.now()}-${Math.random()
+    .toFixed(6)
+    .substring(2)}`;
 
 const dir = "./dist/images/generated";
 
-const getLocalImagePath = (url) => {
-  const fileName = `${randomNumber()}.webp`;
+const getLocalImagePath = (url, filePrefix) => {
+  const fileName = `${uniqueFileName(filePrefix)}.webp`;
   const finalSize = 400;
 
   const generateImage = async () => {
@@ -57,15 +60,13 @@ module.exports = (avatar) => {
       alt = "alt = '" + avatar.name + "'";
     }
 
-    if (isProduction) {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir);
-      }
-
-      fsExtra.emptyDirSync(dir);
-
-      source = getLocalImagePath(source);
+    // if (isProduction) {
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir);
     }
+    fsExtra.emptyDirSync(dir);
+    source = getLocalImagePath(source, avatar.name);
+    // }
   } else {
     hidden = "aria-hidden='true'";
   }
