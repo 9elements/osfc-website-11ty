@@ -1,5 +1,5 @@
 ---
-name: "System 76"
+name: "System76"
 image: "system76.png"
 link: "https://system76.com/"
 sponsor: "bronze"

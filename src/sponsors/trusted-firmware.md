@@ -1,5 +1,5 @@
 ---
-name: "TrustedFirmware"
+name: "Trusted Firmware"
 image: "trustedfirmware.png"
 link: "https://www.trustedfirmware.org/"
 sponsor: "bronze"

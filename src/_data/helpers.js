@@ -99,4 +99,60 @@ module.exports = {
     }
     return newUrl;
   },
+
+  /**
+   * Sort a collection taking another array as model
+   * Note: items in the collection must have an attribute in
+   * Front Matter that is defined by sortingValue
+   * Elements not present in the sorting array are put to the
+   * end of the new collection.
+   *
+   * @param {Array} collection 11ty collection
+   * @param {Array} sortingArr Array of Values
+   * @param {String} sortingValue Defines the Value used for sorting
+   * @returns {Array} result collection or empty
+   */
+  sortCollectionByArray(collection, sortingArr, sortingValue) {
+    const sortedCollection = [];
+
+    sortingArr.forEach((element) => {
+      currentItem = collection.find(
+        (entry) => entry.data[sortingValue] == element
+      );
+      if (currentItem) {
+        sortedCollection.push(currentItem);
+      }
+    });
+
+    const result = sortedCollection.concat(
+      collection.filter(
+        (entry) => !sortingArr.includes(entry.data[sortingValue])
+      )
+    );
+    return result;
+  },
+
+  /**
+   * Sort JSON DATA taking another array as model
+   *
+   * @param {Array} collection 11ty collection
+   * @param {Array} sortingArr Array of Values
+   * @param {String} sortingValue Defines the Value used for sorting
+   * @returns {Array} result collection or empty
+   */
+  sortJsonByArray(collection, sortingArr, sortingValue) {
+    const sortedCollection = [];
+
+    sortingArr.forEach((element) => {
+      currentItem = collection.find((entry) => entry[sortingValue] == element);
+      if (currentItem) {
+        sortedCollection.push(currentItem);
+      }
+    });
+
+    const result = sortedCollection.concat(
+      collection.filter((entry) => !sortingArr.includes(entry[sortingValue]))
+    );
+    return result;
+  },
 };
