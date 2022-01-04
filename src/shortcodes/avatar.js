@@ -57,7 +57,6 @@ module.exports = (avatar) => {
       alt = "alt = '" + avatar.name + "'";
     }
 
-    // if (isProduction)
     if (isProduction) {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir);
