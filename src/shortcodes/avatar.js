@@ -11,73 +11,77 @@ const uniqueFileName = (prefix) =>
     .toFixed(6)
     .substring(2)}`;
 
+//directory to save generated and processed images
 const dir = "./dist/images/generated";
-
-const getLocalImagePath = (url, filePrefix) => {
-  const fileName = `${uniqueFileName(filePrefix)}.webp`;
-  const finalSize = 400;
-
-  const generateImage = async () => {
-    const imageBuffer = await Cache(url, {
-      duration: "1d",
-      type: "buffer",
-    });
-
-    sharp(imageBuffer)
-      .resize({ width: finalSize, height: finalSize, fit: "cover" })
-      .toBuffer((err, data, info) => {
-        if (err) {
-          return;
-        }
-
-        fs.writeFile(`${dir}/${fileName}`, data, (err) => {});
-      });
-  };
-
-  generateImage();
-
-  return `/images/generated/${fileName}`;
-};
-
-//
 
 module.exports = (avatar) => {
   const avatarCounter = Math.floor(Math.random() * 5 + 1);
   let source = "/images/avatar-0" + avatarCounter + ".webp";
-  let hidden = "";
-  let size = "";
+  let isHidden = false;
   let classes = "";
-  let alt = "alt = ''";
+  let alt = "";
 
   if (avatar.src) {
     source = avatar.src;
-    if (source.includes("https://www.gravatar.com")) {
-      source += "?s=";
-      source += 400;
-    }
+
+    source.includes("https://www.gravatar.com") && (source += "?s=400");
 
     if (avatar.name) {
-      alt = "alt = '" + avatar.name + "'";
+      alt = avatar.name;
     }
 
-    // if (isProduction) {
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir);
+    if (isProduction) {
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir);
+      }
+      fsExtra.emptyDirSync(dir);
+      source = getLocalImagePath(source, avatar.name);
     }
-    fsExtra.emptyDirSync(dir);
-    source = getLocalImagePath(source, avatar.name);
-    // }
   } else {
-    hidden = "aria-hidden='true'";
-  }
-
-  if (avatar.size) {
-    size = "width='" + avatar.size + "' height='" + avatar.size + "'";
+    isHidden = true;
   }
 
   if (avatar.classlist) {
     classes = " " + avatar.classlist;
   }
 
-  return `<img loading="lazy" decoding="async" class="avatar${classes}" src="${source}" ${alt} ${hidden} ${size}>`;
+  return `
+    <img
+      loading="lazy"
+      decoding="async"
+      class="avatar${classes}"
+      src="${source}"
+      alt="${alt}"
+      ${isHidden ? 'aria-hidden="true"' : ""}
+      ${avatar.size && `width="${avatar.size}" height="${avatar.size}"`}
+    />`;
 };
+
+function getLocalImagePath(url, filePrefix) {
+  const fileName = `${uniqueFileName(filePrefix)}.webp`;
+  const finalSize = 400;
+
+  // fetches the image from the url and saves it to the local directory
+  async function generateImage() {
+    const imageBuffer = await Cache(url, {
+      duration: "1d",
+      type: "buffer",
+    });
+
+    // resize the image to a smaller size and convert it to webp
+    sharp(imageBuffer)
+      .resize({ width: finalSize, height: finalSize, fit: "cover" })
+      .toBuffer((err, data) => {
+        if (err) {
+          return;
+        }
+
+        // save the image to the local directory
+        fs.writeFile(`${dir}/${fileName}`, data, (err) => {});
+      });
+  }
+
+  generateImage();
+
+  return `/images/generated/${fileName}`;
+}
