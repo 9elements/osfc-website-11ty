@@ -58,7 +58,7 @@ module.exports = (avatar) => {
     }
 
     // if (isProduction)
-    if (true) {
+    if (isProduction) {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir);
       }
