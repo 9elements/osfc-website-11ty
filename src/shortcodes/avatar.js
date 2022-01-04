@@ -25,6 +25,6 @@ module.exports = (avatar) => {
     classes = " " + avatar.classlist;
   }
 
-  return `<img class="avatar${classes}" src="${source}" ${alt} ${hidden} ${size}>
+  return `<img loading="lazy" decoding="async" class="avatar${classes}" src="${source}" ${alt} ${hidden} ${size}>
   `;
 };
