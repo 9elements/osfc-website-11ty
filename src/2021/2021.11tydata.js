@@ -1,5 +1,6 @@
 const util = require("util");
 const Cache = require("@11ty/eleventy-cache-assets");
+const generateSpeakerImages = require("../utils/generate-speaker-images");
 
 /**
  * Grabs the event data from pretalx
@@ -47,6 +48,8 @@ module.exports = async () => {
     );
 
     speakers.results.sort((a, b) => (a.name > b.name ? 1 : -1));
+
+    generateSpeakerImages(speakers.results, 2021);
 
     const videos = await Cache(
       `https://cfp.osfc.io/api/events/osfc2021/p/vimeo/`,
