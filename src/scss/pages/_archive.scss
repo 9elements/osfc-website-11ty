@@ -19,7 +19,6 @@
     position: absolute;
     top: 4rem;
     right: 2rem;
-    outline: 1px solid lime;
 
     @include media-query("lg") {
       display: block;
