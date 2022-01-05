@@ -8,4 +8,16 @@
   @include apply-utility("weight", "bold");
   @include apply-utility("leading", "flat");
   text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    background: get-color("violet");
+    color: get-color("white");
+  }
+}
+[aria-current="page"] {
+  background: get-color("violet");
+}
+[data-state="active"] {
+  color: get-color("peach");
 }

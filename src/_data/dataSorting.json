@@ -1,5 +1,11 @@
 {
-  "team": ["Daniel Nierhauve", "Justine Spalik", "Philipp Deppenwiese"],
+  "team": [
+    "Philipp Deppenwiese",
+    "Kai Michaelis",
+    "Daniel Nierhauve",
+    "Jens Drenhaus",
+    "Justine Spalik"
+  ],
   "projects": [
     "coreboot",
     "Trusted Firmware",

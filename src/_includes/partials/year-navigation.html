@@ -1,0 +1,7 @@
+    <ul class="year-navigation" style="display: flex; gap: 1rem; justify-content: center;">
+    {% for item in years.years %}
+        <li><a href="/archive/{{item}}" class="weight-bold button" aria-current={{"page" if year == item else "default"}}> 
+          <span class="">{{item}}</span>
+        </a></li>
+    {% endfor %}
+    </ul>

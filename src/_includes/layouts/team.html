@@ -11,11 +11,14 @@
 <div class="stack-major">
 
   <section id="team" class="team">
+    <img alt="" class="team__beam" src="/images/beams/beam-04.svg" aria-hidden="true">
+    <img alt="" class="team__beam team__beam--1" src="/images/beams/beam-05.svg" aria-hidden="true">
     <div class="wrapper-l">
-      <div class="stack-300">
-        <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Team</h2>
+      <div class="stack-700">
+        <h2 class="color-peach weight-black fluid-text-800-major uppercase leading-flat">Team</h2>
         <div class="person-grid">
-          {% for rhombItem in collections.team %}
+          {% set teamList = helpers.sortCollectionByArray(collections.team,dataSorting.team, 'name') %}
+          {% for rhombItem in teamList %}
             {% include "partials/rhomb-person.html" %}
           {% endfor %}
         </div>
