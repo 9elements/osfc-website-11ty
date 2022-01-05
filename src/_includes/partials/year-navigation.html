@@ -1,11 +1,7 @@
-    <ul class="jump-navigation | bg-peach">
-        <li><a href="/archive/2020" class="weight-bold">
-          <span class="">2020</span>
+    <ul class="year-navigation" style="display: flex; gap: 1rem; justify-content: center;">
+    {% for item in years.years %}
+        <li><a href="/archive/{{item}}" class="weight-bold button" aria-current={{"page" if year == item else "default"}}> 
+          <span class="">{{item}}</span>
         </a></li>
-        <li><a href="/archive/2021" class="weight-bold">
-        <span class="">2019</span>
-        </a></li>
-        <li><a href="#" class="weight-bold">
-        <span class="">2018</span>
-        </a></li>
+    {% endfor %}
     </ul>

@@ -1,3 +1,8 @@
+      {% if gallery %}
+      <a href="#gallery">
+      <div class="oscar-sign"><span class="text-600 weight-bold">{{year}}'s <br>Photos</span></div>
+      </a>
+    {% endif %}
     <ul class="jump-navigation | bg-peach">
       {% for day in schedule.days %}
         <li><a href="#day-{{day.date}}" class="color-white weight-bold">

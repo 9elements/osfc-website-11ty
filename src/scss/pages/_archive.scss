@@ -1,0 +1,39 @@
+.archive {
+  position: relative;
+  h1 {
+    text-align: center;
+  }
+
+  .year-navigation {
+    list-style-type: none;
+
+    li {
+      text-decoration: none;
+    }
+  }
+  .oscar-sign {
+    display: none;
+
+    height: 13rem;
+    width: 12rem;
+    z-index: 999;
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    background: url(/images/sign-oscar.svg);
+    background-size: 13rem;
+    background-repeat: no-repeat;
+
+    @include media-query("lg") {
+      display: block;
+    }
+
+    span {
+      line-height: 1;
+      position: absolute;
+      bottom: 1.25rem;
+      right: 4rem;
+      text-align: center;
+    }
+  }
+}

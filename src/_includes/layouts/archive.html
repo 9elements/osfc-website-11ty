@@ -2,13 +2,24 @@
 
 {% block content %}
 
-<section>
+<section class="archive">
   <div class="wrapper-l | stack-700">
     <h1 class="fluid-text-800-major weight-black uppercase leading-tight color-peach">
       Archive
     </h1>
     {% include "partials/year-navigation.html" %}
     {% include "partials/condensed-talks.html" %}
+
+    {% if gallery %}
+    <div id="gallery" class="gallery">
+    <h2>{{year}}'s Photos</h2>
+    <div class="gallery-items" style="display: flex; gap: 2rem">
+    {% for item in gallery %}
+    <img src="{{item.img}}" alt="{{item.alt}}">
+    {% endfor %}
+    </div>
+    </div>
+    {% endif %}
   </div>
 </section>
 {%endblock %}
