@@ -1,0 +1,14 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<section>
+  <div class="wrapper-l | stack-700">
+    <h1 class="fluid-text-800-major weight-black uppercase leading-tight color-peach">
+      Archive
+    </h1>
+    {% include "partials/year-navigation.html" %}
+    {% include "partials/condensed-talks.html" %}
+  </div>
+</section>
+{%endblock %}
