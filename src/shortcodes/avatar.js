@@ -11,12 +11,12 @@ const uniqueFileName = (prefix) =>
     .toFixed(6)
     .substring(2)}`;
 
-//directory to save generated and processed images
+//directory to save generated and processed images to
 const dir = "./dist/images/generated";
 
 module.exports = (avatar) => {
   const avatarCounter = Math.floor(Math.random() * 5 + 1);
-  let source = "/images/avatar-0" + avatarCounter + ".webp";
+  let source = `/images/avatar-0${avatarCounter}.webp`;
   let isHidden = false;
   let classes = "";
   let alt = "";
@@ -24,17 +24,21 @@ module.exports = (avatar) => {
   if (avatar.src) {
     source = avatar.src;
 
-    source.includes("https://www.gravatar.com") && (source += "?s=400");
+    if (source.includes("https://www.gravatar.com")) {
+      source += "?s=400";
+    }
 
     if (avatar.name) {
       alt = avatar.name;
     }
 
     if (isProduction) {
+      // Create the directory if it doesn't exist
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir);
       }
-      fsExtra.emptyDirSync(dir);
+      // remove the old images
+      fsExtra.emptyDirSync(dir); // TODO: only run once, not every time an image is generated
       source = getLocalImagePath(source, avatar.name);
     }
   } else {
