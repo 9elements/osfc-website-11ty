@@ -4,6 +4,22 @@
     text-align: center;
   }
 
+  &__beam {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    width: clamp(70rem, 233vw, 100%);
+    right: 0;
+    top: 15rem;
+    max-width: none;
+    display: none;
+
+    @include media-query("lg") {
+      top: 10vh;
+      display: block;
+    }
+  }
+
   .year-navigation {
     list-style-type: none;
     padding: 0;
@@ -18,7 +34,7 @@
     width: 12rem;
     z-index: 999;
     position: absolute;
-    top: 4rem;
+    top: 3rem;
     right: 2rem;
 
     @include media-query("lg") {
