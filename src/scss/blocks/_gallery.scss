@@ -30,11 +30,12 @@
 }
 
 .gallery-item {
-  width: calc(100% - var(--gap));
+  // width: calc(100% - var(--gap));
   max-height: max(25rem, 80vh);
   scroll-snap-align: start;
   margin-bottom: 1rem;
   object-fit: cover;
+  max-width: calc(100% - var(--gap));
 
   @include media-query("md") {
     margin-bottom: 0;
