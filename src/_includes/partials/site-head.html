@@ -1,24 +1,12 @@
 <header class="site-head | bg-violet color-white" style="z-index: 6;">
   <div class="wrapper-l">
     <div class="site-head__inner" style="padding: 2rem 0;">
-      <div class="cluster">
-        <a class="color-white weight-bold uppercase" href="/">Home</a> |
-        <span>2020:</span>
-        <a class="color-white weight-bold uppercase" href="/2020/talks">Talks</a> |
-        <span>2021:</span>
-        <a class="color-white weight-bold uppercase" href="/2021/schedule">Schedule</a>
-        <a class="color-white weight-bold uppercase" href="/2021/speakers">Speakers</a>
-        <a class="color-white weight-bold uppercase" href="/2021/talk-list">Talk List</a>
-        |
-        <a class="color-white weight-bold uppercase" href="/code-of-conduct">COC</a>
-        |
-        <a class="color-white weight-bold uppercase" href="/imprint">Imprint</a>
-        |
-        <a class="color-white weight-bold uppercase" href="/privacy-policy">Privacy Policy</a>
-        |
-        <a class="color-white weight-bold uppercase" href="/team">Team</a>
-        |
-        <a class="color-white weight-bold uppercase" href="/archive/2020">Archive</a>
+      <div class="cluster" style="align-items: center">
+         {% for item in navigation.items %}
+        <a class="color-white weight-bold uppercase" href="{{item.url}}">{{item.text}}</a>
+        {% endfor %}
+        <a class="button" href="{{item.url}}">Subscribe</a>
       </div>
     </div>
+  </div>
 </header>
