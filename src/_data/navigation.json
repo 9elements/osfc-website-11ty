@@ -1,0 +1,41 @@
+{
+  "items": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "Schedule 2021",
+      "url": "/2021/schedule/"
+    },
+    {
+      "text": "Speakers 2021",
+      "url": "/2021/speakers/"
+    },
+    {
+      "text": "Talk List 2021",
+      "url": "/2021/talk-list/"
+    },
+    {
+      "text": "COC",
+      "url": "/code-of-conduct/"
+    },
+
+    {
+      "text": "Team",
+      "url": "/team/"
+    },
+    {
+      "text": "Archive",
+      "url": "/archive/2020"
+    },
+    {
+      "text": "CFP",
+      "url": "#"
+    },
+    {
+      "text": "Tickets",
+      "url": "#"
+    }
+  ]
+}
