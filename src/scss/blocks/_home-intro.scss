@@ -10,10 +10,12 @@
   }
 }
 
-.intro-decoration {
+.intro__decoration {
+  --shift: -3rem;
+
   position: absolute;
-  right: -0.5rem;
-  top: 0;
+  top: var(--shift);
+  right: var(--shift);
   z-index: -1;
   display: none;
   pointer-events: none;
@@ -23,11 +25,15 @@
   }
 
   @include media-query("xl") {
-    // right: -5rem;
+    --shift: -4rem;
+  }
+
+  @include media-query("xxxl") {
+    --shift: 0;
   }
 }
 
-.intro-decoration__item {
+.intro__decoration-item {
   stroke-dasharray: 800;
   stroke-dashoffset: 800;
   animation: dash 2.9s var(--ease-in-out-cubic) forwards;
