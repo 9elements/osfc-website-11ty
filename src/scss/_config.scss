@@ -32,6 +32,12 @@ $fluid-bp: calc(
 );
 
 $fluid-size-scale: (
+  "200-300":
+    clamp(
+      map-get($gorko-size-scale, "200"),
+      calc(map-get($gorko-size-scale, "200") + 2 * $fluid-bp),
+      map-get($gorko-size-scale, "300")
+    ),
   "300-400":
     clamp(
       map-get($gorko-size-scale, "300"),

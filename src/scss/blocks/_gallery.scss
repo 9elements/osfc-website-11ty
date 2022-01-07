@@ -30,11 +30,16 @@
 
 .gallery-item {
   // width: calc(100% - var(--gap));
-  max-height: max(25rem, 80vh);
+  // max-height: max(25rem, 80vh);
+  height: 18rem;
   scroll-snap-align: start;
   margin-bottom: 1rem;
   object-fit: cover;
   max-width: calc(100% - var(--gap));
+
+  &--landscape {
+    aspect-ratio: 4/3;
+  }
 
   @include media-query("md") {
     max-width: none;
