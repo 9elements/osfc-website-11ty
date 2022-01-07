@@ -1,5 +1,5 @@
 .mission {
-  margin-top: get-size("800");
+  margin-top: get-size("900");
 
   @include media-query("md") {
     margin-top: get-size("major");
