@@ -15,7 +15,9 @@
   </div>
   <p class="weight-bold">
     {{ talk.slot.room.en }},
-    <time datetime="{{ talk.slot.start | w3DateFilter }}">{{ talk.slot.start | dateFilter}}</time>
+    {% if talk.slot.start %}
+      <time datetime="{{ talk.slot.start | w3DateFilter }}">{{ talk.slot.start | dateFilter}}</time>
+    {% endif %}
   </p>
   <div class="wrapper-s shadow-box stack-400 my-stack-space-600">
     {% for video in videos %}
