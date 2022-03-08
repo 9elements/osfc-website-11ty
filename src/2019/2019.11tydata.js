@@ -5,20 +5,8 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
  */
 module.exports = async () => {
   try {
-    // Grabs either the fresh remote data or cached data (will always be fresh live)
-    // const schedule = await Cache(
-    //   `https://cfp.osfc.io/osfc2019/schedule/export/schedule.json`,
-    //   {
-    //     duration: "1d", // 1 day
-    //     type: "json",
-    //     headers: {
-    //       Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4",
-    //     },
-    //   }
-    // );
-
     const talks = await EleventyFetch(
-      `https://pretalx.com/api/events/osfc2019/submissions/`,
+      `https://pretalx.com/api/events/osfc2019/submissions/?limit=200`,
       {
         duration: "1d", // 1 day
         type: "json",
@@ -29,9 +17,9 @@ module.exports = async () => {
         },
       }
     );
-    //console.log("Hier: " + talks.results);
 
     return {
+      pureTalks: talks,
       talks: talks.results,
     };
   } catch (error) {
