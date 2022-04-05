@@ -7,7 +7,7 @@ module.exports = async () => {
   try {
     // Grabs either the fresh remote data or cached data (will always be fresh live)
     const schedule = await Cache(
-      `https://cfp.osfc.io/osfc2020/schedule/export/schedule.json`,
+      `https://pretalx.com/osfc2020/schedule/export/schedule.json`,
       {
         duration: "1d", // 1 day
         type: "json",

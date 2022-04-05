@@ -1,11 +1,12 @@
-const EleventyFetch = require("@11ty/eleventy-fetch");
+const Cache = require("@11ty/eleventy-cache-assets");
 
 /**
  * Grabs the event data from pretalx
  */
 module.exports = async () => {
   try {
-    const schedule = EleventyFetch(
+    // Grabs either the fresh remote data or cached data (will always be fresh live)
+    const schedule = await Cache(
       `https://pretalx.com/osfc2019/schedule/export/schedule.json`,
       {
         duration: "1d", // 1 day
@@ -17,7 +18,8 @@ module.exports = async () => {
         },
       }
     );
-    const talks = await EleventyFetch(
+
+    const talks = await Cache(
       `https://pretalx.com/api/events/osfc2019/submissions/?format=json&limit=200`,
       {
         duration: "1d", // 1 day
@@ -35,7 +37,7 @@ module.exports = async () => {
       // (talk) => talk.state === "confirmed" && talk.is_featured
     );
 
-    let speakers = await EleventyFetch(
+    let speakers = await Cache(
       `https://pretalx.com/api/events/osfc2019/speakers/?format=json&limit=200`,
       {
         duration: "1d", // 1 day
@@ -50,7 +52,7 @@ module.exports = async () => {
 
     speakers.results.sort((a, b) => (a.name > b.name ? 1 : -1));
 
-    // const videos = await EleventyFetch(
+    // const videos = await Cache(
     //   `https://cfp.osfc.io/api/events/osfc2019/p/vimeo/`,
     //   {
     //     duration: "1d", // 1 day
@@ -73,10 +75,9 @@ module.exports = async () => {
     // });
 
     return {
-      schedule: schedule.conference,
+      schedule: schedule.schedule.conference,
       talks: confirmedTalks,
       speakers: speakers.results,
-      // videos: newVideos,
     };
   } catch (error) {
     console.log(error);
