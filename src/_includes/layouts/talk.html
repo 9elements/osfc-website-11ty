@@ -16,7 +16,7 @@
   <p class="weight-bold">
     {{ talk.slot.room.en }},
     {% if talk.slot.start %}
-      <time datetime="{{ talk.slot.start | w3DateFilter }}">{{ talk.slot.start | dateFilter}}</time>
+      <time datetime="{{ talk.slot.start | w3DateFilter }}"> {{ talk.slot.start | dateFormat("EEEE, MM/dd") }}</time>
     {% endif %}
   </p>
   <div class="wrapper-s shadow-box stack-400 my-stack-space-600">

@@ -5,6 +5,7 @@ const dateFilter = require("./src/filters/date-filter.js");
 const w3DateFilter = require("./src/filters/w3-date-filter.js");
 const markdownFilter = require("./src/filters/markdown-filter.js");
 const slugify = require("./src/filters/slugify.js");
+const dateFormat = require("./src/filters/dateFormat.js");
 
 // Transforms
 const htmlMinTransform = require("./src/transforms/html-min-transform.js");
@@ -21,6 +22,7 @@ module.exports = (config) => {
 
   // Add filters
   config.addFilter("dateFilter", dateFilter);
+  config.addFilter("dateFormat", dateFormat);
   config.addFilter("w3DateFilter", w3DateFilter);
   config.addFilter("limit", function (arr, limit) {
     return arr.slice(0, limit);

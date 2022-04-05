@@ -9,7 +9,7 @@
       <div class="tabbed__header | bg-peach">
         <ul class="cluster tablist">
           {% for day in schedule.days %}
-            <li><a href="#day-{{day.date}}" class="text-300 md:text-400">{{day.date | dateFilter }}</a></li>
+            <li><a href="#day-{{day.date}}" class="text-300 md:text-400">{{ day.date | dateFormat("EEEE, MM/dd") }}</a></li>
           {% endfor %}
         </ul>
       </div>
@@ -51,7 +51,7 @@
         {# Now that we know the beginning and and of the schedule, we #}
         {# can set up our grid #}
         <section id="day-{{day.date}}" class="tabbed__body | bg-white stack-500">
-          <h2 class="tabbed__headline | color-white bg-peach weight-black uppercase text-700 leading-flat">{{ day.date | dateFilter }}</h2>
+          <h2 class="tabbed__headline | color-white bg-peach weight-black uppercase text-700 leading-flat">{{ day.date | dateFormat("EEEE, MM/dd") }}</h2>
           {% include "partials/schedule-grid.html" %}
         </section>
 

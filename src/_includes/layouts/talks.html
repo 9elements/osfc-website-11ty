@@ -11,7 +11,7 @@
       {% for day in schedule.days %}
         <li><a href="#day-{{day.date}}" class="color-white weight-bold">
           <span class="jump-navigation__day-count">Day {{ helpers.trailingZeroes(loop.index, 2) }}</span>
-          <span class="jump-navigation__date">{{ day.date | dateFilter('numeric', 'long', '2-digit') }}</span>
+          <span class="jump-navigation__date">{{ day.date | dateFormat("EEEE, MM/dd") }}</span>
         </a></li>
       {% endfor %}
     </ul>
@@ -20,7 +20,7 @@
       {% for day in schedule.days %}
 
         <section id="day-{{day.date}}" class="jump-navigation-target | stack-400">
-          <h2 class="weight-black color-violet uppercase fluid-text-700-800 leading-flat">{{ day.date | dateFilter }}</h2>
+          <h2 class="weight-black color-violet uppercase fluid-text-700-800 leading-flat">{{ day.date | dateFormat("EEEE, MM/dd") }}</h2>
           <div class="stack-600">
             {% for room in schedule.rooms %}
               {% if day.rooms[room.name] %}
