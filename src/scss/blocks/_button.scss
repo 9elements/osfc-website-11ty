@@ -14,10 +14,20 @@
     background: get-color("violet");
     color: get-color("white");
   }
-}
-[aria-current="page"] {
-  background: get-color("violet");
-}
-[data-state="active"] {
-  color: get-color("peach");
+
+  &[aria-current="page"] {
+    background: get-color("violet");
+  }
+
+  &[data-state="active"] {
+    color: get-color("peach");
+  }
+
+  &--on-violet {
+    &:hover,
+    &:active {
+      background: get-color("white");
+      color: get-color("peach");
+    }
+  }
 }

@@ -3,6 +3,7 @@ name: "Oxide"
 image: "oxide.svg"
 link: "https://oxide.computer/"
 sponsor: "bronze"
+size: "m"
 ---
 
 **Oxide is building a vertically integrated, rack-level computer delivering the infrastructure efficiencies, software automation, and user experience of cloud computing.**

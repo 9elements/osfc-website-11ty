@@ -1,10 +1,6 @@
 {
   "items": [
     {
-      "text": "Home",
-      "url": "/"
-    },
-    {
       "text": "CFP",
       "url": "#"
     },
@@ -30,7 +26,7 @@
     },
     {
       "text": "Archive",
-      "url": "/archive/2020"
+      "url": "/archive/2021"
     }
   ]
 }

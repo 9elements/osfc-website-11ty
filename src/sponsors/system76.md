@@ -3,6 +3,7 @@ name: "System76"
 image: "system76.png"
 link: "https://system76.com/"
 sponsor: "bronze"
+size: "m"
 ---
 
 **System76 was born in Denver, CO with a passion for all things Linux and open source.**

@@ -2,13 +2,7 @@
 
 {% block content %}
   {# <div class="triangle" aria-hidden="true"></div> #}
-  <svg style="width: 0; height: 0; display: block; opacity: 0;">
-    <defs>
-      <clipPath id="oct-clip">
-        <polygon points="7 188 7 142 142 7 188 7 323 142 323 188 188 323 142 323"></polygon>
-      </clipPath>
-    </defs>
-  </svg>
+{% include "partials/rhomb.svg" %}
 
   <div class="stack-major">
     <section id="intro" class="intro">
@@ -105,15 +99,10 @@
       <div class="wrapper-l">
         <div class="stack-800">
           <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Sponsors</h2>
-          <div class="scroll-gallery">
+          <div class="rhomb-grid">
             {% set sponsorList = helpers.sortCollectionByArray(collections.sponsors, dataSorting.sponsors, 'name') %}
-            {% for item in sponsorList %}
-              <a href="{{ item.url }}">
-                <div class="scroll-gallery__image bg-white">
-                  <img loading="lazy" decoding="async" src="/images/{{item.data.tags}}/{{ item.data.image }}" alt="Company logo of {{item.data.name}}">
-                  <p>{{item.data.sponsor}} Sponsor</p>
-                </div>
-              </a>
+            {% for rhombItem in sponsorList %}
+              {% include "partials/rhomb-image-sponsor.html" %}
             {% endfor %}
           </div>
         </div>

@@ -3,6 +3,7 @@ name: "Huawai"
 image: "huawai.png"
 link: "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent"
 sponsor: "silver"
+size: "s"
 ---
 
 **Founded in 1987, Huawei is a leading global provider of information and communications technology (ICT) infrastructure and smart devices. We have more than 194,000 employees, and we operate in more than 170 countries and regions, serving more than three billion people around the world.**

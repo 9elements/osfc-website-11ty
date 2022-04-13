@@ -3,6 +3,7 @@ name: "Metropole Ruhr"
 image: "metropole-ruhr.svg"
 link: "https://metropole.ruhr/en"
 sponsor: "silver"
+size: "s"
 ---
 
 **The Ruhr Metropolis is home to a unique mixture of more than five million people in 53 cities - a diversity that exists nowhere else in Europe.**

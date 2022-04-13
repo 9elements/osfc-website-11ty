@@ -129,6 +129,15 @@ module.exports = {
         (entry) => !sortingArr.includes(entry.data[sortingValue])
       )
     );
+
+    for (let i = 0; i < result.length; i++) {
+      const prevSponsor = result[i - 1];
+      const nextSponsor = result[i + 1];
+
+      result[i].data["prevSponsor"] = prevSponsor;
+      result[i].data["nextSponsor"] = nextSponsor;
+    }
+
     return result;
   },
 

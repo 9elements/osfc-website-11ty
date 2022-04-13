@@ -2,25 +2,60 @@
 
 {% block content %}
 
+{% include "partials/rhomb.svg" %}
+
 <div class="stack-major"> 
     <section >
         <div class="wrapper-l">
-            <div class="stack-800">
-                <div class="wrapper-s stack-300">
-                    <a href="/"><span aria-hidden>&lt;</span> Back</a>
-                    <div class="plain-html shadow-box stack-300">
-                        <img loading="lazy" decoding="async" src="/images/sponsors/{{image}}" alt="">
-                        <p>{{sponsor}} Sponsor</p>
-                        {{content | safe }}
-                        <a style="display: inline-block" href="{{link}}">{{name}} ></a>
+            <div class="stack-major">
+                <div class="wrapper-s stack-800">
+                    <div class="plain-html shadow-box stack-900 sponsor">
+                        <div class="sponsor__image">
+                            <div class="rhomb-image">
+                                {% set projectSize = 330 %}
+                                {% set projectOffset = 0 %}
+                                {% if size == "m" %}
+                                    {% set projectSize = 230 %}
+                                    {% set projectOffset = 50 %}
+                                {% endif %}
+                                {% if size == "s" %}
+                                    {% set projectSize = 160 %}
+                                    {% set projectOffset = 85 %}
+                                {% endif %}
+                                <svg class="rhomb-image__svg" viewBox="0 0 330 330" aria-label="{{ name }}">
+                                    <path d="M0 189v-48L141 0h48l141 141v48L189 330h-48L0 189Z" fill="url(#{{sponsor}})"/>
+                                <g filter="url(#shadow)">
+                                    <path d="M23.1 185.7v-41.4L144.3 23.1h41.4l121.2 121.2v41.4L185.7 306.9h-41.4L23.1 185.7Z" fill="#fff"/>
+                                </g>
+                                <image clip-path="url(#oct-clip-sponsor)" height="{{ projectSize }}" width="{{ projectSize }}"
+                                    x="{{ projectOffset }}" y="{{ projectOffset }}"
+                                    xlink:href="/images/{{tags}}/{{ image }}"></image>  
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="stack-800">
+                            <p class="uppercase weight-bold color-{{sponsor}}">{{sponsor}} Sponsor</p>
+                            <img loading="lazy" decoding="async" src="/images/sponsors/{{image}}" alt="" style="max-width: 18.5rem; max-height: 15.625rem;">
+                            <div class="stack-200">
+                                {{content | safe }}
+                            </div>
+                            <a style="display: inline-block" class="weight-bold uppercase" href="{{link}}">{{link}}</a>
+                        </div>
+                    </div>
+
+                    <div class="color-peach uppercase weight-bold sponsor-buttons" style="display: flex; justify-content: {{"space-between" if prevSponsor else "flex-end"}};">
+                        {% if prevSponsor %}
+                        <a href="/sponsors/{{ prevSponsor.data.name | slugify }}/index.html"><span aria-hidden>&lt;</span> {{ prevSponsor.data.name }}</a>
+                        {% endif %}
+                        {% if nextSponsor %}
+                        <a href="/sponsors/{{ nextSponsor.data.name | slugify }}/index.html">{{ nextSponsor.data.name }} <span aria-hidden>&gt;</span> </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    {% include "partials/newsletter.html" %}
-
 
 </div>
 
-{%endblock %}
+{% endblock %}

@@ -3,6 +3,7 @@ name: "Secunet"
 image: "secunet.png"
 link: "https://www.secunet.com/en"
 sponsor: "gold"
+size: "m"
 ---
 
 **secunet – Protecting Digital Infrastructures Would you like to become part of our team in Germany's leading cyber security company? secunet offers a combination of products and consulting services, robust digital infrastructures and the highest level of security for data, applications and digital identities. We specialize in areas with unique security requirements, like the cloud, IIoT, machine learning and eHealth.**

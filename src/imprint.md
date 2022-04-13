@@ -1,6 +1,7 @@
 ---
 title: "Imprint"
 layout: "layouts/plain.html"
+transparentHeader: true
 ---
 
 ### Name und Kontakt des Verantwortlichen gemäß Artikel 4 Abs. 7 DSGVO

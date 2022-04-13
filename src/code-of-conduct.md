@@ -1,6 +1,7 @@
 ---
 title: "Code of Conduct"
 layout: "layouts/plain.html"
+transparentHeader: true
 ---
 
 ### CODE OF CONDUCT

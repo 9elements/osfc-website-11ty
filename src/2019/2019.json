@@ -1,5 +1,6 @@
 {
   "year": "2019",
+  "transparentHeader": true,
   "gallery": [
     {
       "img": "https://picsum.photos/800/600",

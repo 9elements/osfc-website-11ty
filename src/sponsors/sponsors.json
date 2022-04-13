@@ -1,6 +1,7 @@
 {
   "tags": "sponsors",
   "layout": "layouts/sponsor.html",
+  "title": "Sponsors",
   "permalink": "/sponsors/{{ name | slugify }}/index.html",
-  "title": "Sponsors"
+  "transparentHeader": true
 }
