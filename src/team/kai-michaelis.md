@@ -1,5 +1,5 @@
 ---
 name: "Kai Michaelis"
 position: "Organizer"
-image: "kai-michaelis.jpg"
+image: "kai-michaelis.jpeg"
 ---
