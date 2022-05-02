@@ -45,9 +45,9 @@ module.exports = (config) => {
   config.addShortcode("avatar", require("./src/shortcodes/avatar.js"));
 
   // Only minify HTML if we are in production because it slows builds _right_ down
-  // if (isProduction) {
-  //   config.addTransform("htmlmin", htmlMinTransform);
-  // }
+  if (isProduction) {
+    config.addTransform("htmlmin", htmlMinTransform);
+  }
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
@@ -58,7 +58,7 @@ module.exports = (config) => {
     htmlTemplateEngine: "njk",
     dir: {
       input: "src",
-      output: "dist",
-    },
+      output: "dist"
+    }
   };
 };

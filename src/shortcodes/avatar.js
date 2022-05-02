@@ -8,23 +8,22 @@ module.exports = (avatar) => {
   if (avatar.src) {
     source = avatar.src;
     if (source.includes("https://www.gravatar.com")) {
-      source += "?s=";
-      source += 400;
+      source += "?s=400";
     }
 
     if (avatar.name) {
-      alt = "alt = '" + avatar.name + "'";
+      alt = `alt="${avatar.name}"`;
     }
   } else {
-    hidden = "aria-hidden='true'";
+    hidden = `aria-hidden="true"`;
   }
   if (avatar.size) {
-    size = "width='" + avatar.size + "' height='" + avatar.size + "'";
+    size = `width="${avatar.size}" height="${avatar.size}"`;
   }
   if (avatar.classlist) {
     classes = " " + avatar.classlist;
   }
 
-  return `<img loading="lazy" decoding="async" class="avatar${classes}" src="${source}" ${alt} ${hidden} ${size}>
+  return `<img loading="lazy" decoding="async" class="avatar${classes}" src="${source}" ${alt} ${hidden} ${size} />
   `;
 };
