@@ -8,9 +8,6 @@
     <h1 class="uppercase fluid-text-800-900 leading-flat color-black weight-black">
       {{ talk.title }}
     </h1>
-    {% if year < years.currentYear %}
-      <a href="/archive/{{year}}" class="uppercase weight-bold color-peach"> Back to Archive</a>
-    {% endif %}
     <div class="cluster" style="--cluster-gap: 0.5rem;">
       {% for speaker in talk.speakers %}
         {% include "partials/speaker-pill.html" %}
@@ -49,6 +46,12 @@
         </ul>
       {% endif %}
     </div>
+    <div class="wrapper-s">
+    {% if year < years.currentYear %}
+      <a href="/archive/{{year}}" class="uppercase weight-bold color-peach">&#60; Back to Archive</a>
+    {% endif %}
+    </div>
+
 
   </div>
 
