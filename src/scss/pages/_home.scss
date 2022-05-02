@@ -6,6 +6,9 @@
   }
 
   .rhomb-image {
+    max-width: 18rem;
+    margin-inline: auto;
+
     &__svg {
       width: 18rem;
       margin-inline: auto;
@@ -14,6 +17,10 @@
         margin-inline: unset;
         margin-left: auto;
       }
+    }
+    @include media-query("lg") {
+      margin-inline: unset;
+      margin-left: auto;
     }
   }
 
@@ -74,6 +81,8 @@
   }
 
   .rhomb-image {
+    max-width: 28rem;
+    margin-left: auto;
     &__svg {
       width: 18rem;
       margin-inline: auto;
