@@ -5,9 +5,13 @@
 
 
 <div class="wrapper-l stack-200">
+
   <h1 class="fluid-text-800-900 leading-flat uppercase color-black weight-black">
     {{ talk.title }}
   </h1>
+  {% if year < years.currentYear %}
+    <a href="/archive/{{year}}" class="weight-bold color-peach uppercase"> < Back to Archive</a>
+  {% endif %}
   <div class="cluster" style="--cluster-gap: 0.5rem;">
     {% for speaker in talk.speakers %}
       {% include "partials/speaker-pill.html" %}
@@ -45,6 +49,7 @@
       </ul>
     {% endif %}
   </div>
+
 </div>
 
 

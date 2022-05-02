@@ -109,8 +109,8 @@
     position: absolute;
     right: -0.75rem;
     top: -25rem;
-    width: 20.02vw;
-    height: 40.2vw;
+    width: 20.02rem;
+    height: 40.2rem;
     background: url(/images/beams/deco-line-02.svg);
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -167,35 +167,35 @@
 
     @include media-query("xl") {
       width: 33.02rem;
-      top: -5rem;
+      top: -12rem;
     }
   }
 
-  &::after {
-    pointer-events: none;
-    position: absolute;
-    left: -25rem;
-    top: -7.75rem;
-    width: 38.02rem;
-    height: 70.2rem;
-    background: url(/images/beams/deco-line-04.svg);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    content: "";
+  // &::after {
+  //   pointer-events: none;
+  //   position: absolute;
+  //   left: -25rem;
+  //   top: -7.75rem;
+  //   width: 38.02rem;
+  //   height: 70.2rem;
+  //   background: url(/images/beams/deco-line-04.svg);
+  //   background-size: 100% auto;
+  //   background-repeat: no-repeat;
+  //   content: "";
 
-    @include media-query("md") {
-      left: -20rem;
-    }
+  //   @include media-query("md") {
+  //     left: -20rem;
+  //   }
 
-    @include media-query("lg") {
-      left: -2rem;
-      top: 2rem;
-    }
+  //   @include media-query("lg") {
+  //     left: -2rem;
+  //     top: 2rem;
+  //   }
 
-    @include media-query("xl") {
-      width: 42.02rem;
-    }
-  }
+  //   @include media-query("xl") {
+  //     width: 42.02rem;
+  //   }
+  // }
 }
 
 .sponsors {
@@ -218,11 +218,11 @@
     max-width: none;
 
     @include media-query("lg") {
-      top: -5vh;
+      top: 10vh;
     }
 
     &--1 {
-      top: -5vh;
+      top: 10vh;
       left: 0;
       display: none;
 

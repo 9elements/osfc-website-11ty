@@ -12,7 +12,7 @@
     {% set projectOffset = 85 %}
   {% endif %}
 
-  {% if rhombItem.url%}
+  {% if rhombItem.data.link %}
     <a href="{{ rhombItem.data.link }}" target="_blank">
   {% endif %}
     <svg class="rhomb-image__svg" viewBox="0 0 330 330" aria-label="{{ rhombItem.data.name }}">

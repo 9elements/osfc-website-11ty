@@ -1,31 +1,4 @@
 {
   "year": "2018",
-  "transparentHeader": true,
-  "gallery": [
-    {
-      "img": "https://picsum.photos/800/600",
-      "alt": "hier ist ein Hund",
-      "format": "landscape"
-    },
-    {
-      "img": "https://picsum.photos/801/600",
-      "alt": "hier ist ein Hund",
-      "format": "landscape"
-    },
-    {
-      "img": "https://picsum.photos/800/1200",
-      "alt": "hier ist ein Hund",
-      "format": "portrait"
-    },
-    {
-      "img": "https://picsum.photos/802/600",
-      "alt": "hier ist ein Hund",
-      "format": "landscape"
-    },
-    {
-      "img": "https://picsum.photos/800/1210",
-      "alt": "hier ist ein Hund",
-      "format": "portrait"
-    }
-  ]
+  "transparentHeader": true
 }
