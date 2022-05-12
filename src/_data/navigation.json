@@ -1,5 +1,13 @@
 {
   "items": [
+    { 
+      "text": "Call for Participation",
+      "url": "https://talks.osfc.io/osfc2022/cfp"
+    },
+    { 
+      "text": "Tickets",
+      "url": "https://pretix.eu/9eSec/osfc2022/"
+    },
     {
       "text": "Team",
       "url": "/team/"
