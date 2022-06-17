@@ -1,13 +1,18 @@
 {
   "items": [
-    { 
+    {
       "text": "Call for Participation",
       "url": "https://talks.osfc.io/osfc2022/cfp",
       "target": "_blank"
     },
-    { 
+    {
       "text": "Tickets",
       "url": "https://pretix.eu/9eSec/osfc2022/",
+      "target": "_blank"
+    },
+    {
+      "text": "Scholarship",
+      "url": "https://bit.ly/3OqHPjP",
       "target": "_blank"
     },
     {
