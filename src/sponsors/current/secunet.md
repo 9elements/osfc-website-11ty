@@ -2,7 +2,7 @@
 name: "Secunet"
 image: "secunet.png"
 link: "https://www.secunet.com/en"
-sponsor: "gold"
+sponsor: "silver"
 size: "m"
 ---
 
