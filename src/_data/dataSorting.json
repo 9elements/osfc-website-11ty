@@ -23,14 +23,6 @@
   ],
   "organizer": ["Meta", "9elements Cyber Security", "Google"],
   "sponsors": [
-    "openSUSE",
-    "Bochum Wirtschaftsentwicklung",
-    "Hardened Vault",
-    "Huawai",
-    "Metropole Ruhr",
-    "Oxide",
-    "Secunet",
-    "System76",
-    "Trusted Firmware"
+    "Secunet"
   ]
 }
