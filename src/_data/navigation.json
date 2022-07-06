@@ -1,6 +1,11 @@
 {
   "items": [
     {
+      "text": "Info",
+      "url": "/info/",
+      "target": "_blank"
+    },
+    {
       "text": "Call for Participation",
       "url": "https://talks.osfc.io/osfc2022/cfp",
       "target": "_blank"
