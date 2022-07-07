@@ -32,6 +32,10 @@
         <div class="stack-300 fluid-text-400-500">
           {{ talk.abstract | markdownFilter | safe }}
         </div>
+      {% elseif talk.description %}
+       <div class="stack-300 fluid-text-400-500">
+          {{ talk.description | markdownFilter | safe }}
+        </div>
       {% endif %}
       {% if talk.resources.length > 0 %}
         <h2>Resources:</h2>
