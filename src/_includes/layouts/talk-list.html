@@ -11,7 +11,7 @@
     <div class="stack-100">
       {% for talk in talks %}
         {% if talk.is_featured and talk.state == "confirmed" %}
-          <article class="talk-card {% if talk.abstract %}talk-card--linked{% endif %}" style="padding: 0.5rem 1rem;">
+          <article class="talk-card {% if talk.abstract or talk.description %}talk-card--linked{% endif %}" style="padding: 0.5rem 1rem;">
             <h2 class="weight-bold fluid-text-500-600">
               {{talk.title}}
             </h2>
@@ -29,7 +29,7 @@
               </div>
             {% endif %} #}
 
-            {% if talk.abstract %}
+            {% if talk.abstract or talk.description %}
               <a class="talk-card__link" href="/{{ year }}/talks/{{ talk.title | slugify }}">
                 <span class="sr-only">Talk details: {{talk.title}}</span>
               </a>
