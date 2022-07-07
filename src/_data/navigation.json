@@ -2,8 +2,7 @@
   "items": [
     {
       "text": "Info",
-      "url": "/info/",
-      "target": "_blank"
+      "url": "/info/"
     },
     {
       "text": "Call for Participation",
