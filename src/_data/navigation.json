@@ -2,8 +2,11 @@
   "items": [
     {
       "text": "Info",
-      "url": "/info/",
-      "target": "_blank"
+      "url": "/info/"
+    },
+    {
+      "text": "Talks",
+      "url": "/2022/talk-list/"
     },
     {
       "text": "Talks",

@@ -29,7 +29,11 @@
                 <a href="/{{year}}/talks/{{talk.title | slugify }}" class="color-violet" style="text-decoration: none;">{{ talk.title }}</a>
               </h2>
               <div class="stack-300">
+                {% if talk.abstract %}
                 {{ talk.abstract | markdownFilter | safe }}
+                {% elif talk.description %}
+                {{ talk.description | markdownFilter | safe }}
+                {% endif %}
               </div>
             </div>
           {% endif %}
