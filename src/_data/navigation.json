@@ -5,6 +5,10 @@
       "url": "/info/"
     },
     {
+      "text": "Talks",
+      "url": "/2022/talk-list/"
+    },
+    {
       "text": "Call for Participation",
       "url": "https://talks.osfc.io/osfc2022/cfp",
       "target": "_blank"
