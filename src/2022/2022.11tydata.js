@@ -7,16 +7,16 @@ const Cache = require("@11ty/eleventy-cache-assets");
 module.exports = async () => {
   try {
     // Grabs either the fresh remote data or cached data (will always be fresh live)
-    // const schedule = await Cache(
-    //   `https://talks.osfc.io/osfc2021/schedule/export/schedule.json`,
-    //   {
-    //     duration: "1d", // 1 day
-    //     type: "json",
-    //     headers: {
-    //       Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4",
-    //     },
-    //   }
-    // );
+    const schedule = await Cache(
+      `https://talks.osfc.io/osfc2022/schedule/export/schedule.json`,
+      {
+        duration: "1d", // 1 day
+        type: "json",
+        headers: {
+          Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4"
+        }
+      }
+    );
 
     const talks = await Cache(
       //`https://pretalx.com/api/events/osfc2021/talks/?limit=200`,
@@ -68,6 +68,7 @@ module.exports = async () => {
     // });
 
     return {
+      schedule: schedule.schedule.conference,
       talks: confirmedTalks,
       speakers: speakers.results
     };
