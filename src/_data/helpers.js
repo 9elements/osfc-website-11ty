@@ -116,18 +116,14 @@ module.exports = {
     const sortedCollection = [];
 
     sortingArr.forEach((element) => {
-      currentItem = collection.find(
-        (entry) => entry.data[sortingValue] == element
-      );
+      currentItem = collection.find((entry) => entry.data[sortingValue] == element);
       if (currentItem) {
         sortedCollection.push(currentItem);
       }
     });
 
     const result = sortedCollection.concat(
-      collection.filter(
-        (entry) => !sortingArr.includes(entry.data[sortingValue])
-      )
+      collection.filter((entry) => !sortingArr.includes(entry.data[sortingValue]))
     );
 
     for (let i = 0; i < result.length; i++) {
@@ -164,4 +160,26 @@ module.exports = {
     );
     return result;
   },
+
+  MatchingDayAndRoom(breaks, day, room) {
+    return breaks.filter((x) => {
+      let firstDate = new Date(day);
+      let secondDate = new Date(x.start);
+      let datesAreOnSameDay = false;
+      if (
+        firstDate.getFullYear() === secondDate.getFullYear() &&
+        firstDate.getMonth() === secondDate.getMonth() &&
+        firstDate.getDate() === secondDate.getDate()
+      ) {
+        datesAreOnSameDay = true;
+      }
+      return x.room.en == room && datesAreOnSameDay;
+    });
+  },
+
+  getFiveCount(start, end) {
+    let startDate = new Date(start);
+    let endDate = new Date(end);
+    return (endDate - startDate) / 60000 / 5;
+  }
 };

@@ -38,6 +38,19 @@
               {% endif %}
 
             {% endfor %}
+
+            {# Breaks may be before or after the talks #}
+            {# So we need du adjust starting and end time #}
+            {% if breaks %}
+              {% set currentBreaks = helpers.MatchingDayAndRoom(breaks, day.date, room.name) %}
+              {% if currentBreaks[0].start.slice(11,13) < firstHour %}
+                {% set firstHour = currentBreaks[0].start.slice(11,13) %}
+              {% endif %}
+              {% if currentBreaks[currentBreaks.length - 1].end.slice(11,13) > lastHour %}
+                {{ currentBreaks[currentBreaks.length - 1].end.slice(11,13) | log }}
+                {% set lastHour = currentBreaks[currentBreaks.length - 1].end.slice(11,13) %}
+              {% endif %}
+            {% endif %}
           {% endif %}
         {% endfor %}
 
@@ -52,6 +65,7 @@
         {# can set up our grid #}
         <section id="day-{{day.date}}" class="tabbed__body | bg-white stack-500">
           <h2 class="tabbed__headline | color-white bg-peach weight-black uppercase text-700 leading-flat">{{ day.date | dateFormat("EEEE, MM/dd") }}</h2>
+
           {% include "partials/schedule-grid.html" %}
         </section>
 

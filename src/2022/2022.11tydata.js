@@ -50,6 +50,19 @@ module.exports = async () => {
       }
     );
 
+    const breaks = await Cache(
+      `https://pretalx.com/api/events/osfc2022/schedules/latest/?format=json`,
+      {
+        duration: "1d", // 1 day
+        type: "json",
+        fetchOptions: {
+          headers: {
+            Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4"
+          }
+        }
+      }
+    );
+
     speakers.results.sort((a, b) => (a.name > b.name ? 1 : -1));
 
     // const videos = await Cache(`https://cfp.osfc.io/api/events/osfc2021/p/vimeo/`, {
@@ -70,7 +83,8 @@ module.exports = async () => {
     return {
       schedule: schedule.schedule.conference,
       talks: confirmedTalks,
-      speakers: speakers.results
+      speakers: speakers.results,
+      breaks: breaks.breaks
     };
   } catch (error) {
     console.log(error);

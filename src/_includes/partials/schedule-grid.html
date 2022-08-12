@@ -93,6 +93,26 @@
           {% endif %}
         </article>
       {% endfor %}
+      {% if breaks %}
+        {% set currentBreaks = helpers.MatchingDayAndRoom(breaks, day.date, room.name) %}
+
+        {% for break in currentBreaks %}
+          {% set breakHour = break.start.slice(11, 13) %}
+          {% set breakMinute = break.start.slice(14, 16) %}
+          {% set fiveCount = 3 %}
+          {% set fiveCount = helpers.getFiveCount(break.start, break.end) %}
+          <article class="" style="
+            background: #ccc;
+            font-weight: bold;
+            padding: 0.5rem;
+            grid-row-start: slice-{{ helpers.trailingZeroes(breakHour, 2) }}-{{ breakMinute }};
+            grid-row-end: span {{fiveCount}};
+            grid-column: {{ roomCount + 1 }};
+            ">
+            {{ breakHour }}:{{ breakMinute }} | {{ break.description.en }}
+          </article>
+        {% endfor %}
+      {% endif %}
     {% endif %}
   {% endfor %}
 </div>
