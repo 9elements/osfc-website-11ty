@@ -3,7 +3,7 @@
   grid-template-rows:
     [head] auto
     {% for i in range(0, hourCount + 1) %}
-      {% set currentHour = i + firstHour|int %}
+      {% set currentHour = i + firstHour | int %}
       {% if currentHour > 23 %}
         {% set currentHour = currentHour - 24 %}
       {% endif %}
@@ -26,12 +26,12 @@
 
   {# Set Hours & Divider #}
   {% for i in range(0, hourCount + 1) %}
-    {% set currentHour = i + firstHour|int %}
+    {% set currentHour = i + firstHour | int %}
     {% if currentHour > 23 %}
       {% set currentHour = currentHour - 24 %}
     {% endif %}
 
-    {# Hour #}
+    {# Hours #}
     <div class="schedule__hour | text-300 md:text-400" style="
         grid-row-start: slice-{{ helpers.trailingZeroes(currentHour, 2) }}-00;
         " aria-hidden="true">
@@ -51,7 +51,6 @@
 
     {# Set Room as Headline #}
     <div class="schedule__room | bg-white color-dark-gray weight-black uppercase md:text-500 leading-tight" style="
-
         grid-column: {{ roomCount + 1 }};">
       {{room.name}}
     </div>
@@ -96,21 +95,25 @@
       {% if breaks %}
         {% set currentBreaks = helpers.MatchingDayAndRoom(breaks, day.date, room.name) %}
 
+        {# Do this only if breaks are defined this year #}
         {% for break in currentBreaks %}
           {% set breakHour = break.start.slice(11, 13) %}
           {% set breakMinute = break.start.slice(14, 16) %}
-          {% set fiveCount = 3 %}
           {% set fiveCount = helpers.getFiveCount(break.start, break.end) %}
-          <article class="" style="
-            background: #ccc;
-            font-weight: bold;
-            padding: 0.5rem;
+          <article class="grid-event grid-event--break" style="
             grid-row-start: slice-{{ helpers.trailingZeroes(breakHour, 2) }}-{{ breakMinute }};
             grid-row-end: span {{fiveCount}};
             grid-column: {{ roomCount + 1 }};
             ">
-            {{ breakHour }}:{{ breakMinute }} | {{ break.description.en }}
-          </article>
+          <div class="grid-event__body | stack-100 | leading-tight">
+            <h3 class="weight-bold text-300 md:text-400">
+              {{ break.description.en }}
+            </h3>
+          </div>
+          <div class="grid-event__time | bg-violet leading-tight">
+            <span class="weight-bold text-300 md:text-400">{{ breakHour }}:{{ breakMinute }}</span>
+          </div>
+        </article>
         {% endfor %}
       {% endif %}
     {% endif %}

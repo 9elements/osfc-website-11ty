@@ -44,4 +44,14 @@
       box-shadow: inset 0 0 0 3px get-color("peach");
     }
   }
+
+  &--break {
+    background: get-color("silver");
+    color: get-color("dark-gray");
+
+    .grid-event__time {
+      background: darken(get-color("silver"), 10%);
+      color: darken(get-color("dark-gray"), 10%);
+    }
+  }
 }
