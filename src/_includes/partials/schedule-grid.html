@@ -85,7 +85,7 @@
             <span class="text-300">{{ (talk.duration.slice(0,2)|int * 12) + (talk.duration.slice(3, 5)|int) }}min</span>
           </div>
           {# Only add link, if there is an abstract #}
-          {% if talk.abstract %}
+          {% if talk.abstract or talk.description.length > 30 %}
             <a class="grid-event__link" href="/{{ year }}/talks/{{ talk.title | slugify }}">
               <span class="sr-only">Talk details: {{talk.title}}</span>
             </a>
