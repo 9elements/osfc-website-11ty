@@ -82,7 +82,7 @@
           </div>
           <div class="grid-event__time | bg-violet leading-tight">
             <span class="weight-bold text-300 md:text-400">{{talk.start}}</span>
-            <span class="text-300">{{ (talk.duration.slice(0,2)|int * 12) + (talk.duration.slice(3, 5)|int) }}min</span>
+            <span class="text-300">{{ (talk.duration.slice(0,2)|int * 60) + (talk.duration.slice(3, 5)|int) }}min</span>
           </div>
           {# Only add link, if there is an abstract #}
           {% if talk.abstract or talk.description.length > 30 %}
