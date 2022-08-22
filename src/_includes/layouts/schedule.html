@@ -42,11 +42,13 @@
             {# So we need du adjust starting and end time #}
             {% if breaks %}
               {% set currentBreaks = helpers.MatchingDayAndRoom(breaks, day.date, room.name) %}
-              {% if currentBreaks[0].start.slice(11,13) < firstHour %}
-                {% set firstHour = currentBreaks[0].start.slice(11,13) %}
-              {% endif %}
-              {% if currentBreaks[currentBreaks.length - 1].end.slice(11,13) > lastHour %}
-                {% set lastHour = currentBreaks[currentBreaks.length - 1].end.slice(11,13) %}
+              {% if currentBreaks.length > 0 %}
+                {% if currentBreaks[0].start.slice(11,13) < firstHour %}
+                  {% set firstHour = currentBreaks[0].start.slice(11,13) %}
+                {% endif %}
+                {% if currentBreaks[currentBreaks.length - 1].end.slice(11,13) > lastHour %}
+                  {% set lastHour = currentBreaks[currentBreaks.length - 1].end.slice(11,13) %}
+                {% endif %}
               {% endif %}
             {% endif %}
           {% endif %}
