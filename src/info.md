@@ -42,6 +42,20 @@ In the evening of the first day and at any time during the breaks there will be 
 On the third day, the main room is turned into a hackathon space. We are talking about a group table setup ready to start hacking on your projects or have fruitful conversations. If you are a newbie and are interested in getting your hands dirty, that is the chance to explore the wide range of open-source firmware projects and getting in touch with other developers. 
 During the hackathon there are short lightning talks showing current state of projects, nifty tricks and tools or presenting technical topics.
 
+&nbsp;
+
+
+### COVID-19
+The Swedish Government and the Publich Health Agency of Sweden have lifted the remaining restrictions and recommendations as of 1 April 2022. Summarized, this means that there is no participant limits, requirements for social distancing between groups, maximum groups sizes or mandatory mask-wearing.
+
+Even though this is a good sign that we can finally meet in person again, we'd like to be extra caution. We ask you to do a self-test every day before you enter the conference - however we will not supervise those tests nor check the status upon entry.
+
+The OSFC will provide face mask for those who like to wear a mask throughout the conference for free. Additionally, we will provide free hand santizer at the entry points and within the lobby. As part of the welcome package, everyone will get a free hand sanitizer package within the goodie bag - please use them!
+
+It should be common sense, but please stay at home if you feel sick or dizzy at the conference to keep everyone else safe. It is more important than ever that we take care of each other to protect the conference and it's attendees.
+
+In case you have any questions, feel free to drop us an email at [osfc at 9elements.com](mailto:osfc@9elements.com). Stay safe!
+
 ### Workshop
 
 On the third day, we will provide workshops for those who are interested. You will have to register for these workshops upfront as we only have limited space available. The workshops are included in the price of the conference. Currently we are still sourcing for mentors. If you are interested, feel free to ping us at [osfc at 9elements.com](mailto:osfc@9elements.com).  
