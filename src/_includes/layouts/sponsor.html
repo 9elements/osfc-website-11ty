@@ -4,7 +4,7 @@
 
 {% include "partials/rhomb.svg" %}
 
-<div class="stack-major"> 
+<div class="stack-major">
     <section >
         <div class="wrapper-l">
             <div class="stack-major">
@@ -29,7 +29,7 @@
                                 </g>
                                 <image clip-path="url(#oct-clip-sponsor)" height="{{ projectSize }}" width="{{ projectSize }}"
                                     x="{{ projectOffset }}" y="{{ projectOffset }}"
-                                    xlink:href="/images/{{tags}}/{{ image }}"></image>  
+                                    xlink:href="/images/{{tags}}/{{ image }}"></image>
                                 </svg>
                             </div>
                         </div>
@@ -39,7 +39,8 @@
                             <div class="stack-200">
                                 {{content | safe }}
                             </div>
-                            <a style="display: inline-block" class="weight-bold uppercase" href="{{link}}">{{link}}</a>
+                            {% set linkValue = linkText if linkText else link %}
+                            <a style="display: inline-block" class="weight-bold uppercase" href="{{link}}">{{linkValue}}</a>
                         </div>
                     </div>
 
