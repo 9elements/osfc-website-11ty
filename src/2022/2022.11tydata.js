@@ -26,8 +26,6 @@ module.exports = async () => {
       }
     );
 
-    //console.log(speakers2022.count);
-
     speakers2022.results.sort((a, b) => (a.name > b.name ? 1 : -1));
 
     const talks = await Cache(
