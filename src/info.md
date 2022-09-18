@@ -36,7 +36,7 @@ _Wednesday 21. Sep_
 &nbsp;
 
 
-During the first two days, there will be one track - the main track - with [talks](https://www.osfc.io/2022/talk-list), each followed by a Q&A session. 
+During the first two days, there will be one track - the main track - with [Talks](https://www.osfc.io/2022/talk-list), each followed by a Q&A session. 
 In the evening of the first day and at any time during the breaks there will be also room available to gather, network, chat and spin ideas.
 
 On the third day, the main room is turned into a hackathon space. We are talking about a group table setup ready to start hacking on your projects or have fruitful conversations. If you are a newbie and are interested in getting your hands dirty, that is the chance to explore the wide range of open-source firmware projects and getting in touch with other developers. 
