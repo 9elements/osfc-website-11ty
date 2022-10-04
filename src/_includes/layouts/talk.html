@@ -25,6 +25,7 @@
         {% if video.submission == talk.code %}
           <div class="video" style="--aspect-ratio:16/9;">
             <iframe src="https://player.vimeo.com/video/{{video.vimeo_id}}?h=7a191cc612&color=4f51a9" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
           </div>
         {% endif %}
       {% endfor %}
@@ -33,7 +34,7 @@
           {{ talk.abstract | markdownFilter | safe }}
         </div>
       {% elseif talk.description %}
-       <div class="stack-300 fluid-text-400-500">
+        <div class="stack-300 fluid-text-400-500">
           {{ talk.description | markdownFilter | safe }}
         </div>
       {% endif %}
@@ -51,11 +52,10 @@
       {% endif %}
     </div>
     <div class="wrapper-s">
-    {% if year < years.currentYear %}
-      <a href="/archive/{{year}}" class="uppercase weight-bold color-peach">&#60; Back to Archive</a>
-    {% endif %}
+      {% if year < years.currentYear %}
+        <a href="/archive/{{year}}" class="uppercase weight-bold color-peach">&#60; Back to Archive</a>
+      {% endif %}
     </div>
-
 
   </div>
 

@@ -60,26 +60,27 @@ module.exports = async () => {
       }
     );
 
-    // const videos = await Cache(`https://cfp.osfc.io/api/events/osfc2021/p/vimeo/`, {
-    //   duration: "1d", // 1 day
-    //   type: "json",
-    //   headers: {
-    //     Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4"
-    //   }
-    // });
+    const videos = await Cache(`https://cfp.osfc.io/api/events/osfc2022/p/vimeo/`, {
+      duration: "1d", // 1 day
+      type: "json",
+      headers: {
+        Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4"
+      }
+    });
 
-    // const newVideos = videos.results.map((video) => {
-    //   return {
-    //     ...video,
-    //     vimeo_id: video.vimeo_link.substring(video.vimeo_link.lastIndexOf("/") + 1)
-    //   };
-    // });
+    const newVideos = videos.results.map((video) => {
+      return {
+        ...video,
+        vimeo_id: video.vimeo_link.substring(video.vimeo_link.lastIndexOf("/") + 1)
+      };
+    });
 
     return {
       schedule: schedule.schedule.conference,
       talks: confirmedTalks,
       speakers: speakers2022.results,
-      breaks: breaks.breaks
+      breaks: breaks.breaks,
+      videos: newVideos
     };
   } catch (error) {
     console.log(error);
