@@ -2,14 +2,14 @@
 
 {% block content %}
   {# <div class="triangle" aria-hidden="true"></div> #}
-{% include "partials/rhomb.svg" %}
+  {% include "partials/rhomb.svg" %}
 
   <div class="stack-major">
     <section id="intro" class="intro">
       {% include "partials/intro-decoration.svg" %}
       <div class="wrapper-m">
         <h1 class="hero__logo intro__branding">
-          {% include "partials/logo-2022.svg" %}
+          {% include "partials/logo-2023.svg" %}
         </h1>
       </div>
     </section>
@@ -31,48 +31,52 @@
           {% set projectSize = 330 %}
           {% set projectOffset = 0 %}
           <a href="https://9esec.io/" target="_blank">
-          <svg class="rhomb-image__svg" viewBox="0 0 330 330" aria-label="">
-            <polygon class="rhomb-image__border" fill="#fff" stroke-width="14" stroke="#fff"
+            <svg class="rhomb-image__svg" viewBox="0 0 330 330" aria-label="">
+              <polygon class="rhomb-image__border" fill="#fff" stroke-width="14" stroke="#fff"
             points="7 188 7 142 142 7 188 7 323 142 323 188 188 323 142 323"></polygon>
-            <image clip-path="url(#oct-clip)" height="{{ projectSize }}" width="{{ projectSize }}"
+              <image clip-path="url(#oct-clip)" height="{{ projectSize }}" width="{{ projectSize }}"
             x="{{ projectOffset }}" y="{{ projectOffset }}"
             xlink:href="/images/organizer/9e_cc_logo.svg"></image>
-          </svg>
+            </svg>
           </a>
         </div>
       </div>
     </section>
 
-    <section id="venue" class="venue">
+    <section id="venue" class="venue" style="min-height: 20vw;">
       <img loading="lazy" decoding="async" alt="" class="venue__beam" src="/images/beams/beam-01.svg" aria-hidden="true">
       <div class="wrapper-l stack-600">
         <div class="stack-300 venue__text bg-light-gray">
           <h2 class="color-black weight-black fluid-text-800-major uppercase leading-flat">Venue</h2>
-          <p class="fluid-text-400-500 weight-bold">OSFC goes to Sweden!</p>
-          <p class="fluid-text-400-500">This year we meet in person again in Gothenburg:</p>
-          <address class="fluid-text-400-500" style="font-style: normal">
+          <p class="fluid-text-400-500 weight-bold">OSFC goes to the USA!</p>
+          <p class="fluid-text-400-500">This year we meet in person again in Kirkland</p>
+          <p class="fluid-text-400-500">Stay tuned for more information coming soon!</p>
+          {# <address class="fluid-text-400-500" style="font-style: normal">
             Quality Hotel The Weaver <br>
             Göteborgsvägen 91 <br>
             431 37, Mölndal <br>
             Sweden
           </address>
-          <p class="color-peach weight-black fluid-text-400-500 uppercase leading-flat"> <a href="https://pretix.eu/9eSec/osfc2022/" target="_blank">Get your tickets here!</a></p>
-          <p class="fluid-text-400-500">We will provide booking codes with a discount for hotel rooms along with each ticket.</p>
+          <p class="color-peach weight-black fluid-text-400-500 uppercase leading-flat">
+            <a href="https://pretix.eu/9eSec/osfc2022/" target="_blank">Get your tickets here!</a>
+          </p>
+          <p class="fluid-text-400-500">We will provide booking codes with a discount for hotel rooms along with each ticket.</p> #}
         </div>
-        
-        <div class="rhomb-image">
+
+        <!-- Little Map Graphic with Oscar waving a flag -->
+        {# <div class="rhomb-image">
           {% set projectSize = 330 %}
           {% set projectOffset = 0 %}
           <a href="https://goo.gl/maps/CvTcHGhd4pNqELMb8" target="_blank">
-          <svg class="rhomb-image__svg" viewBox="0 0 330 330" aria-label="">
-            <polygon class="rhomb-image__border" fill="#fff" stroke-width="14" stroke="#fff"
+            <svg class="rhomb-image__svg" viewBox="0 0 330 330" aria-label="">
+              <polygon class="rhomb-image__border" fill="#fff" stroke-width="14" stroke="#fff"
             points="7 188 7 142 142 7 188 7 323 142 323 188 188 323 142 323"></polygon>
-            <image clip-path="url(#oct-clip)" height="{{ projectSize }}" width="{{ projectSize }}"
+              <image clip-path="url(#oct-clip)" height="{{ projectSize }}" width="{{ projectSize }}"
             x="{{ projectOffset }}" y="{{ projectOffset }}"
             xlink:href="/images/oscar_map.png"></image>
-          </svg>
+            </svg>
           </a>
-        </div>
+        </div> #}
       </div>
     </section>
 

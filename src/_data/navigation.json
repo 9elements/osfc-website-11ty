@@ -5,10 +5,6 @@
       "url": "/info/"
     },
     {
-      "text": "Schedule",
-      "url": "/2022/schedule/"
-    },
-    {
       "text": "Team",
       "url": "/team/"
     },
@@ -18,7 +14,7 @@
     },
     {
       "text": "Archive",
-      "url": "/archive/2021"
+      "url": "/archive/2022"
     }
   ]
 }
