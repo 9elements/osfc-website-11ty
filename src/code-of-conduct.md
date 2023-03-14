@@ -26,4 +26,4 @@ If you are confronted with inappropriate behavior that constitutes a violation o
 
 All attendees, visitors, speakers, sponsors, exhibitors and those involved in the organisation - commit themselves to the Code of Conduct formulated here by participating in the OSFC and thereby declare that they will comply with it. Violations of this Code of Conduct lead to consequences. Thank you very much for your understanding
 
-Contact: Jens Drenhaus & Justine Spalik at [osfc@9elements.com](mailto:osfc@9elements.com)
+Contact: [osfc@9elements.com](mailto:osfc@9elements.com)
