@@ -35,7 +35,8 @@
 
 .venue {
   position: relative;
-  min-height: 50vw;
+  // change back to 50vw as soon as graphic with new location is available
+  min-height: 20vw;
 
   &__beam {
     position: absolute;
