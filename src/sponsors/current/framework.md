@@ -1,7 +1,7 @@
 ---
 name: "Framework"
 image: "framework.svg"
-link: "https://frame.work/de/de"
+link: "https://frame.work/"
 sponsor: "bronze"
 size: "m"
 ---
