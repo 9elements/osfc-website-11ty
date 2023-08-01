@@ -15,7 +15,8 @@ transparentHeader: true
 We are excited to announce that our friends and long-term supporters, Oxide, 
 have generously invited all attendees of the Open-Source Firmware Conference 
 (OSFC) 2023 to their offices for an exclusive 'Day One - After-Conference Party'. 
-This event will take place in [Sunnyvale](https://goo.gl/maps/qyNkv7UffMGy5DKf9) 
+This event will originate in [Sunnyvale](https://goo.gl/maps/qyNkv7UffMGy5DKf9)
+and take place in [Emeryville](https://goo.gl/maps/13akU4kV2jNS1cCV9)
 on October 10th.
 
 &nbsp;
