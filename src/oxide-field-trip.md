@@ -27,7 +27,7 @@ on October 10th.
 please be on time as we aim to keep the schedule.
 - 5:30 PM - 6:00 PM: Estimated arrival at [Oxide offices](https://goo.gl/maps/13akU4kV2jNS1cCV9).
 Expect an hour-long drive filled with conversation and anticipation. Do we have
-any volunteer's for a spontaneus talk during the bus transfer? [info@osfc.io](mailto:info@osfc.io)
+any volunteers for a spontaneous talk during the bus transfer [info@osfc.io](mailto:info@osfc.io)
 - 6:00 PM onwards: Party begins! Explore Oxide's new hardware, mingle, and enjoy 
 the evening with food and drinks.
 - 9.00 PM - 9.30 PM: The bus will take you back to the venue. We will have an early
