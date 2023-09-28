@@ -71,3 +71,13 @@ this during the checkout of your OSFC 2023 ticket under "Special Diet".
 ### Goodies
 
 With your ticket, you will get a bag and some little OSFC gifts.
+
+### Hardware Table
+
+We will be hosting our hardware table again this year. If you have hardware that
+you would like to give away for free to allow others to hack on it, please feel
+free to bring it and leave it on the table. The table will be located in the
+hackathon room.
+
+As always, please only take from the table what you truly want or need, ensuring
+that others also have the opportunity to acquire some items.
