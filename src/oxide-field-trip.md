@@ -49,7 +49,7 @@ please make sure to add this information when purchasing your conference ticket.
 The field trip is included at no additional cost with the purchase of your 
 OSFC conference ticket, however we need to know in advance how many of our attendees 
 will be joining us for the party. This will help us in making the necessary 
-arrangements and ensuring a smooth and enjoyable experience for everyone.
+arrangements and ensuring a smooth and enjoyable experience for everyone. We have a limit of 100 attendees for the field trip - first come, first served.
 
 Please book a ticket with no additional costs for the Oxide Field Trip when purchasing 
 your OSFC conference ticket. If you have already purchased your ticket - drop us
