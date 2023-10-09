@@ -13,39 +13,6 @@ _MP Building 6_
 _1195 Borregas Ave._
 _Sunnyvale CA 94089_
 
-
-### Timetable (preliminary)
-
-_Tuesday October 10th_
-
-- 8:00AM Registration
-- 9:00AM Opening & Talks Part I
-- 1:00PM Lunch
-- 2:00PM Talks Part II
-- 4:30PM End of Day I / Pickup Oxide Field Trip
-- 6:00PM Arrival Office Oxide in [Emeryville](https://goo.gl/maps/13akU4kV2jNS1cCV9)
-- 9:30PM Pickup Return Trip to [Sunnyvale](https://goo.gl/maps/qyNkv7UffMGy5DKf9)
-
-_Wednesday October 11th_
-
-- 8:30AM Venue opens
-- 9:00AM Talks Part I
-- 1:00PM Lunch
-- 2:00PM Talks Part II
-- 6:00PM End of Day 2
-
-_Thursday October 12th_
-
-- 8:30AM Venue opens
-- 10:00AM Lightning Talks Part I
-- 1:00PM Lunch
-- 2:00PM Lightning Talks Part II
-- 5:00PM End of Day 3
-
-Throughout the whole day 3 there will be place to hack around firmware and
-collaborate with each other. Additionally we will be scheduling workshops for
-day 3 soon.
-
 &nbsp;
 
 ### Workshops
