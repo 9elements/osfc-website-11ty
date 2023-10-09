@@ -13,31 +13,47 @@ _MP Building 6_
 _1195 Borregas Ave._
 _Sunnyvale CA 94089_
 
+Find the schedule [here](https://www.osfc.io/2023/schedule/)
+
+Information on the field trip to Oxide can be found [here](./oxide-field-trip.md)
+
+There will be a small breakfast and lunch every day. Beverages and snacks are available throughout the day. 
+
+On registration at the first day, you'll get a badge, which is mandatory to access the building during the conference days. Also, please bring your ID or passport
+
+Also feel free to you the osfc channel at the [Open Source Firmware Slack](https://osfw.slack.com/)
+Get an invitation [here](https://slack.osfw.dev/)
+
 &nbsp;
 
 ### Workshops
 
-On the third day, we will provide workshops for those who are interested.You will
-have to register for these workshops upfront as we only have limited space
-available. The workshops are included in the price of the conference. Currently we
-are still sourcing for mentors. If you are interested, feel free to ping us at
-[info at osfc.io](mailto:info@osfc.io).
+This year, OSFC 2023 will provide workshops again. Feel free to join those workshops for free. The only thing what is needed is that you reserve a place upfront. We only have limited availability for the workshop - so be fast here.
+
+If you already purchased a ticket, you can reserve a workshop ticket via the order link you received from the ticket system. We do have the following workshops available this year:
+
+- Embarking on the Zephyr journey: A beginner's guide to the open-source RTOS
+
+- Getting started with System Transparency
+
+- Develop for TKey
+
+All workshops will take place on Thursday, 12th October.
+
 
 &nbsp;
 
-### The Venue
+### Open Mic Session
+We've got a super cool opportunity for all you spontaneous thinkers out there. 🚀
 
-The OSFC will be hosted at Google's offices in Sunnyvale. More information to follow.
+On Thursday, the third day of the conference, we've got some open slots just waiting to be filled with your brilliant ideas. Yes, you heard that right - it's time for the Open-Mic session, and we want YOU to grab the mic and share your thoughts!
 
-### Catering
+[Open Mic Submission](https://pretalx.com/osfc23-open-mic/cfp)
 
-The catering will be provided by our host Google. We will follow up with more
-information. However, if you have any special diet requirements - please mention
-this during the checkout of your OSFC 2023 ticket under "Special Diet".
+### OSF Project Working Groups
 
-### Goodies
-
-With your ticket, you will get a bag and some little OSFC gifts.
+Use the hackathon room to team up with the community and work on all the cool open-source firmware projects.
+You can use Slack as mentioned above to coordinate.
 
 ### Hardware Table
 
@@ -48,3 +64,7 @@ hackathon room.
 
 As always, please only take from the table what you truly want or need, ensuring
 that others also have the opportunity to acquire some items.
+
+### Awareness
+As an attendee of the OSFC we all commit to our [Code of Conduct](./code-of-conduct.md). 
+If you feel uncomfortable at any time, contact us at info@osc.io or contact the team at the event.
