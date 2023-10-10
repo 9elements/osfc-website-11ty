@@ -29,7 +29,7 @@ On registration at the first day, you'll get a badge, which is mandatory to acce
 
 &nbsp;
 
-Also feel free to you the osfc channel at the [Open Source Firmware Slack](https://osfw.slack.com/)
+Also feel free to join the osfc channel at the [Open Source Firmware Slack](https://osfw.slack.com/).
 Get an invitation [here](https://slack.osfw.dev/)
 
 &nbsp;
