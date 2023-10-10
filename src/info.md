@@ -15,11 +15,19 @@ _Sunnyvale CA 94089_
 
 Find the schedule [here](https://www.osfc.io/2023/schedule/)
 
+&nbsp;
+
 Information on the field trip to Oxide can be found [here](./oxide-field-trip.md)
+
+&nbsp;
 
 There will be a small breakfast and lunch every day. Beverages and snacks are available throughout the day. 
 
+&nbsp;
+
 On registration at the first day, you'll get a badge, which is mandatory to access the building during the conference days. Also, please bring your ID or passport
+
+&nbsp;
 
 Also feel free to you the osfc channel at the [Open Source Firmware Slack](https://osfw.slack.com/)
 Get an invitation [here](https://slack.osfw.dev/)
