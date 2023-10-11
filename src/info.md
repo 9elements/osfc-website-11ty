@@ -58,6 +58,8 @@ On Thursday, the third day of the conference, we've got some open slots just wai
 
 [Open Mic Submission](https://pretalx.com/osfc23-open-mic/cfp)
 
+&nbsp;
+
 ### OSF Project Working Groups
 
 Use the hackathon room to team up with the community and work on all the cool open-source firmware projects.
