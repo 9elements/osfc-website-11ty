@@ -65,6 +65,8 @@ On Thursday, the third day of the conference, we've got some open slots just wai
 Use the hackathon room to team up with the community and work on all the cool open-source firmware projects.
 You can use Slack as mentioned above to coordinate.
 
+&nbsp;
+
 ### Hardware Table
 
 We will be hosting our hardware table again this year. If you have hardware that
