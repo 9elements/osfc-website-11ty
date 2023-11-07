@@ -1,21 +1,8 @@
 {
   "items": [
     {
-      "text": "Info",
-      "url": "/info/"
-    },
-    {
-      "text": "Oxide Field Trip",
-      "url": "/oxide-field-trip/"
-    },
-    {
-      "text": "Tickets",
-      "url": "https://tickets.osfc.io/",
-      "target": "_blank"
-    },
-    {
-      "text": "Schedule",
-      "url": "/2023/schedule/"
+      "text": "2023 Videos",
+      "url": "/archive/2023"
     },
     {
       "text": "Team",
@@ -27,7 +14,7 @@
     },
     {
       "text": "Archive",
-      "url": "/archive/2022"
+      "url": "/archive/2023"
     }
   ]
 }
