@@ -2,7 +2,6 @@
 name: "Bochum Wirtschaftsentwicklung"
 image: "bochum-we.png"
 link: "https://www.bochum-wirtschaft.de/"
-sponsor: "gold"
 size: "m"
 ---
 

@@ -112,7 +112,7 @@ module.exports = {
    * @param {String} sortingValue Defines the Value used for sorting
    * @returns {Array} result collection or empty
    */
-  sortCollectionByArray(collection, sortingArr, sortingValue) {
+  sortCollectionByArray(collection = [], sortingArr, sortingValue) {
     const sortedCollection = [];
 
     sortingArr.forEach((element) => {
