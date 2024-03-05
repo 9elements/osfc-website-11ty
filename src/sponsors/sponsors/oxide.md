@@ -1,8 +1,8 @@
 ---
 name: "Oxide"
-image: "oxide.svg"
+image: "oxide.png"
 link: "https://oxide.computer/"
-sponsor: "bronze"
+sponsor: "gold"
 size: "m"
 ---
 
