@@ -1,6 +1,11 @@
 {
   "items": [
     {
+      "text": "Call for Participation",
+      "url": "https://talks.osfc.io/osfc-2024/",
+      "target": "_blank"
+    },
+    {
       "text": "2023 Videos",
       "url": "/archive/2023"
     },
