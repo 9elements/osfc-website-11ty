@@ -1,6 +1,11 @@
 {
   "items": [
     {
+      "text": "Tickets",
+      "url": "https://tickets.osfc.io",
+      "target": "_blank"
+    },
+    {
       "text": "Call for Participation",
       "url": "https://talks.osfc.io/osfc-2024/",
       "target": "_blank"
