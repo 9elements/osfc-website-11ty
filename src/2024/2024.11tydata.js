@@ -8,36 +8,37 @@ module.exports = async () => {
   try {
     // Grabs either the fresh remote data or cached data (will always be fresh live)
     const schedule = await Cache(
-      `https://talks.osfc.io/open-source-firmware-conference-2023/schedule/export/schedule.json`,
+      `https://talks.osfc.io/open-source-firmware-conference-2024/schedule/export/schedule.json`,
       {
         duration: "1d", // 1 day
         type: "json",
         headers: {
-          Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4"
+          Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4"
         }
       }
     );
 
-    const speakers2023 = await Cache(
-      `https://pretalx.com/api/events/open-source-firmware-conference-2023/speakers/?format=json&limit=200`,
+    const speakers2024 = await Cache(
+      `https://pretalx.com/api/events/open-source-firmware-conference-2024/speakers/?format=json&limit=200`,
       {
         duration: "1m", // 1 day
-        type: "json"
+        type: "json",
+        headers: {
+          Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4"
+        }
+
       }
     );
 
-    speakers2023.results.sort((a, b) => (a.name > b.name ? 1 : -1));
+    speakers2024.results.sort((a, b) => (a.name > b.name ? 1 : -1));
 
     const talks = await Cache(
-      //`https://pretalx.com/api/events/osfc2021/talks/?limit=200`,
-      `https://pretalx.com/api/events/open-source-firmware-conference-2023/submissions/?format=json&limit=200`,
+      `https://pretalx.com/api/events/open-source-firmware-conference-2024/submissions/?format=json&limit=200`,
       {
         duration: "1s", // 1 day
         type: "json",
-        fetchOptions: {
-          headers: {
-            Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4"
-          }
+        headers: {
+          Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4"
         }
       }
     );
@@ -48,23 +49,21 @@ module.exports = async () => {
     );
 
     const breaks = await Cache(
-      `https://pretalx.com/api/events/open-source-firmware-conference-2023/schedules/latest/?format=json`,
+      `https://pretalx.com/api/events/open-source-firmware-conference-2024/schedules/latest/?format=json`,
       {
         duration: "1d", // 1 day
         type: "json",
-        fetchOptions: {
-          headers: {
-            Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4"
-          }
+        headers: {
+          Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4"
         }
       }
     );
 
-    const videos = await Cache(`https://cfp.osfc.io/api/events/open-source-firmware-conference-2023/p/vimeo/`, {
+    const videos = await Cache(`https://cfp.osfc.io/api/events/open-source-firmware-conference-2024/p/vimeo/`, {
       duration: "1d", // 1 day
       type: "json",
       headers: {
-        Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4"
+        Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4"
       }
     });
 
@@ -78,7 +77,7 @@ module.exports = async () => {
     return {
       schedule: schedule.schedule.conference,
       talks: confirmedTalks,
-      speakers: speakers2023.results,
+      speakers: speakers2024.results,
       breaks: breaks.breaks,
       videos: newVideos
     };
