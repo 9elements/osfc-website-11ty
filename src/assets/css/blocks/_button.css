@@ -1,0 +1,33 @@
+.button {
+  display: inline-block;
+  background: var(--color-peach);
+  text-decoration: none;
+  color: var(--color-white);
+  padding: var(--space-400);
+  font-size: var(--space-400);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-flat);
+  text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    background: var(--color-violet);
+    color: var(--color-white);
+  }
+
+  &[aria-current="page"] {
+    background: var(--color-violet);
+  }
+
+  &[data-state="active"] {
+    color: var(--color-peach);
+  }
+}
+
+.button--on-violet {
+  &:hover,
+  &:active {
+    background: var(--color-white);
+    color: var(--color-peach);
+  }
+}

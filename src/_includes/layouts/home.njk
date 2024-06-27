@@ -1,0 +1,135 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  {# <div class="triangle" aria-hidden="true"></div> #}
+  {% include "partials/rhomb.svg" %}
+
+  <div class="stack-major">
+    <section id="intro" class="intro">
+      {% include "partials/intro-decoration.svg" %}
+      <div class="wrapper-m">
+        <h1 class="hero__logo intro__branding">
+          {% include "partials/logo-2024.svg" %}
+        </h1>
+      </div>
+    </section>
+
+    <section id="mission" class="mission">
+      <div class="wrapper-l stack-600">
+        <div class="stack-300 shadow-box bg-light-gray mission__text">
+          <h2 class="uppercase text-peach weight-black text-800-major leading-flat">Mission</h2>
+          <p class="leading-tight text-peach weight-bold text-600-700">Change the way of firmware development, collaborate with
+          others and share knowledge.</p>
+          <p class="text-500-600">Closed source firmware development has been the de-facto standard for the
+          electronics industry since its inception. That didn't change even when open-source took off in other areas. Now,
+          with changing use cases and strict security requirements, it's more important than ever to take open-source
+          firmware development to the next level. That's why we're inviting you to the Open Source Firmware Conference.
+          <p class="uppercase text-peach weight-black text-400-500 leading-flat">
+              <a class="button" href="https://talks.osfc.io/osfc-2024/" target="_blank">Contribute now!</a>
+            </p>
+            <p class="uppercase text-peach weight-black text-400-500 leading-flat">
+              <a class="button" href="/archive/2023">Check out the #OSFC2023 Videos</a>
+            </p>
+          </p>
+        </div>
+        <div class="rhomb-image">
+          {% set projectSize = 330 %}
+          {% set projectOffset = 0 %}
+          <a href="https://9esec.io/" target="_blank">
+            <svg class="rhomb-image__svg" viewBox="0 0 330 330" aria-label="">
+              <polygon class="rhomb-image__border" fill="#fff" stroke-width="14" stroke="#fff"
+            points="7 188 7 142 142 7 188 7 323 142 323 188 188 323 142 323"></polygon>
+              <image clip-path="url(#oct-clip)" height="{{ projectSize }}" width="{{ projectSize }}"
+            x="{{ projectOffset }}" y="{{ projectOffset }}"
+            xlink:href="/assets/images/organizer/9e_cc_logo.svg"></image>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="venue" class="venue">
+      <img loading="lazy" decoding="async" alt="" class="venue__beam" src="/assets/images/beams/beam-01.svg" aria-hidden="true">
+      <div class="wrapper-l stack-600">
+        <div class="stack-300 venue__text bg-light-gray">
+          <h2 class="text-black uppercase weight-black text-800-major leading-flat">Venue</h2>
+          <p class="text-400-500 weight-bold">This year's OSFC will take place in the Rotunde in Bochum, Germany.
+          We will publish more details throughout the next week including hotel recommendations. Stay tuned!</p>
+          <address class="text-400-500" style="font-style: normal">
+		  Rotunde <br>
+		  Am Kulturgleis 3-5<br>
+		  44787 Bochum<br>
+		  Germany<br>
+          </address>
+          <p class="uppercase text-peach weight-black text-400-500 leading-flat">
+            <a href="http://maps.google.com/?q=Rotunde Am Kulturgleis 3-5 44787 Bochum Germany" target="_blank">Google Maps</a>
+          </p>
+        </div>
+
+        <!-- Little Map Graphic with Oscar waving a flag -->
+        <!-- As soon as there is a new graphic, restore the min-height from 20vw to 50vw of .venue in home.css -->
+        <!--
+        <div class="rhomb-image">
+          {% set projectSize = 330 %}
+          {% set projectOffset = 0 %}
+          <svg class="rhomb-image__svg" viewBox="0 0 330 330" aria-label="">
+            <polygon class="rhomb-image__border" fill="#fff" stroke-width="14" stroke="#fff"
+            points="7 188 7 142 142 7 188 7 323 142 323 188 188 323 142 323"></polygon>
+            <image clip-path="url(#oct-clip)" height="{{ projectSize }}" width="{{ projectSize }}"
+            x="{{ projectOffset }}" y="{{ projectOffset }}"
+            xlink:href="/assets/images/oscar_map_usa.png"></image>
+          </svg>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="wrapper-l">
+        <div class="stack-300">
+          <h2 class="text-black uppercase weight-black text-800-major leading-flat">Projects</h2>
+          <div class="rhomb-grid">
+            {% set projectList = helpers.sortCollectionByArray(collections.projects, dataSorting.projects, 'name') %}
+            {% for rhombItem in projectList %}
+              {% include "partials/rhomb-image.njk" %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="organizer" class="organizer">
+      <div class="wrapper-l">
+        <div class="stack-800">
+          <h2 class="text-black uppercase weight-black text-800-major leading-flat">Organizers</h2>
+          <div class="rhomb-grid">
+            {% set organizerList = helpers.sortCollectionByArray(collections.organizer, dataSorting.organizer, 'name') %}
+            {% for rhombItem in organizerList %}
+              {% include "partials/rhomb-image.njk" %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sponsors" class="sponsors">
+      <img loading="lazy" decoding="async" alt="" class="sponsors__beam" src="/assets/images/beams/beam-05.svg" aria-hidden="true">
+      <img loading="lazy" decoding="async" alt="" class="sponsors__beam sponsors__beam--1" src="/assets/images/beams/small_grey_stripe_left.svg" aria-hidden="true">
+      <img loading="lazy" decoding="async" alt="" class="sponsors__beam sponsors__beam--2" src="/assets/images/beams/big_grey_stripe_left.svg" aria-hidden="true">
+      <div class="wrapper-l">
+        <div class="stack-800">
+          <h2 class="text-black uppercase weight-black text-800-major leading-flat">Sponsors 2024</h2>
+          <div class="rhomb-grid">
+            {% set sponsorList = helpers.sortCollectionByArray(collections.sponsors, dataSorting.sponsors, 'name') %}
+            {% for rhombItem in sponsorList %}
+              {% include "partials/rhomb-image-sponsor.njk" %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include "partials/newsletter.njk" %}
+  </div>
+
+{%endblock %}

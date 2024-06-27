@@ -1,0 +1,20 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+
+  <section>
+    <div class="wrapper-l | stack-700">
+      <h1 class="text-800-major weight-black uppercase leading-tight text-peach">
+      Speakers {{ year }}
+      </h1>
+
+      <div class="auto-grid" style="--auto-grid-min-size: 25rem; --auto-grid-gap: 2rem;" >
+        {% for speaker in speakers %}
+          {% include "partials/speaker-card.njk" %}
+        {% endfor %}
+      </div>
+
+    </div>
+
+  </section>
+
+{%endblock %}

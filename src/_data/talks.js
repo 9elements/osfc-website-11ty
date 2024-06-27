@@ -1,12 +1,11 @@
-const util = require("util");
-const Cache = require("@11ty/eleventy-cache-assets");
+import Cache from "@11ty/eleventy-cache-assets";
 
 const EVENT = "osfc-2024";
 
 /**
  * Grabs the event data from pretalx
  */
-module.exports = async () => {
+export default async () => {
   //console.log("talks.js");
   try {
     // Grabs either the fresh remote data or cached data (will always be fresh live)

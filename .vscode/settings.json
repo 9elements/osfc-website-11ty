@@ -1,5 +1,11 @@
 {
   "files.associations": {
-    "*.html": "nunjucks"
+    "*.css": "postcss"
+  },
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  },
+  "tailwindCSS.includeLanguages": {
+    "nunjucks": "html"
   }
 }
