@@ -62,7 +62,6 @@ body {
 
 a:not([class]) {
   color: currentColor;
-  /* text-decoration-color: get-color('quinary'); */
 }
 
 :focus-visible {

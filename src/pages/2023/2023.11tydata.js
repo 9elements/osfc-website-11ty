@@ -1,6 +1,6 @@
 import util from "util";
 import Cache from "@11ty/eleventy-cache-assets";
-
+import fs from "fs";
 /**
  * Grabs the event data from pretalx
  */
@@ -25,6 +25,8 @@ export default async () => {
         type: "json",
       }
     );
+
+    // write the speakers to a file
 
     speakers2023.results.sort((a, b) => (a.name > b.name ? 1 : -1));
 
@@ -83,7 +85,10 @@ export default async () => {
     return {
       schedule: schedule.schedule.conference,
       talks: confirmedTalks,
-      speakers: speakers2023.results,
+      speakers: speakers2023.results.map((speaker) => ({
+        ...speaker,
+        name: speaker.name || speaker.code,
+      })),
       breaks: breaks.breaks,
       videos: newVideos,
     };

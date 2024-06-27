@@ -1,5 +1,5 @@
 [class*="wrapper-"] {
-  --wrapper-padding-inline: #{get-size("300")};
+  --wrapper-padding-inline: var(--space-300);
 
   max-width: var(--wrapper-width);
   margin-left: auto;
