@@ -6,7 +6,7 @@
   <section id="intro" class="intro">
     <div class="wrapper-l stack-300">
 
-      <h1 class="text-800-major text-black uppercase weight-black leading-flat">
+      <h1 class="text-black uppercase text-800-major weight-black leading-flat">
         {{ speaker.name }}
       </h1>
       <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
@@ -22,13 +22,13 @@
         {% endif %}
       </div>
 
-      <div class="wrapper-s stack-500">
+      <div class="stack-500">
         {% for submission in speaker.submissions %}
           {% for talk in talks %}
             {% if submission == talk.code %}
               {% if not talk.description or talk.description.length > 30 %}
                 <div class="stack-400 shadow-box">
-                  <h2 class="text-600-700 uppercase weight-bold leading-tight">
+                  <h2 class="leading-tight uppercase text-600-700 weight-bold">
                     <a href="/{{year}}/talks/{{talk.title | slugify }}" class="text-violet" style="text-decoration: none;">{{ talk.title }}</a>
                   </h2>
                   <div class="stack-300">
