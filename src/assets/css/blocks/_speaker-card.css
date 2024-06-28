@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 0.25rem 1rem rgba(var(--color-black), 0.1);
+  box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.1);
 }
 
 .speaker-card__image {
@@ -56,7 +56,7 @@
 
   li + li {
     padding-top: 0.3125rem;
-    border-top: 1px solid rgba(var(--color-black), 0.1);
+    border-top: 1px solid rgb(0 0 0 / 0.1);
   }
 }
 

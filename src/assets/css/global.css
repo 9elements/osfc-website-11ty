@@ -84,10 +84,7 @@ h4 {
 /* folks read the text easier */
 ::selection {
   color: var(--color-white);
-
-  /* We set this as an RGBA because that’s how you get a solid color, by using 0.99 */
-  /* alpha value. Browsers are wild. */
-  background: rgba(var(--color-violet), 0.99);
+  background: color-mix(in srgb, var(--color-violet), rgb(0 0 0 / 0.99));
 }
 
 /* Scrollbar styles */
