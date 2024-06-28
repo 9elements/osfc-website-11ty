@@ -2,6 +2,6 @@
   "tags": "sponsors",
   "layout": "layouts/sponsor.njk",
   "title": "Sponsors",
-  "permalink": "/sponsors/{{ name | slugify }}/index.njk",
+  "permalink": "/sponsors/{{ name | slugify }}/index.html",
   "transparentHeader": true
 }

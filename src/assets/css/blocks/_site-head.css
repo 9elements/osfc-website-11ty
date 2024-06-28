@@ -35,6 +35,7 @@
     border: none;
     color: var(--color-peach);
     background: transparent;
+    cursor: pointer;
 
     & svg {
       --size: 2.5rem;
