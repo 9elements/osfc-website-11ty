@@ -1,37 +1,45 @@
 {
-  "name": "ubmc",
-  "version": "1.0.0",
-  "description": "",
+  "name": "eleventy-starter",
+  "version": "2.0.0",
+  "description": "Boilerplate for basic 11ty page",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve --quiet\"",
-    "production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
+    "start": "eleventy --serve --incremental",
+    "start-production": "NODE_ENV=production eleventy --serve --incremental",
+    "production": "NODE_ENV=production eleventy",
+    "serve": "npx serve dist -p 8080"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
+  "browserslist": [
+    "> 0.2% and not dead and supports css-media-range-syntax"
+  ],
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-cache-assets": "^2.3.0",
-    "@11ty/eleventy-fetch": "^3.0.0",
-    "@sindresorhus/slugify": "^2.1.0",
-    "concurrently": "^6.1.0",
-    "dotenv": "^16.0.0",
-    "get-google-fonts": "^1.2.2",
-    "gorko": "^0.8.0",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-svgmin": "^4.1.0",
+    "@11ty/eleventy": "^3.0.0-alpha.14",
+    "@11ty/eleventy-img": "^4.0.2",
+    "autoprefixer": "^10.4.19",
+    "dotenv": "^16.4.5",
+    "eleventy-plugin-svg-sprite": "^2.4.2",
     "html-minifier": "^4.0.0",
-    "markdown-it": "^10.0.0",
-    "moment": "^2.29.1",
-    "sass": "^1.32.12",
-    "string": "^3.3.3"
+    "jsdom": "^24.1.0",
+    "luxon": "^3.4.4",
+    "markdown-it": "^14.1.0",
+    "purgecss": "^6.0.0",
+    "tailwindcss": "^3.4.4"
   },
   "devDependencies": {
-    "gulp-minify": "^3.1.0",
-    "gulp-svgstore": "^7.0.1"
+    "@11ty/eleventy-cache-assets": "^2.3.0",
+    "@cagov/11ty-build-system": "^1.0.1",
+    "cssnano": "^7.0.3",
+    "esbuild": "^0.21.5",
+    "esbuild-plugin-glob": "^2.2.3",
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
+    "postcss-import-ext-glob": "^2.1.1",
+    "postcss-js": "^4.0.1",
+    "postcss-preset-env": "^9.5.14",
+    "utopia-core": "^1.4.0"
   }
 }
