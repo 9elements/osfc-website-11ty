@@ -1,4 +1,3 @@
-import util from "util";
 import Cache from "@11ty/eleventy-cache-assets";
 
 /**
@@ -8,11 +7,10 @@ export default async () => {
   try {
     // Grabs either the fresh remote data or cached data (will always be fresh live)
     const schedule = await Cache(
-      `https://talks.osfc.io/open-source-firmware-conference-2024/schedule/export/schedule.json`,
+      `https://talks.osfc.io/osfc-2024/schedule/export/schedule.json`,
       {
-        duration: "1d", // 1 day
+        duration: "1d",
         type: "json",
-
         fetchOptions: {
           headers: {
             Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4",
@@ -22,11 +20,10 @@ export default async () => {
     );
 
     const speakers2024 = await Cache(
-      `https://pretalx.com/api/events/open-source-firmware-conference-2024/speakers/?format=json&limit=200`,
+      `https://pretalx.com/api/events/osfc-2024/speakers/?format=json&limit=200`,
       {
-        duration: "1m", // 1 day
+        duration: "1m",
         type: "json",
-
         fetchOptions: {
           headers: {
             Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4",
@@ -38,11 +35,10 @@ export default async () => {
     speakers2024.results.sort((a, b) => (a.name > b.name ? 1 : -1));
 
     const talks = await Cache(
-      `https://pretalx.com/api/events/open-source-firmware-conference-2024/submissions/?format=json&limit=200`,
+      `https://pretalx.com/api/events/osfc-2024/submissions/?format=json&limit=200`,
       {
-        duration: "1s", // 1 day
+        duration: "1m",
         type: "json",
-
         fetchOptions: {
           headers: {
             Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4",
@@ -52,16 +48,15 @@ export default async () => {
     );
 
     const confirmedTalks = talks.results.filter(
-      (talk) => talk.state === "confirmed"
-      // (talk) => talk.state === "confirmed" && talk.is_featured
+      // strip out duplicate talks and only show confirmed talks
+      (talk, _, arr) => talk.state === "confirmed" && !arr.includes(talk)
     );
 
     const breaks = await Cache(
-      `https://pretalx.com/api/events/open-source-firmware-conference-2024/schedules/latest/?format=json`,
+      `https://pretalx.com/api/events/osfc-2024/schedules/latest/?format=json`,
       {
-        duration: "1d", // 1 day
+        duration: "1d",
         type: "json",
-
         fetchOptions: {
           headers: {
             Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4",
@@ -71,11 +66,10 @@ export default async () => {
     );
 
     const videos = await Cache(
-      `https://cfp.osfc.io/api/events/open-source-firmware-conference-2024/p/vimeo/`,
+      `https://cfp.osfc.io/api/events/osfc-2024/p/vimeo/`,
       {
-        duration: "1d", // 1 day
+        duration: "1d",
         type: "json",
-
         fetchOptions: {
           headers: {
             Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4",
