@@ -1,11 +1,10 @@
 {
   "team": [
-    "Philipp Deppenwiese",
     "Jens Drenhaus",
     "Christian Walter",
-    "Kai Michaelis",
     "Daniel Nierhauve",
-    "Nils Binder"
+    "Lucy Klomfass",
+    "Roxanne Josefus"
   ],
   "projects": [
     "coreboot",
@@ -22,7 +21,5 @@
     "u-root"
   ],
   "organizer": ["Meta", "9elements Cyber Security", "Google"],
-  "sponsors": [
-    "Secunet"
-  ]
+  "sponsors": ["Secunet"]
 }

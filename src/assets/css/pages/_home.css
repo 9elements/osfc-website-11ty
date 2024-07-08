@@ -191,7 +191,6 @@
   margin-top: 12rem;
 
   @media (--lg) {
-    margin-top: 30rem;
     text-align: right;
   }
 
