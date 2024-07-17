@@ -1,3 +1,7 @@
+@custom-media --rhomb-sm (width >= 30em);
+@custom-media --rhomb-md (width >= 40em);
+@custom-media --rhomb-lg (width >= 50em);
+
 .rhomb-grid {
   display: grid;
   gap: 10vw;
@@ -20,7 +24,7 @@
     }
   }
 
-  @media screen and (min-width: 30rem) {
+  @media (--rhomb-sm) {
     grid-template-columns: repeat(4, 1fr);
     gap: 8vw;
 
@@ -33,7 +37,7 @@
     }
   }
 
-  @media screen and (min-width: 40rem) {
+  @media (--rhomb-md) {
     grid-template-columns: repeat(6, 1fr);
     gap: 5vw;
 
@@ -46,7 +50,7 @@
     }
   }
 
-  @media screen and (min-width: 50rem) {
+  @media (--rhomb-lg) {
     grid-template-columns: repeat(7, 1fr);
     gap: min(5vw, 3rem);
 
@@ -57,5 +61,15 @@
     > *:nth-child(6n - 5) {
       grid-column-start: 2;
     }
+  }
+}
+
+.rhomb-grid--small {
+  width: 70%;
+  margin-inline: auto;
+
+  @media (--rhomb-sm) {
+    width: 80%;
+    margin-right: 0;
   }
 }
