@@ -47,12 +47,12 @@
 
             <div class="uppercase text-peach weight-bold sponsor-buttons" style="display: flex; justify-content: {{"space-between" if prevSponsor else "flex-end"}};">
               {% if prevSponsor %}
-                <a href="/sponsors/{{ prevSponsor.data.name | slugify }}">
+                <a href="/sponsors/{{ prevSponsor.data.name | slugify }}/">
                   <span aria-hidden>&lt;</span>
                   {{ prevSponsor.data.name }}</a>
               {% endif %}
               {% if nextSponsor %}
-                <a href="/sponsors/{{ nextSponsor.data.name | slugify }}">{{ nextSponsor.data.name }}
+                <a href="/sponsors/{{ nextSponsor.data.name | slugify }}/">{{ nextSponsor.data.name }}
                   <span aria-hidden>&gt;</span>
                 </a>
               {% endif %}

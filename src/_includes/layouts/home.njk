@@ -133,6 +133,21 @@
       </div>
     </section>
 
+    <section id="supporters" class="supporters">
+      <div class="wrapper-l">
+        <div class="stack-800">
+          <h2 class="text-black uppercase weight-black text-700-800 leading-flat">Supporters</h2>
+          <ul class="rhomb-grid rhomb-grid--small supporters__list" role="list">
+            {% for supporter in supporters %}
+              <li>
+                <img src="/assets/images/supporters/{{ supporter.image }}" alt="" decoding="async" loading="lazy" alt="{{ supporter.name }}" />
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
     {% include "partials/newsletter.njk" %}
   </div>
 
