@@ -1,4 +1,5 @@
 import Cache from "@11ty/eleventy-cache-assets";
+import fs from "fs";
 
 /**
  * Grabs the event data from pretalx
@@ -49,7 +50,9 @@ export default async () => {
 
     const confirmedTalks = talks.results.filter(
       // strip out duplicate talks and only show confirmed talks
-      (talk, _, arr) => talk.state === "confirmed" && !arr.includes(talk)
+      (talk, i, arr) =>
+        talk.state === "confirmed" &&
+        arr.findIndex((t) => t.code === talk.code) === i
     );
 
     const breaks = await Cache(
