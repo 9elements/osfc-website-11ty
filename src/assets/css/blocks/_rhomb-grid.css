@@ -69,7 +69,6 @@
   margin-inline: auto;
 
   @media (--rhomb-sm) {
-    width: 80%;
     margin-right: 0;
   }
 }
