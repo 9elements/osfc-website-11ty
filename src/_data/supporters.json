@@ -1,14 +1,17 @@
 [
   {
     "name": "eurobits e.V.",
-    "image": "eurobits.png"
+    "image": "eurobits.png",
+    "url": "https://www.eurobits.de?utm_source=osfc"
   },
   {
     "name": "HIGH-TECH.NRW",
-    "image": "hightechnrw.png"
+    "image": "hightechnrw.png",
+    "url": "https://high-tech.nrw?utm_source=osfc"
   },
   {
     "name": "Open Compute Project",
-    "image": "opencompute.svg"
+    "image": "opencompute.svg",
+    "url": "https://opencompute.org?utm_source=osfc"
   }
 ]
