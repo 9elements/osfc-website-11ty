@@ -1,9 +1,15 @@
 .supporters__content {
-  width: 75%;
-  margin-inline: auto;
+  @media (width >= 30em) {
+    width: 75%;
+  }
 }
 
 .supporters__list {
+  @media (width < 30em) {
+    width: 75%;
+    margin-left: auto;
+  }
+
   & li {
     display: flex;
     justify-content: center;
