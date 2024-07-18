@@ -9,7 +9,7 @@
 
   @media (width < 30em) {
     width: 75%;
-    margin-left: auto;
+    margin-inline: auto;
   }
 
   & a {
