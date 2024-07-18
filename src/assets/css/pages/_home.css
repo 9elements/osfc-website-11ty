@@ -81,24 +81,26 @@
 
   &::before {
     pointer-events: none;
-    position: absolute;
+    position: relative;
+    display: block;
     left: -6rem;
-    top: -3vw;
     width: 90vw;
-    height: 12vw;
-    background: url(/assets/images/beams/deco-line-01.svg);
+    aspect-ratio: 570/219;
+    background: url(/assets/images/beams/deco-line-01-skyline.svg);
     background-size: 100% auto;
     background-repeat: no-repeat;
     content: "";
 
     @media (--md) {
       left: -1vw;
-      width: 45vw;
-      height: 8vw;
+      width: min(45vw, 48rem);
     }
 
     @media (--lg) {
       left: -5vw;
+      position: absolute;
+      top: 0;
+      translate: 0 -85%;
     }
   }
 }
