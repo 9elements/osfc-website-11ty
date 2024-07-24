@@ -24,15 +24,12 @@ export default async () => {
       {
         duration: "1m",
         type: "json",
-        fetchOptions: {
-          headers: {
-            Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4",
-          },
-        },
       }
     );
 
-    speakers2024.results.sort((a, b) => (a.name > b.name ? 1 : -1));
+    const sortedSpeakers = speakers2024.results.sort((a, b) =>
+      a.name > b.name ? 1 : -1
+    );
 
     const talks = await Cache(
       `https://pretalx.com/api/events/osfc-2024/submissions/?format=json&limit=200`,
@@ -92,7 +89,7 @@ export default async () => {
     return {
       schedule: schedule.schedule.conference,
       talks: confirmedTalks,
-      speakers: speakers2024.results,
+      speakers: sortedSpeakers,
       breaks: breaks.breaks,
       videos: newVideos,
     };
