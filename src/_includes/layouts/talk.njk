@@ -5,7 +5,7 @@
 
   <div class="wrapper-l stack-200">
 
-    <h1 class="uppercase text-800-900 leading-flat text-black weight-black">
+    <h1 class="text-black uppercase text-800-900 leading-flat weight-black">
       {{ talk.title }}
     </h1>
     <div class="cluster" style="--cluster-gap: 0.5rem;">
@@ -33,7 +33,8 @@
         <div class="stack-300 text-400-500">
           {{ talk.abstract | markdownFilter | safe }}
         </div>
-      {% elseif talk.description %}
+      {% endif %}
+      {% if talk.description %}
         <div class="stack-300 text-400-500">
           {{ talk.description | markdownFilter | safe }}
         </div>
