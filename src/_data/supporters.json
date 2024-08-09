@@ -2,21 +2,21 @@
   {
     "name": "eurobits e.V.",
     "image": "eurobits.png",
-    "url": "https://www.eurobits.de?utm_source=osfc"
+    "url": "https://www.eurobits.de"
   },
   {
     "name": "HIGH-TECH.NRW",
     "image": "hightechnrw.png",
-    "url": "https://high-tech.nrw?utm_source=osfc"
+    "url": "https://high-tech.nrw"
   },
   {
     "name": "Open Compute Project",
     "image": "opencompute.svg",
-    "url": "https://opencompute.org?utm_source=osfc"
+    "url": "https://opencompute.org"
   },
   {
     "name": "NlNet Foundation",
     "image": "nlnet.png",
-    "url": "https://nlnet.nl/"
+    "url": "https://nlnet.nl"
   }
 ]
