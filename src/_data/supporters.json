@@ -13,5 +13,10 @@
     "name": "Open Compute Project",
     "image": "opencompute.svg",
     "url": "https://opencompute.org?utm_source=osfc"
+  },
+  {
+    "name": "NlNet Foundation",
+    "image": "nlnet.png",
+    "url": "https://nlnet.nl/"
   }
 ]
