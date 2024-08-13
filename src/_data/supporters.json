@@ -18,5 +18,10 @@
     "name": "NlNet Foundation",
     "image": "nlnet.png",
     "url": "https://nlnet.nl"
+  },
+  {
+    "name": "Cube5",
+    "image": "cube5.png",
+    "url": "https://cube-five.de/en/"
   }
 ]
