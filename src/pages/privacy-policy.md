@@ -19,7 +19,7 @@ Telefon: +49 234 689 41 88
 
 Telefax: +49 234 689 41 90
 
-E-Mail: osfc@9elements.com
+E-Mail: info@osfc.io
 
 Impressum: https://9elements.com/imprint
 
