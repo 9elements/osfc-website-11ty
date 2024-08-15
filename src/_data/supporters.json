@@ -33,5 +33,10 @@
     "name": "Donna und der Blitz",
     "image": "donnablitz.svg",
     "url": "https://donna-blitz.de/"
+  },
+  {
+    "name": "RVR",
+    "image": "RVR.png",
+    "url": "https://rvr.ruhr/"
   }
 ]
