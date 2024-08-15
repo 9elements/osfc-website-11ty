@@ -23,5 +23,15 @@
     "name": "Cube5",
     "image": "cube5.png",
     "url": "https://cube-five.de/en/"
+  },
+  {
+    "name": "BMR",
+    "image": "BMR.jpg",
+    "url": "https://www.business.ruhr/en/index.html"
+  },
+  {
+    "name": "Donna und der Blitz",
+    "image": "donnablitz.svg",
+    "url": "https://donna-blitz.de/"
   }
 ]
