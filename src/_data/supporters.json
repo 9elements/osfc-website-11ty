@@ -38,5 +38,10 @@
     "name": "RVR",
     "image": "RVR.png",
     "url": "https://rvr.ruhr/"
+  },
+  {
+    "name": "IR",
+    "image": "Logo_IR.jpg",
+    "url": "https://initiativkreis-ruhr.de/"
   }
 ]
