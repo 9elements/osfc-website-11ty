@@ -5,15 +5,31 @@ transparentHeader: true
 permalink: "/info/index.html"
 ---
 
-## The Venue 
+## Agenda (Overview) ##
 
-The OSFC 2024 will be hosted at the Rotunde Venue, Bochum (https://maps.app.goo.gl/bavT7KUHg8rYSRRcA)
+For the detailed schedule check the [Schedule](https://www.osfc.io/2024/schedule/) page. You will find more information
+about the social events under the [Social Event](#social-events) paragraph.
 
-All the talks, sessions and workshops, as well as catering, will take place at the Rotunde Venue.
+### Monday, September 2nd ###
 
-Find the conference schedule 2024 [here](https://www.osfc.io/2024/schedule/)
+Drink-up Event at the [Mandragora](https://maps.app.goo.gl/Kaswr3eiP6oNW4JZ8) in Bochum.
 
-&nbsp;
+### Tuesday, September 3rd ###
+
+- Open Gates at 8.30 am
+- Talks start at 09.30 am
+- Conference closes down at 10.00 pm
+
+### Wednesday, September 4th ###
+- Gates open at 8.30 am
+- Talks start at 9.30 am
+- Aftershow Party starts at 6.30 pm
+- Gates close at 11.59pm
+
+### Thursday, September 5th
+- Gates open at 9.30 am
+- Talks and Workshops start at 10.30 am
+- Gates close at 04.00 pm
 
 ## #OSFC2024 – Trip Guide
 
@@ -62,6 +78,16 @@ Code ”OSFC 2024” via
 
 Discount on apartments for stay duration from 02.09.2024 to 05.09.2024
 
+## The Venue 
+
+The OSFC 2024 will be hosted at the [Rotunde Venue, Bochum](https://maps.app.goo.gl/bavT7KUHg8rYSRRcA)
+
+All the talks, sessions and workshops, as well as catering, will take place at the Rotunde Venue.
+
+Find the conference schedule 2024 [here](https://www.osfc.io/2024/schedule/)
+
+&nbsp;
+
 ## Social Events
 
 We’ve got some fun "After Work" activities lined up for you guys!
@@ -70,7 +96,13 @@ We’ve got some fun "After Work" activities lined up for you guys!
 
 If you’re already in Bochum, come hang out with us at our local bar. It’s the perfect chance to get to know each other and explore the "Bermuda3eck" together. Your first Drink is on us! Let us know if you’re coming by filling out this quick survey. [[here](https://docs.google.com/forms/d/1SNNtunrPB1iVE5Axw4wzMtktYKGQd0y589v8nKy2Cxw/viewform?edit_requested=true)]
 
-**More Social Events are in progress, so stay tuned!**
+**Wednesday, September 4th - "Aftershow Party"**
+
+On the second day of the conference, after all talks are done we will have a party in the Venue - we will open up the gates
+for external guests (invite-only) and share drinks together. You are invited to hang around, get yourself a drink, some food
+and enjoy the company. Of course all rooms will stay open until ~midnight.
+
+If you want to get any guest on the invite list, reach out to info (at) osfc.io.
 
 &nbsp;
 
