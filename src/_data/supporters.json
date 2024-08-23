@@ -43,5 +43,15 @@
     "name": "IR",
     "image": "Logo_IR.jpg",
     "url": "https://initiativkreis-ruhr.de/"
+  },
+  {
+    "name": "BRYCK",
+    "image": "BRYCK_Wortmarke_schwarz.png",
+    "url": "https://bryck.com/"
+  },
+  {
+    "name": "Bride Builder",
+    "image": "BridgeBuilder_Logo_Claim_web_Dark.png",
+    "url": "https://bridgebuilder.ruhr/"
   }
 ]
