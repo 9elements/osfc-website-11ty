@@ -151,12 +151,6 @@ Use the hackathon room to team up with the community and work on all the cool op
 
 You can use Slack as mentioned above to coordinate.
 
-## Hardware Table
-
-We will be hosting our hardware table again this year. If you have hardware that you would like to give away for free to allow others to hack on it, please feel free to bring it and leave it on the table. The table will be located in the hackathon room.
-
-As always, please only take from the table what you truly want or need, ensuring that others also have the opportunity to acquire some items.
-
 ## Awareness
 
 As an attendee of the OSFC we all commit to our [Code of Conduct](./code-of-conduct.md).
