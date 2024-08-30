@@ -25,6 +25,7 @@ Drink-up Event at the [Mandragora](https://maps.app.goo.gl/Kaswr3eiP6oNW4JZ8) in
 - Doors open at 8.30 am
 - Talks start at 9.30 am
 - Meet 9elements Headquarter at 6:00 pm (details below, reservation needed)
+- Conference Gates close at 7.00 pm
 
 ### Wednesday, September 4th ###
 - Doors open at 8.30 am
