@@ -18,7 +18,8 @@ For the detailed schedule check the [Schedule](https://www.osfc.io/2024/schedule
 
 ### Monday, September 2nd ###
 
-Drink-up Event at the [Mandragora](https://maps.app.goo.gl/Kaswr3eiP6oNW4JZ8) in Bochum. More details down below.
+Drink-up Event at the [Mandragora](https://maps.app.goo.gl/Kaswr3eiP6oNW4JZ8) in Bochum. We will meet there at 07.00 pm.
+Sign-up link and more information [below](#social-events)
 
 ### Tuesday, September 3rd ###
 
@@ -47,7 +48,9 @@ We’ve got some fun "After Work" activities lined up for you guys!
 
 **Monday, September 2nd - "Drink Up"** 
 
-If you’re already in Bochum, come hang out with us at our local bar. It’s the perfect chance to get to know each other and explore the "Bermuda3eck" together. Your first Drink is on us! Let us know if you’re coming by filling out this quick survey. [[here](https://docs.google.com/forms/d/1SNNtunrPB1iVE5Axw4wzMtktYKGQd0y589v8nKy2Cxw/viewform?edit_requested=true)]
+If you’re already in Bochum, come hang out with us at our local bar [Mandragora](https://maps.app.goo.gl/Kaswr3eiP6oNW4JZ8). It’s the perfect chance to get to know each other and explore the "Bermuda3eck" together. Your first Drink is on us! Let us know if you’re coming by filling out this quick survey. [[here](https://docs.google.com/forms/d/1SNNtunrPB1iVE5Axw4wzMtktYKGQd0y589v8nKy2Cxw/viewform?edit_requested=true)]
+
+We will meet there at 07.00 pm directly outside of the Mandragora. There is a "glass shelter" which we will be using - Don't worry, we will put up some OSFC Beachflags so that you won't miss us!
 
 **Tuesday, September 3rd - "Meet 9elements Headquarter"**
 
