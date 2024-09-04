@@ -97,7 +97,8 @@ Hey spontaneous thinkers, we’ve got something exciting for you!
 
 On September 5th, we’ve got some open slots just waiting to be filled with your brilliant ideas. Yes, you heard that right – it’s time for the Open-Mic session, and we want YOU to grab the mic and share your thoughts!
 
-Submit your idea [here](https://openmic.osfc.io/osfc24-open-mic/cfp)
+Submit your idea [here](https://openmic.osfc.io/osfc24-open-mic/cfp) **Submission closed**
+[Vote your favorite talks!](https://bit.ly/osfc24openmic)
 
 &nbsp;
 
