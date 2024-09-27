@@ -1,19 +1,6 @@
 {
   "items": [
     {
-      "text": "Info",
-      "url": "/info/"
-    },
-    {
-      "text": "Tickets",
-      "url": "https://tickets.osfc.io",
-      "target": "_blank"
-    },
-    {
-      "text": "Schedule",
-      "url": "/2024/schedule/"
-    },
-    {
       "text": "Team",
       "url": "/team/"
     },
@@ -23,7 +10,7 @@
     },
     {
       "text": "Archive",
-      "url": "/archive/2023"
+      "url": "/archive/2024"
     }
   ]
 }
