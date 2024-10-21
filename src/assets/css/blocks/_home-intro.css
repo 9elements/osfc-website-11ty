@@ -44,6 +44,10 @@
   margin: 0 auto 3rem;
   z-index: 20;
   position: relative;
+
+  & svg {
+    height: auto;
+  }
 }
 
 .intro__branding-svg {
