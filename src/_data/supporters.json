@@ -1,57 +1,7 @@
 [
   {
-    "name": "eurobits e.V.",
-    "image": "eurobits.png",
-    "url": "https://www.eurobits.de"
-  },
-  {
-    "name": "HIGH-TECH.NRW",
-    "image": "hightechnrw.png",
-    "url": "https://high-tech.nrw"
-  },
-  {
-    "name": "Open Compute Project",
-    "image": "opencompute.svg",
-    "url": "https://opencompute.org"
-  },
-  {
-    "name": "NlNet Foundation",
-    "image": "nlnet.png",
-    "url": "https://nlnet.nl"
-  },
-  {
-    "name": "10xD",
-    "image": "10xD.svg",
-    "url": "https://10xd.de/"
-  },
-  {
-    "name": "BMR",
-    "image": "BMR.jpg",
-    "url": "https://www.business.ruhr/en/index.html"
-  },
-  {
-    "name": "Donna und der Blitz",
-    "image": "donnablitz.svg",
-    "url": "https://donna-blitz.de/"
-  },
-  {
-    "name": "RVR",
-    "image": "RVR.png",
-    "url": "https://rvr.ruhr/"
-  },
-  {
-    "name": "IR",
-    "image": "Logo_IR.jpg",
-    "url": "https://initiativkreis-ruhr.de/"
-  },
-  {
-    "name": "BRYCK",
-    "image": "BRYCK_Wortmarke_schwarz.png",
-    "url": "https://bryck.com/"
-  },
-  {
-    "name": "Bride Builder",
-    "image": "BridgeBuilder_Logo_Claim_web_Dark.png",
-    "url": "https://bridgebuilder.ruhr/"
+    "name": "",
+    "image": "",
+    "url": ""
   }
 ]
