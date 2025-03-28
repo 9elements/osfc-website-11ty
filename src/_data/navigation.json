@@ -1,6 +1,10 @@
 {
   "items": [
     {
+      "text": "Info",
+      "url": "/info/"
+    },
+    {
       "text": "Team",
       "url": "/team/"
     },
