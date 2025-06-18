@@ -13,7 +13,7 @@ export default async () => {
         duration: "1d", // 1 day
         type: "json",
         headers: {
-          Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4",
+          Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
         },
       }
     );
@@ -25,7 +25,7 @@ export default async () => {
         duration: "1d", // 1 day
         type: "json",
         headers: {
-          Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4",
+          Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
         },
       }
     );
@@ -41,7 +41,7 @@ export default async () => {
         duration: "1d", // 1 day
         type: "json",
         headers: {
-          Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4",
+          Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
         },
       }
     );
@@ -54,7 +54,7 @@ export default async () => {
         duration: "1d", // 1 day
         type: "json",
         headers: {
-          Authorization: "Token 1bfe4598ca6e29bb43e1e09510915432196d76c4",
+          Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
         },
       }
     );
