@@ -13,7 +13,7 @@ export default async () => {
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4",
+            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
       }
@@ -38,7 +38,7 @@ export default async () => {
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4",
+            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
       }
@@ -58,7 +58,7 @@ export default async () => {
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4",
+            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
       }
@@ -71,7 +71,7 @@ export default async () => {
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 50d2d1e3a6a1bc93d32195a72ec656c3e8597cc4",
+            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
       }
