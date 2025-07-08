@@ -7,7 +7,7 @@ permalink: "/info/index.html"
 
 # **What’s in store for #OSFC2025?**
 
-Get ready! From October 7th to 10th, 2025, the Open Source Firmware Conference returns, and we’re thrilled to announce that it will once again be held in California, USA, at Google’s Sunnyvale campus! ( Google - MP3, 1170 Bordeaux Dr Building 3, Sunnyvale CA 94089)
+Get ready! From October 7th to 10th, 2025, the Open Source Firmware Conference returns, and we’re thrilled to announce that it will once again be held in California, USA, at Google’s Sunnyvale campus! (Google - MP3, 1170 Bordeaux Dr Building 3, Sunnyvale CA 94089)
 
 This year, we’re excited to host a back-to-back event with the UEFI 2025 Developers Conference and Plugfest!
 
@@ -35,6 +35,28 @@ This page will be **continuously updated**, so don’t forget to check back in 
 
 The OSFC 2025 ticket sale has officially kicked off! Grab your pass and get ready for an amazing event! 
 → [tickets.osfc.io](https://tickets.osfc.io/)
+
+# Hotels Nearby
+
+This year we were not able to reserve a specific contigent for anyone visiting OSFC. However, we these are some hotels nearby the conference that you can pick. Any other hotel will obviously also work. The hotels are listed in no particular order.
+
+**The Grand Hotel (Crew Hotel)**
+
+This is the hotel where the OSFC crew will be. It's a 10 minute Uber ride (or 1:15h walk) away from the venue. It's budget-effective, looks clean and our crew will transform the lobby into a giant hacker room (maybe).
+
+Link: [https://www.svgrandhotel.com/](https://www.svgrandhotel.com/)
+
+**Hilton Garden Inn Sunnyvale**
+
+If the budget wouldn't be so restrictive this _would_ have been the hotel where the crew _would_ be. But we're living on a small budget! It's a 5 minute Uber ride (25 minute walk) away from the venue.
+
+Link: [https://www.hilton.com/](https://www.hilton.com/en/hotels/sjcmagi-hilton-garden-inn-sunnyvale/)
+
+**Treehouse Silicon Valley**
+
+Budget is not an issue? We got the right place to spend your corporate money. The hotel _looks_ super nice. I doubt that you will get an Uber because it's just a 5 minute walk away.
+
+Link: [https://www.treehousehotels.com/](https://www.treehousehotels.com/silicon-valley)
 
 # Call for Participation
 
