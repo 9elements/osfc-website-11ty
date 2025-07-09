@@ -25,7 +25,7 @@ This page will be **continuously updated**, so don’t forget to check back in 
 
 - Early Bird Ticket Sale: April 29 - July 28
 - Regular Ticket Sale: July 28 - October 7
-- Call For Participation: May 9 - July 6
+- Call For Participation: May 9 - ~~July 6~~ EXTENDED July 20
 - Notification of Acceptance: July 24
 - Scholarship Application Attendee: May 12 - July 15
 - OSFC 2025: October 7 - 9
