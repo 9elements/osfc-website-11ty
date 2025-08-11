@@ -68,6 +68,10 @@
                   grid-row-end: span {{fiveCount}};
                   grid-column: {{ roomCount + 1 }};
                   ">
+          <div class="grid-event__time | bg-violet leading-tight">
+            <span class="weight-bold text-300 md:text-400">{{talk.start}}</span>
+            <span class="text-300">{{ (talk.duration.slice(0,2)|int * 60) + (talk.duration.slice(3, 5)|int) }}min</span>
+          </div>
           <div class="grid-event__body | stack-100 | leading-tight">
             <h3 class="weight-bold text-300 md:text-400">
               {{talk.title}}
@@ -82,10 +86,7 @@
               {% endfor %}
             </p>
           </div>
-          <div class="grid-event__time | bg-violet leading-tight">
-            <span class="weight-bold text-300 md:text-400">{{talk.start}}</span>
-            <span class="text-300">{{ (talk.duration.slice(0,2)|int * 60) + (talk.duration.slice(3, 5)|int) }}min</span>
-          </div>
+
           {# Only add link, if there is an abstract #}
           {% if talk.abstract or talk.description.length > 30 %}
             <a class="grid-event__link" href="/{{ year }}/talks/{{ talk.title | slugify }}">
@@ -111,13 +112,13 @@
             grid-row-end: span {{fiveCount}};
             grid-column: {{ roomCount + 1 }};
             ">
+            <div class="grid-event__time | bg-violet leading-tight">
+              <span class="weight-bold text-300 md:text-400">{{ breakHour }}:{{ breakMinute }}</span>
+            </div>
             <div class="grid-event__body | stack-100 | leading-tight">
               <h3 class="weight-bold text-300 md:text-400">
                 {{ break.description.en }}
               </h3>
-            </div>
-            <div class="grid-event__time | bg-violet leading-tight">
-              <span class="weight-bold text-300 md:text-400">{{ breakHour }}:{{ breakMinute }}</span>
             </div>
           </article>
         {% endfor %}
