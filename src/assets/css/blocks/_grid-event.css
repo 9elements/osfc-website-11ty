@@ -3,8 +3,7 @@
   color: #fff;
   font-variant-numeric: tabular-nums;
   display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
+  flex-direction: column;
   position: relative;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
 }
