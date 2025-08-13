@@ -9,8 +9,12 @@
       {{ talk.title }}
     </h1>
     <div class="cluster" style="--cluster-gap: 0.5rem;">
-      {% for speaker in talk.speakers %}
-        {% include "partials/speaker-pill.njk" %}
+      {% for speakerCode in talk.speakers %}
+        {% for speaker in speakers %}
+          {% if speaker.code == speakerCode %}
+            {% include "partials/speaker-pill.njk" %}
+          {% endif %}
+        {% endfor %}
       {% endfor %}
     </div>
     <p class="weight-bold">
