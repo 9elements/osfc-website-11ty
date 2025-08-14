@@ -13,10 +13,11 @@ export default async () => {
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+            Authorization:
+              "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      }
+      },
     );
 
     const speakers2025 = await Cache(
@@ -24,31 +25,32 @@ export default async () => {
       {
         duration: "1m",
         type: "json",
-      }
+      },
     );
 
     const sortedSpeakers = speakers2025.results.sort((a, b) =>
-      a.name > b.name ? 1 : -1
+      a.name > b.name ? 1 : -1,
     );
 
     const talks = await Cache(
-      `https://pretalx.com/api/events/osfc-2025/submissions/?format=json&limit=200`,
+      `https://pretalx.com/api/events/osfc-2025/submissions/?format=json&limit=200&expand=speakers,slots,slots.room`,
       {
         duration: "1m",
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+            Authorization:
+              "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      }
+      },
     );
 
     const confirmedTalks = talks.results.filter(
       // strip out duplicate talks and only show confirmed talks
       (talk, i, arr) =>
         talk.state === "confirmed" &&
-        arr.findIndex((t) => t.code === talk.code) === i
+        arr.findIndex((t) => t.code === talk.code) === i,
     );
 
     const breaks = await Cache(
@@ -58,10 +60,11 @@ export default async () => {
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+            Authorization:
+              "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      }
+      },
     );
 
     const videos = await Cache(
@@ -71,17 +74,18 @@ export default async () => {
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+            Authorization:
+              "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      }
+      },
     );
 
     const newVideos = videos.results.map((video) => {
       return {
         ...video,
         vimeo_id: video.vimeo_link.substring(
-          video.vimeo_link.lastIndexOf("/") + 1
+          video.vimeo_link.lastIndexOf("/") + 1,
         ),
       };
     });
