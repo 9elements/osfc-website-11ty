@@ -53,11 +53,13 @@
         </ul>
       {% endif %}
     </div>
-    <div class="wrapper-s">
-      {% if year < years.currentYear %}
-        <a href="/archive/{{year}}" class="uppercase weight-bold text-peach">&#60; Back to Archive</a>
-      {% endif %}
-    </div>
+      <div class="wrapper-s">
+        {% if year < years.currentYear %}
+          <a href="/archive/{{year}}" class="uppercase weight-bold text-peach">&#60; Back to archive</a>
+        {% else %}
+          <a href="/{{year}}/schedule" class="uppercase weight-bold text-peach">&#60; Back to schedule</a>
+        {% endif %}
+      </div>
 
   </div>
 
