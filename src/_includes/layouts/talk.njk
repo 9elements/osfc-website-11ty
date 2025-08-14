@@ -9,19 +9,17 @@
       {{ talk.title }}
     </h1>
     <div class="cluster" style="--cluster-gap: 0.5rem;">
-      {% for speakerCode in talk.speakers %}
-        {% for speaker in speakers %}
-          {% if speaker.code == speakerCode %}
-            {% include "partials/speaker-pill.njk" %}
-          {% endif %}
-        {% endfor %}
+      {% for speaker in talk.speakers %}
+         {% include "partials/speaker-pill.njk" %}
       {% endfor %}
     </div>
     <p class="weight-bold">
-      {{ talk.slot.room.en }},
-    {% if talk.slot.start %}
-        <time datetime="{{ talk.slot.start | toISODate }}">
-          {{ talk.slot.start | dateFormat("EEEE, MM/dd") }}</time>
+      {% set slot = talk.slots[0] %}
+      {{ slot.room.name.en }},
+      {% if slot.start %}
+        <time datetime="{{ slot.start | toISODate }}">
+          {{ slot.start | dateFormat("EEEE, MM/dd") }}
+        </time>
       {% endif %}
     </p>
     <div class="wrapper-s shadow-box stack-400 my-stack-space-600">

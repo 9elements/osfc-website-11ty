@@ -13,9 +13,10 @@ export default async () => {
         duration: "1d", // 1 day
         type: "json",
         headers: {
-          Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+          Authorization:
+            "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
         },
-      }
+      },
     );
 
     const speakers2023 = await Cache(
@@ -23,7 +24,7 @@ export default async () => {
       {
         duration: "1m", // 1 day
         type: "json",
-      }
+      },
     );
 
     // write the speakers to a file
@@ -32,20 +33,21 @@ export default async () => {
 
     const talks = await Cache(
       //`https://pretalx.com/api/events/osfc2021/talks/?limit=200`,
-      `https://pretalx.com/api/events/open-source-firmware-conference-2023/submissions/?format=json&limit=200`,
+      `https://pretalx.com/api/events/open-source-firmware-conference-2023/submissions/?format=json&limit=200&expand=speakers,slots,slots.room`,
       {
         duration: "1s", // 1 day
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+            Authorization:
+              "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      }
+      },
     );
 
     const confirmedTalks = talks.results.filter(
-      (talk) => talk.state === "confirmed"
+      (talk) => talk.state === "confirmed",
       // (talk) => talk.state === "confirmed" && talk.is_featured
     );
 
@@ -56,10 +58,11 @@ export default async () => {
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+            Authorization:
+              "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      }
+      },
     );
 
     const videos = await Cache(
@@ -68,16 +71,17 @@ export default async () => {
         duration: "1d", // 1 day
         type: "json",
         headers: {
-          Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+          Authorization:
+            "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
         },
-      }
+      },
     );
 
     const newVideos = videos.results.map((video) => {
       return {
         ...video,
         vimeo_id: video.vimeo_link.substring(
-          video.vimeo_link.lastIndexOf("/") + 1
+          video.vimeo_link.lastIndexOf("/") + 1,
         ),
       };
     });

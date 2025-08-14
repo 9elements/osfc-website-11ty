@@ -13,27 +13,29 @@ export default async () => {
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+            Authorization:
+              "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      }
+      },
     );
 
     const talks = await Cache(
-      `https://pretalx.com/api/events/osfc2018/submissions/?format=json&limit=200`,
+      `https://pretalx.com/api/events/osfc2018/submissions/?format=json&limit=200&expand=speakers,slots,slots.room`,
       {
         duration: "1d", // 1 day
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+            Authorization:
+              "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      }
+      },
     );
 
     const confirmedTalks = talks.results.filter(
-      (talk) => talk.state === "confirmed"
+      (talk) => talk.state === "confirmed",
       // (talk) => talk.state === "confirmed" && talk.is_featured
     );
 
@@ -44,10 +46,11 @@ export default async () => {
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+            Authorization:
+              "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      }
+      },
     );
 
     speakers.results.sort((a, b) => (a.name > b.name ? 1 : -1));
@@ -59,17 +62,18 @@ export default async () => {
         type: "json",
         fetchOptions: {
           headers: {
-            Authorization: "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+            Authorization:
+              "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      }
+      },
     );
 
     const newVideos = videos.results.map((video) => {
       return {
         ...video,
         vimeo_id: video.vimeo_link.substring(
-          video.vimeo_link.lastIndexOf("/") + 1
+          video.vimeo_link.lastIndexOf("/") + 1,
         ),
       };
     });
