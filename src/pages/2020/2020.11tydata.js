@@ -19,7 +19,7 @@ export default async () => {
     );
 
     const talks = await Cache(
-      `https://pretalx.com/api/events/osfc2020/submissions/?format=json&limit=200&expand=speakers,slots,slots.room`,
+      `https://pretalx.com/api/events/osfc2020/submissions/?format=json&limit=200&expand=speakers,slots,slots.room,resources`,
       {
         duration: "1d", // 1 day
         type: "json",
