@@ -33,7 +33,7 @@ export default async () => {
     );
 
     const talks = await Cache(
-      `https://pretalx.com/api/events/osfc-2024/submissions/?format=json&limit=200&expand=speakers,slots,slots.room`,
+      `https://pretalx.com/api/events/osfc-2024/submissions/?format=json&limit=200&expand=speakers,slots,slots.room,resources`,
       {
         duration: "1m",
         type: "json",
