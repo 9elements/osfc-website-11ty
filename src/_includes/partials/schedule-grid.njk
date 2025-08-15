@@ -1,5 +1,13 @@
+{# Filter rooms to only show those with content for this day #}
+{% set activeRooms = [] %}
+{% for room in schedule.rooms %}
+  {% if day.rooms[room.name] %}
+    {% set activeRooms = (activeRooms.push(room), activeRooms) %}
+  {% endif %}
+{% endfor %}
+
 <div class="schedule" style="
-  grid-template-columns: var(--schedule-first-column, 4ch) repeat({{ schedule.rooms.length }}, 1fr);
+  grid-template-columns: var(--schedule-first-column, 4ch) repeat({{ activeRooms.length }}, 1fr);
   grid-template-rows:
     [head] auto
     {% for i in range(0, hourCount + 1) %}
@@ -43,7 +51,7 @@
         " aria-hidden="true"></div>
   {% endfor %}
 
-  {% for room in schedule.rooms %}
+  {% for room in activeRooms %}
     {# Save the index, because we don't have access to this in nested loops #}
     {% set roomCount = loop.index %}
 
@@ -53,9 +61,8 @@
       {{room.name}}
     </div>
 
-    {% if day.rooms[room.name] %}
-      {# Insert Talks #}
-      {% for talk in day.rooms[room.name] %}
+    {# Insert Talks #}
+    {% for talk in day.rooms[room.name] %}
         {% set talkHour = talk
           .start
           .slice(0, 2) %}
@@ -94,35 +101,34 @@
             </a>
           {% endif %}
         </article>
-      {% endfor %}
-      {% if breaks %}
-        {% set currentBreaks = helpers.MatchingDayAndRoom(breaks, day.date, room.name) %}
+    {% endfor %}
+    {% if breaks %}
+      {% set currentBreaks = helpers.MatchingDayAndRoom(breaks, day.date, room.name) %}
 
-        {# Do this only if breaks are defined this year #}
-        {% for break in currentBreaks %}
-          {% set breakHour = break
-            .start
-            .slice(11, 13) %}
-          {% set breakMinute = break
-            .start
-            .slice(14, 16) %}
-          {% set fiveCount = helpers.getFiveCount(break.start, break.end) %}
-          <article class="grid-event grid-event--break" style="
-            grid-row-start: slice-{{ helpers.trailingZeroes(breakHour, 2) }}-{{ breakMinute }};
-            grid-row-end: span {{fiveCount}};
-            grid-column: {{ roomCount + 1 }};
-            ">
-            <div class="grid-event__time | bg-violet leading-tight">
-              <span class="weight-bold text-300 md:text-400">{{ breakHour }}:{{ breakMinute }}</span>
-            </div>
-            <div class="grid-event__body | stack-100 | leading-tight">
-              <h3 class="weight-bold text-300 md:text-400">
-                {{ break.description.en }}
-              </h3>
-            </div>
-          </article>
-        {% endfor %}
-      {% endif %}
+      {# Do this only if breaks are defined this year #}
+      {% for break in currentBreaks %}
+        {% set breakHour = break
+          .start
+          .slice(11, 13) %}
+        {% set breakMinute = break
+          .start
+          .slice(14, 16) %}
+        {% set fiveCount = helpers.getFiveCount(break.start, break.end) %}
+        <article class="grid-event grid-event--break" style="
+          grid-row-start: slice-{{ helpers.trailingZeroes(breakHour, 2) }}-{{ breakMinute }};
+          grid-row-end: span {{fiveCount}};
+          grid-column: {{ roomCount + 1 }};
+          ">
+          <div class="grid-event__time | bg-violet leading-tight">
+            <span class="weight-bold text-300 md:text-400">{{ breakHour }}:{{ breakMinute }}</span>
+          </div>
+          <div class="grid-event__body | stack-100 | leading-tight">
+            <h3 class="weight-bold text-300 md:text-400">
+              {{ break.description.en }}
+            </h3>
+          </div>
+        </article>
+      {% endfor %}
     {% endif %}
   {% endfor %}
 </div>
