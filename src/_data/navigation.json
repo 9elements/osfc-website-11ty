@@ -11,7 +11,8 @@
     },
     {
       "text": "Schedule",
-      "url": "/2025/schedule/"
+      "url": "https://talks.osfc.io/osfc-2025/schedule",
+      "target": "_blank"
     },
     {
       "text": "Call for Participation",
