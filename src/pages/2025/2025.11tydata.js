@@ -28,9 +28,9 @@ export default async () => {
       },
     );
 
-    const sortedSpeakers = speakers2025.results.sort((a, b) =>
-      a.name > b.name ? 1 : -1,
-    );
+    const sortedSpeakers = speakers2025.results
+      .filter((speaker) => speaker.name)
+      .sort((a, b) => (a.name > b.name ? 1 : -1));
 
     const talks = await Cache(
       `https://pretalx.com/api/events/osfc-2025/submissions/?format=json&limit=200&expand=speakers,slots,slots.room,resources`,
