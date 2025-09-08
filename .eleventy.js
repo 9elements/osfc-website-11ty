@@ -9,6 +9,7 @@ import { dateFormatFilter } from "./src/utils/filters/date-format.js";
 // Plugins
 import fs from "node:fs";
 import svgSprite from "eleventy-plugin-svg-sprite";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 // Transforms
 import { purgeCSS } from "./src/utils/transforms/css-purge-inline.js";
@@ -31,7 +32,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === "production";
 
-/** @param {import("@11ty/eleventy/src/UserConfig").default} config */
+/** @param {import("./node_modules/@11ty/eleventy/src/UserConfig.js").default} config */
 export default function EleventyConfig(config) {
   const cssDir = path.join(__dirname, "/dist/assets/css/");
   if (!fs.existsSync(cssDir)) {
@@ -66,6 +67,29 @@ export default function EleventyConfig(config) {
   config.addPlugin(svgSprite, {
     path: "./src/assets/icons", // relative path to SVG directory
     outputFilepath: "./dist/assets/icons.svg",
+  });
+
+  config.addPlugin(eleventyImageTransformPlugin, {
+    // which file extensions to process
+    extensions: "html",
+
+    outputDir: "./dist/assets/images/",
+    urlPath: "/assets/images/",
+
+    // Add any other Image utility options here:
+
+    // optional, output image formats
+    formats: ["webp"],
+
+    // optional, output image widths
+    widths: ["auto"],
+    sizes: "(max-width: 600px) 100vw, 50vw", // Responsive sizes
+
+    // optional, attributes assigned on <img> override these values.
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
+    },
   });
 
   config.addPlugin(buildSystem, {
