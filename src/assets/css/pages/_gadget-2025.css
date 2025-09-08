@@ -10,6 +10,11 @@
   z-index: 0;
   position: sticky;
   top: 0;
+
+  > spline-viewer {
+    position: absolute;
+    inset: 0;
+  }
 }
 
 .gadget-intro__content {
@@ -154,15 +159,12 @@
 }
 
 .gadget-slider {
-  & swiper-container {
-  }
-
   & swiper-slide {
     object-fit: contain;
     width: fit-content;
 
     & img {
-      width: auto;
+      width: 100%;
       height: clamp(20rem, 12.727rem + 36.36vw, 40rem);
       object-fit: contain;
       background-color: var(--color-white);
