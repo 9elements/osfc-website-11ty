@@ -1,0 +1,84 @@
+---
+title: "Gadget 2025"
+permalink: "/gadget2025/index.html"
+transparentHeader: false
+headerBackground: "violet"
+---
+
+{% extends "layouts/base.njk" %}
+{% block content %}
+  <div class="stack-900">
+    <section class="gadget-intro">
+      <spline-viewer class="gadget-intro__spline"  url="https://prod.spline.design/QjaH69cz4gLDLhvW/scene.splinecode"></spline-viewer>
+
+      <div class="gadget-intro__content">
+        <div class="wrapper-l">
+
+          {% include "partials/gadget-2025/keycap-typo.svg" %}
+
+          <h1 class="sr-only">
+            Press to Open source
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="gadget-info | py-900 bg-light-gray wrapper-s stack-800">
+      {% include "partials/gadget-2025/powered-by-9e.svg" %}
+
+      <div class="gadget-info__divider" aria-hidden="true"></div>
+
+      <div class="gadget-info__card | shadow-box bg-light-gray stack-500">
+        <p class="uppercase text-bronze weight-black">#OSFC2025</p>
+        <h2 class="uppercase text-800-900 text-peach weight-black">
+          The OSFC BOARD
+        </h2>
+        <p class="weight-bold">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ab, sunt maxime in id unde nesciunt rerum odit? Blanditiis aut et delectus consequatur ipsam, ratione ipsum laborum officia sapiente. Totam reprehenderit libero illum rem praesentium id dolorum nostrum suscipit laboriosam!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam aperiam placeat, quisquam corrupti inventore nobis amet autem, et soluta natus, asperiores officia! Molestias animi culpa sunt magni voluptatibus fugiat nisi laudantium alias magnam asperiores fuga sed qui, eum esse, minima vel similique quo est? Accusamus ducimus vitae molestiae expedita ipsam. Commodi officia vitae amet obcaecati odio. Animi aliquid nam molestias?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quam perspiciatis exercitationem. Suscipit debitis reprehenderit quae veniam explicabo cum natus accusamus molestiae incidunt velit aspernatur beatae quisquam reiciendis vitae neque similique in ratione, repellat eius vel. Ratione inventore hic enim perspiciatis deleniti id, ipsam officiis velit non sunt dolor iste similique distinctio modi. Vero quasi nesciunt atque consequuntur hic natus dolore accusantium ex doloribus porro, exercitationem libero debitis, et assumenda eius! Quaerat illo exercitationem odio similique accusamus nam, minima soluta!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quo officiis ab in consequatur quam magnam alias rerum nam? Eaque.
+        </p>
+
+        <div class="cluster my-stack-space-800" style="--cluster-justification: center">
+          <a class="button" href="#">
+            More infos
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gadget-slider wrapper-l">
+      <swiper-container slides-per-view="auto" loop="true" centered-slides="true" autoplay="true" space-between="32" speed="750" grab-cursor="true">
+        <swiper-slide>
+          <img loading="lazy" decoding="async" width="600" alt="" src="/assets/images/gadget-2025/3d-printer.webp" />
+        </swiper-slide>
+        <swiper-slide>
+          <img loading="lazy" decoding="async" width="600" alt="" src="/assets/images/gadget-2025/board-2d.webp" />
+        </swiper-slide>
+        <swiper-slide>
+          <img loading="lazy" decoding="async" width="600" alt="" src="/assets/images/gadget-2025/prototype.webp" />
+        </swiper-slide>
+        <swiper-slide>
+          <img loading="lazy" decoding="async" width="600" alt="" src="/assets/images/gadget-2025/3d-printer.webp" />
+        </swiper-slide>
+        <swiper-slide>
+          <img loading="lazy" decoding="async" width="600" alt="" src="/assets/images/gadget-2025/board-2d.webp" />
+        </swiper-slide>
+        <swiper-slide>
+          <img loading="lazy" decoding="async" width="600" alt="" src="/assets/images/gadget-2025/prototype.webp" />
+        </swiper-slide>
+      </swiper-container>
+    </section>
+
+    {% include "partials/newsletter.njk" %}
+  </div>
+
+  {% script src = "gadget2025.js" %}
+  {% endblock %}

@@ -39,6 +39,8 @@ export default {
     "fontFamily",
     "textTransform",
     "accessibility",
+    "padding",
+    "margin",
   ],
   blocklist: ["container"],
   experimental: {
