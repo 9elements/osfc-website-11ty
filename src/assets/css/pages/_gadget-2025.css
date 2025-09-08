@@ -163,7 +163,9 @@
 
     & img {
       width: auto;
-      height: 40rem;
+      height: clamp(20rem, 12.727rem + 36.36vw, 40rem);
+      object-fit: contain;
+      background-color: var(--color-white);
     }
   }
 }
