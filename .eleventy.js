@@ -97,7 +97,6 @@ export default function EleventyConfig(config) {
 
   // Only minify HTML if we are in production because it slows builds _right_ down
   if (isProduction) {
-    config.addTransform("htmlmin", htmlMinify);
     config.addTransform("purgeCSS", purgeCSS);
   }
 
