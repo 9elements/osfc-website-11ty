@@ -5,7 +5,7 @@ transparentHeader: true
 permalink: "/oxide-field-trip/index.html"
 ---
 
-![Oxide Field Trip Logo](../images/oxide-field-trip.svg)
+![Oxide Field Trip Logo](../assets/images/oxide-field-trip.svg)
 
 &nbsp;
 
