@@ -1,4 +1,3 @@
-import "https://unpkg.com/@splinetool/viewer@1.10.56/build/spline-viewer.js";
 import { register } from "swiper/element/bundle";
 register();
 
@@ -60,11 +59,11 @@ function setupPointerListener(enabled) {
 
       document.documentElement.style.setProperty(
         "--pointer-x",
-        state.x.toFixed(4)
+        state.x.toFixed(4),
       );
       document.documentElement.style.setProperty(
         "--pointer-y",
-        state.y.toFixed(4)
+        state.y.toFixed(4),
       );
     };
 

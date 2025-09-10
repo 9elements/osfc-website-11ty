@@ -3,7 +3,7 @@
   background: var(--color-violet);
 }
 
-.gadget-intro__spline {
+.gadget-intro__visual {
   width: 100%;
   height: max(25rem, 80svh);
   pointer-events: none;
