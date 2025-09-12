@@ -27,42 +27,46 @@
   }
 }
 
-.js-active {
-  /* When JavaScript is enabled, the hamburger menu is shown on small screens */
-  & .nav__button {
-    appearance: none;
-    padding: 0.25rem;
-    border: none;
-    color: var(--color-peach);
-    background: transparent;
-    cursor: pointer;
-
-    & svg {
-      --size: 2.5rem;
-
-      width: var(--size);
-      height: var(--size);
-    }
-
-    &[aria-expanded="true"] + .nav__items {
-      display: flex;
-
-      > li {
-        animation: fade-in 0.4s var(--li-delay, 0s) ease-out both;
-
-        @for $i from 0 through 10 {
-          &:nth-child(#{$i}) {
-            --li-delay: calc(0.05s * #{$i});
-          }
-        }
-      }
-    }
+.nav__item {
+  &:last-of-type {
+    padding-top: var(--space-200);
 
     @media (--nav) {
-      display: none;
+      padding-top: 0;
+      padding-left: var(--space-200);
     }
   }
+}
 
+.nav__button {
+  appearance: none;
+  padding: 0.25rem;
+  border: none;
+  color: var(--color-peach);
+  background: transparent;
+  cursor: pointer;
+
+  & svg {
+    --size: 2.5rem;
+
+    width: var(--size);
+    height: var(--size);
+  }
+
+  &[aria-expanded="true"] + .nav__items {
+    display: flex;
+  }
+
+  @media (--nav) {
+    display: none;
+  }
+
+  .no-js & {
+    display: none;
+  }
+}
+
+.js-active {
   /* When JS is enabled hide the nav Items on small screens */
   & .nav__items {
     display: none;
@@ -82,6 +86,7 @@
   align-items: center;
   text-decoration: none;
   margin: 0 calc(-1 * var(--inline-padding));
+  transition: 0.2s ease;
 
   &[aria-current="page"] {
     color: var(--color-peach);
