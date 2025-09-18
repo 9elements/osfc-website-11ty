@@ -1,29 +1,28 @@
 .gadget-intro {
+  --video-height: 100svh;
   margin-top: calc(-1 * var(--space-900));
   background: var(--color-violet);
+  background-color: var(--color-black);
 }
 
-.gadget-intro__visual {
+.gadget-intro__video {
   width: 100%;
-  height: max(25rem, 80svh);
+  height: calc(var(--video-height) + clamp(5rem, 12vh, 18rem));
   pointer-events: none;
   z-index: 0;
   position: sticky;
   top: 0;
-
-  > spline-viewer {
-    position: absolute;
-    inset: 0;
-  }
+  position: absolute;
+  inset-inline: 0;
+  object-fit: cover;
 }
 
 .gadget-intro__content {
   background-color: var(--color-violet);
-  padding-top: var(--space-900);
-  padding-bottom: clamp(5rem, 12vh, 18rem);
-  margin-bottom: clamp(5rem, 12vh, 18rem);
+  padding-block: clamp(5rem, 12vh, 18rem);
   position: relative;
   z-index: 1;
+  margin-top: calc(var(--video-height) - 11.5rem);
 
   &::before,
   &::after {
