@@ -15,6 +15,7 @@
   position: absolute;
   inset-inline: 0;
   object-fit: cover;
+  background-color: var(--color-black);
 }
 
 .gadget-intro__content {
