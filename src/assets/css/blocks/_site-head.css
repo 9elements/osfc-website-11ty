@@ -2,7 +2,11 @@
   padding: var(--space-400) 0;
   z-index: 100;
   position: relative;
-  height: var(--header-height);
+  min-height: var(--header-height);
+
+  .gadget2025 & {
+    height: var(--header-height);
+  }
 }
 
 .nav {
