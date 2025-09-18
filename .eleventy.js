@@ -49,6 +49,7 @@ export default function EleventyConfig(config) {
 
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy("./src/assets/images/");
+  config.addPassthroughCopy("./src/assets/video/");
   config.addPassthroughCopy("./src/assets/fonts/");
 
   // Add filters
