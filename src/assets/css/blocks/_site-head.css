@@ -12,6 +12,10 @@
 .nav__home-link svg {
   height: 5.5rem;
   width: auto;
+
+  .with-text-shadow & {
+    filter: drop-shadow(0 3px 3px rgb(0 0 0 / 0.3));
+  }
 }
 
 .nav__items {
@@ -55,6 +59,10 @@
 
   &[aria-expanded="true"] + .nav__items {
     display: flex;
+  }
+
+  .with-text-shadow & {
+    filter: drop-shadow(0 3px 3px rgb(0 0 0 / 0.3));
   }
 
   @media (--nav) {
@@ -106,16 +114,16 @@
     outline-offset: -5px;
   }
 
+  .with-text-shadow & {
+    text-shadow: 0 1px 3px rgb(0 0 0 / 0.7);
+  }
+
   @media (--nav) {
     margin: 0;
 
     .nav__item:last-of-type & {
       margin-right: calc(-1 * var(--inline-padding));
     }
-  }
-
-  .with-text-shadow & {
-    text-shadow: 0 1px 3px rgb(0 0 0 / 0.7);
   }
 }
 
