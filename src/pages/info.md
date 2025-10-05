@@ -11,30 +11,23 @@ Get ready! From October 7th to 10th, 2025, the Open Source Firmware Conference r
 
 This year, we’re excited to host a back-to-back event with the UEFI 2025 Developers Conference and Plugfest!
 
-Here’s how the conference will unfold:
+# Open Mic
 
-**Days 1 & 2 –** OSFC talks
+The mic is yours! 
+We've got a super cool opportunity for all you spontaneous thinkers out there.
 
-**Day 3 –** UEFI Developers Conference public presentations and UEFI Forum members Plugfest testing & OSFC hackathon plus open-mic sessions
+So, on Thursday, the third day of the conference, we've got some open slots just waiting to be filled with your brilliant ideas. Yes, you heard that right - it's time for the Open-Mic session, and we want YOU to grab the mic and share your thoughts!
 
-**Day 4 –** UEFI Developers Conference members-only presentations and Plugfest testing
+Submission-Deadline: **Day 2, after lunch break**
+[Submit your proposal](https://openmic.osfc.io/osfc25-open-mic/cfp)
 
-This page will be **continuously updated**, so don’t forget to check back in regularly to get the latest updates.
+# Field Trip to Meta HQ
 
-# Important Dates
+At #OSFC2025, we’re not just talking about open source .. we’re taking it on the road!
 
-- Early Bird Ticket Sale: April 29 - July 28
-- Regular Ticket Sale: July 28 - October 7
-- Call For Participation: May 9 - ~~July 6~~ EXTENDED July 20
-- Notification of Acceptance: July 24
-- Scholarship Application Attendee: May 12 - July 15
-- OSFC 2025: October 7 - 9
-- UEFI Developers Conference and Plugfest: October 9-10
+On Wednesday, October 8, we’re going on a Field Trip to Meta HQ featuring food, drinks, and a peek behind the scenes at what Meta’s BMC team has been working on.
 
-# Tickets
-
-The OSFC 2025 ticket sale has officially kicked off! Grab your pass and get ready for an amazing event! 
-→ [tickets.osfc.io](https://tickets.osfc.io/)
+Transportation is organized by OSFC. More information during the opening.
 
 # Hotels Nearby
 
