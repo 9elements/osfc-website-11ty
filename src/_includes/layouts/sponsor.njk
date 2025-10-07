@@ -23,7 +23,7 @@
                     {% set projectOffset = 85 %}
                   {% endif %}
                   <svg class="rhomb-image__svg" viewBox="0 0 330 330" aria-label="{{ name }}">
-                    <path d="M0 189v-48L141 0h48l141 141v48L189 330h-48L0 189Z" fill="url(#{{sponsor}})" />
+                    <path d="M0 189v-48L141 0h48l141 141v48L189 330h-48L0 189Z" fill="url(#{{ sponsor }})" />
                     <g filter="url(#shadow)">
                       <path d="M23.1 185.7v-41.4L144.3 23.1h41.4l121.2 121.2v41.4L185.7 306.9h-41.4L23.1 185.7Z" fill="#fff" />
                     </g>
@@ -34,8 +34,8 @@
                 </div>
               </div>
               <div class="stack-800 plain-html">
-                <p class="uppercase weight-bold text-{{sponsor}}">{{sponsor}} Sponsor</p>
-                <img loading="lazy" decoding="async" src="/assets/images/sponsors/{{image}}" alt="" style="max-width: 18.5rem; max-height: 15.625rem;">
+                <h1 class="text-700">{{ name }}</h1>
+                <p class="uppercase weight-bold text-{{ sponsor }}">{{ sponsor }} Sponsor</p>
                 <div class="stack-200">
                   {{content | safe }}
                 </div>
