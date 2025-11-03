@@ -196,3 +196,9 @@ For webfonts, a different approach is taken:
 This separation ensures that font styling is managed independently from other styles, optimizing loading times and maintainability.
 
 <hr />
+
+## How to archive a year
+
+1. Copy `archive.md` from the previous year inside `src/pages/{year}`
+2. Inside `src/_data/years.json`, add the year to the array of `years` and increment `currentYear` by one
+3. Inside `src/_data/navigation.json`, adjust the year inside the `url` path of the link to the archive. You can update/remove the other nav items as you like.
