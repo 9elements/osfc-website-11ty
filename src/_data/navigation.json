@@ -1,20 +1,6 @@
 {
   "items": [
     {
-      "text": "Info",
-      "url": "/info/"
-    },
-    {
-      "text": "Tickets",
-      "url": "https://tickets.osfc.io",
-      "target": "_blank"
-    },
-    {
-      "text": "Schedule",
-      "url": "https://talks.osfc.io/osfc-2025/schedule",
-      "target": "_blank"
-    },
-    {
       "text": "Gadget 2025",
       "url": "/gadget2025"
     },
