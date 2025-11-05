@@ -1,6 +1,10 @@
 {
   "items": [
     {
+      "text": "Talks",
+      "url": "/archive/2025"
+    },
+    {
       "text": "Gadget 2025",
       "url": "/gadget2025"
     },
@@ -14,7 +18,7 @@
     },
     {
       "text": "Archive",
-      "url": "/archive/2025"
+      "url": "/archive/2024"
     }
   ]
 }
