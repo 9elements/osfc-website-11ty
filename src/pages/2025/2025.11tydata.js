@@ -1,5 +1,5 @@
 import Cache from "@11ty/eleventy-cache-assets";
-
+import fs from "node:fs";
 /**
  * Grabs the event data from pretalx
  */
@@ -17,7 +17,7 @@ export default async () => {
               "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      },
+      }
     );
 
     const speakers2025 = await Cache(
@@ -25,7 +25,7 @@ export default async () => {
       {
         duration: "1m",
         type: "json",
-      },
+      }
     );
 
     const sortedSpeakers = speakers2025.results
@@ -43,15 +43,28 @@ export default async () => {
               "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      },
+      }
     );
 
-    const confirmedTalks = talks.results.filter(
-      // strip out duplicate talks and only show confirmed talks
-      (talk, i, arr) =>
-        talk.state === "confirmed" &&
-        arr.findIndex((t) => t.code === talk.code) === i,
+    const talksSecondPage = await Cache(
+      `https://pretalx.com/api/events/osfc-2025/submissions/?format=json&limit=200&expand=speakers,slots,slots.room,resources&page=2`,
+      {
+        duration: "1m",
+        type: "json",
+        fetchOptions: {
+          headers: {
+            Authorization:
+              "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
+          },
+        },
+      }
     );
+
+    const confirmedTalks = Array.from(
+      [...talks.results, ...talksSecondPage.results]
+        .reduce((map, talk) => map.set(talk.code, talk), new Map())
+        .values()
+    ).filter((talk) => talk.state === "confirmed");
 
     const breaks = await Cache(
       `https://pretalx.com/api/events/osfc-2025/schedules/latest/?format=json`,
@@ -64,7 +77,7 @@ export default async () => {
               "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      },
+      }
     );
 
     const videos = await Cache(
@@ -78,14 +91,14 @@ export default async () => {
               "Token 9m8nf121ftqh1fv8xdsi17zraw31rxa1u3kczju822jtm4ul0ipvjbgfuyl8vm4l",
           },
         },
-      },
+      }
     );
 
     const newVideos = videos.results.map((video) => {
       return {
         ...video,
         vimeo_id: video.vimeo_link.substring(
-          video.vimeo_link.lastIndexOf("/") + 1,
+          video.vimeo_link.lastIndexOf("/") + 1
         ),
       };
     });
