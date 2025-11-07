@@ -1,5 +1,4 @@
 import Cache from "@11ty/eleventy-cache-assets";
-import fs from "node:fs";
 /**
  * Grabs the event data from pretalx
  */
