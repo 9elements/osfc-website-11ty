@@ -2,7 +2,7 @@
 name: "ARM"
 image: "arm_logo.svg"
 link: "https://www.arm.com/architecture/system-architectures/systemready-certification-program"
-sponsor: "bronze"
+sponsor: "silver"
 size: "l"
 ---
 

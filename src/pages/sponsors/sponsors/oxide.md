@@ -2,7 +2,7 @@
 name: "Oxide"
 image: "oxide.png"
 link: "https://oxide.computer/"
-sponsor: "gold"
+sponsor: "silver"
 size: "m"
 ---
 
