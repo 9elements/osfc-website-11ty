@@ -36,7 +36,7 @@
 
 .venue {
   position: relative;
-  min-height: 20vw;
+  min-height: 50vw; /* Restored from 20vw when Oscar map graphic was reactivated */
 
   .rhomb-image {
     max-width: 28rem;
