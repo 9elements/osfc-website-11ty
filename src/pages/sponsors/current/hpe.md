@@ -1,7 +1,7 @@
 ---
 name: "HPE"
 image: "hpe.png"
-link: "https://www.hpe.com/us/en/compute/openbmc-proliant-servers.njk"
+link: "https://www.hpe.com/us/en/compute/openbmc-proliant-servers.html"
 sponsor: "gold"
 size: "m"
 ---
