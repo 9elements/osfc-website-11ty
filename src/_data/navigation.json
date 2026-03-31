@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "text": "Tickets",
+      "url": "https://tickets.osfc.io",
+      "target": "_blank"
+    },
+    {
+      "text": "CFP",
+      "url": "https://talks.osfc.io",
+      "target": "_blank"
+    },
+    {
       "text": "Talks",
       "url": "/archive/2025"
     },
