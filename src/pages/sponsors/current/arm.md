@@ -6,4 +6,4 @@ sponsor: "silver"
 size: "l"
 ---
 
-Arm technology is defining the future of computing. Our energy-efficient processor designs and software platforms have enabled advanced computing in more than 225 billion chips and our technologies securely power products from the sensor to the smartphone and the supercomputer. Together with 1,000+ technology partners, we are enabling artificial intelligence to work everywhere, and in cybersecurity, we are delivering the foundation for trust in the digital world – from chip to cloud. The future is being built on Arm.
+Arm delivers unmatched performance and power efficiency for next‑generation AI from edge to cloud and powers the world's largest computing ecosystem. Proven by more than 350 billion Arm-based chips, and more than 1,000 technology partners, the Arm platform provides a trusted foundation for a wide range of applications, from sensors to smartphones to supercomputers. We support thousands of open-source software projects, empowering more than 22 million developers targeting Arm platforms to build, deploy, and manage applications efficiently, achieving high performance across diverse Arm-based hardware.
