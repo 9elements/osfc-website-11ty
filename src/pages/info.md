@@ -1,73 +1,121 @@
 ---
-title: "OSFC 2025 Event Information"
+title: "OSFC 2026 Event Information"
 layout: "layouts/plain.njk"
 transparentHeader: true
 permalink: "/info/index.html"
 ---
 
-# **What’s in store for #OSFC2025?**
+# **About OSFC**
 
-Get ready! From October 7th to 10th, 2025, the Open Source Firmware Conference returns, and we’re thrilled to announce that it will once again be held in California, USA, at Google’s Sunnyvale campus! (Google - MP3, 1170 Bordeaux Dr Building 3, Sunnyvale CA 94089)
+The **Open Source Firmware Conference (OSFC)** is the leading event for open-source firmware, low-level engineering and platform security. Since 2018, OSFC has connected the global firmware community to exchange knowledge, share innovation and build lasting collaborations.
 
-This year, we’re excited to host a back-to-back event with the UEFI 2025 Developers Conference and Plugfest!
+Our mission is simple:
 
-# Open Mic
+**Connecting the people building the foundation of modern computing.**
 
-The mic is yours! 
-We've got a super cool opportunity for all you spontaneous thinkers out there.
+OSFC brings together engineers, security researchers and technical leaders who share insights, real-world experience and ideas shaping the future of open firmware and open hardware.
 
-So, on Thursday, the third day of the conference, we've got some open slots just waiting to be filled with your brilliant ideas. Yes, you heard that right - it's time for the Open-Mic session, and we want YOU to grab the mic and share your thoughts!
+## Who attends OSFC?
 
-Submission-Deadline: **Day 2, after lunch break**
-[Submit your proposal](https://openmic.osfc.io/osfc25-open-mic/cfp)
+OSFC brings together professionals from across the firmware ecosystem, including engineers, platform architects, security researchers, silicon vendors and technical decision-makers.
 
-# Field Trip to Meta HQ
+## OSFC 2026 – the key facts
 
-At #OSFC2025, we’re not just talking about open source .. we’re taking it on the road!
+**Date:** September 15–17, 2026
 
-On Wednesday, October 8, we’re going on a Field Trip to Meta HQ featuring food, drinks, and a peek behind the scenes at what Meta’s BMC team has been working on.
+**Location:** Amsterdam, The Netherlands
 
-Transportation is organized by OSFC. More information during the opening.
+**Venue:** Pakhuis de Zwijger
 
-# Hotels Nearby
+**Tickets:** Early Bird sales have started – <a href="https://tickets.osfc.io" target="_blank">get your ticket now</a>
 
-This year we were not able to reserve a specific contigent for anyone visiting OSFC. However, we these are some hotels nearby the conference that you can pick. Any other hotel will obviously also work. The hotels are listed in no particular order.
+# **The Dates**
 
-**The Grand Hotel (Crew Hotel)**
+## Ticket Sales – <a href="https://tickets.osfc.io" target="_blank">Ticket Shop</a>
 
-This is the hotel where the OSFC crew will be. It's a 10 minute Uber ride (or 1:15h walk) away from the venue. It's budget-effective, looks clean and our crew will transform the lobby into a giant hacker room (maybe).
+| Topic | Date |
+| --- | --- |
+| Early Bird Ticket Sales Start | April 13, 2026 |
+| Early Bird Ticket Sales End | June 15, 2026 |
+| Regular Ticket Sales | June 16 – September 15, 2026 |
 
-Link: [https://www.svgrandhotel.com/](https://www.svgrandhotel.com/)
+## Call for Proposals (CfP) – <a href="https://talks.osfc.io" target="_blank">Submit here</a>
 
-**Hilton Garden Inn Sunnyvale**
+| Topic | Date |
+| --- | --- |
+| CfP Opens | April 13, 2026 |
+| CfP Deadline | June 22, 2026 |
 
-If the budget wouldn't be so restrictive this _would_ have been the hotel where the crew _would_ be. But we're living on a small budget! It's a 5 minute Uber ride (25 minute walk) away from the venue.
+## Scholarship Program – <a href="https://bit.ly/OSFC26SCHOLARSHIP" target="_blank">Apply here</a>
 
-Link: [https://www.hilton.com/](https://www.hilton.com/en/hotels/sjcmagi-hilton-garden-inn-sunnyvale/)
+| Topic | Date |
+| --- | --- |
+| Scholarship Applications Open | April 17, 2026 |
+| Scholarship Application Deadline | July 1, 2026 |
 
-**Treehouse Silicon Valley**
+## Conference Dates
 
-Budget is not an issue? We got the right place to spend your corporate money. The hotel _looks_ super nice. I doubt that you will get an Uber because it's just a 5 minute walk away.
+| Topic | Date |
+| --- | --- |
+| OSFC 2026 | September 15–17, 2026 |
 
-Link: [https://www.treehousehotels.com/](https://www.treehousehotels.com/silicon-valley)
+We may occasionally adjust timelines as the event approaches. All important updates will be communicated via:
 
-# Call for Participation
+- Our <a href="https://mailchi.mp/01a2d5ccbe95/osfc-subscription" target="_blank">newsletter</a>
+- <a href="https://www.linkedin.com/company/open-source-firmware-conference/" target="_blank">LinkedIn</a>
 
-**Join us at OSFC 2025!**
+We recommend <a href="https://mailchi.mp/01a2d5ccbe95/osfc-subscription" target="_blank">subscribing</a> to stay up to date on announcements, program updates and ticket availability.
 
-We’re excited to announce that the **Call for Participation** for the Open Source Firmware Conference 2025 is now open!
+# **Travel Information**
 
-Our mission is to bring together developers, hardware manufacturers, and open-source firmware projects from around the world to collaborate, exchange knowledge, and drive innovation in open-source firmware development.
+Amsterdam is easy to reach via international rail, Amsterdam Schiphol Airport (AMS) and European bus connections. The venue is well connected by public transport.
 
-**The stage is yours:**
+**Conference Location**
 
-Do you have a project, idea, or insight related to open-source firmware that you’d like to share with the community? Whether it’s a talk, workshop, or lightning talk – we’d love to hear from you!
+Pakhuis de Zwijger  
+Piet Heinkade 179  
+1019 HC Amsterdam  
+Netherlands
 
-→ [talks.osfc.io](https://talks.osfc.io/)
+**Conference Date**
 
-# Support Open-Source Firmware for the greater good! 
-If your are interested in sponsoring the event, reach out to [info(at)osfc.io](mailto:info@osfc.io)  
+September 15–17, 2026
 
-# Stay in the loop
+# **Hotel Recommendations**
 
-Subscribe to our [newsletter](https://mailchi.mp/01a2d5ccbe95/osfc-subscription) and be the first to hear about all the important updates!
+![OSFC 2026 Hotel & Travel Guide](../assets/images/info/OSFC2026_Hotels_TravelGuide.png)
+
+- **The Hoxton, Lloyd Amsterdam**  
+Use the code **PAKHUIS** when booking directly through their site to get a 15% discount: <a href="https://thehoxton.com/amsterdam/lloyd/" target="_blank">https://thehoxton.com/amsterdam/lloyd/</a>  
+Just a short walk from Pakhuis de Zwijger, The Hoxton Lloyd is your best bet for an easygoing base while in Amsterdam. Set in the former HQ of the Royal Lloyd Shipping Company, it's big on character, with bold design and all the Hox perks; think flexy check-in and check-out, free bikes to roam the city, and Hox Shop goodies to take a little piece home. If you feel like keeping the night going post-event, swing by Breman Brasserie for a delicious bite and a nightcap (or two).
+
+- **Mövenpick Hotel Amsterdam City Centre**  
+Get a 15% dynamic discount under this link: <a href="https://businesstravel.accor.com/en/booking/advanced-search.html?identification.reserverType=SC&identification.reserverId=SCP4230391&identification.reserverContract=EL241DE433" target="_blank">Book with discount</a>  
+When searching for availability on the website, please select "Special Rates", then enter the Business client with contract under "Professional travellers" and the access code in the designated field.  
+  - **Business client with contract**: SCP4230391
+  - **Access code**: EL241DE433  
+
+  Experience modern comfort, warm hospitality and breathtaking views of both the city skyline and the IJ river at Mövenpick Hotel Amsterdam City Centre. Ideally located in the heart of Amsterdam, the inviting 4-star hotel is within easy reach of everything the city has to offer.
+
+- **Hotel Jakarta Amsterdam by WestCords**
+
+- **Pension Homeland**
+
+**Airport nearby:** Schiphol Amsterdam Airport  
+**Train station nearby:** Amsterdam Centraal
+
+# **Visa Support**
+
+If you require a visa invitation letter, our crew is happy to support you. Just drop us a mail!
+
+[info@osfc.io](mailto:info@osfc.io)
+
+# **More than a conference**
+
+OSFC is more than an event. It's a community of engineers building the open foundations of modern infrastructure.
+
+**Join the people moving open firmware forward.**
+
+We look forward to welcoming you to OSFC 2026 in Amsterdam.
+
+– The OSFC Team
