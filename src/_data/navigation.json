@@ -1,6 +1,10 @@
 {
   "items": [
     {
+      "text": "Info",
+      "url": "/info/"
+    },
+    {
       "text": "Tickets",
       "url": "https://tickets.osfc.io",
       "target": "_blank"
