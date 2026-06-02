@@ -1,9 +1,14 @@
 .plain-html {
-  > * + * {
+  > * + *,
+  li > * + * {
     margin-top: 0.75em;
   }
 
-  h2 {
+  li + li {
+    margin-top: 0.5rem;
+  }
+
+  * + h2 {
     margin-top: 1.5em;
   }
 }
