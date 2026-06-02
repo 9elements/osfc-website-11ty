@@ -60,7 +60,7 @@ OSFC 2026 will take place from September 15 to 17, 2026.
 We may occasionally adjust timelines as the event approaches. All important updates will be communicated via:
 
 - [Our newsletter](https://mailchi.mp/01a2d5ccbe95/osfc-subscription)
-- [LinkedIn](https://www.linkedin.com/company/open-source-firmware-conference)
+- [LinkedIn](https://www.linkedin.com/company/osff)
 - [The OSFC website](https://osfc.io)
 
 We recommend subscribing to stay up to date on announcements, program updates and ticket availability.
