@@ -1,10 +1,4 @@
 {
-  "files.associations": {
-    "*.css": "postcss"
-  },
-  "emmet.includeLanguages": {
-    "postcss": "css"
-  },
   "tailwindCSS.includeLanguages": {
     "nunjucks": "html"
   }
