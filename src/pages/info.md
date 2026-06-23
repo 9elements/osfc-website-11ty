@@ -45,7 +45,7 @@ Regular ticket sales begin on June 16, 2026 and continue until September 15, 202
 
 The Call for Proposals opens on April 13, 2026.
 
-The submission deadline is June 22, 2026.
+The submission deadline is July 1, 2026.
 
 ### Scholarship Program
 
