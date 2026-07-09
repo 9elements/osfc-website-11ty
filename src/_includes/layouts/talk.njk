@@ -13,15 +13,17 @@
          {% include "partials/speaker-pill.njk" %}
       {% endfor %}
     </div>
-    <p class="weight-bold">
-      {% set slot = talk.slots[0] %}
-      {{ slot.room.name.en }},
-      {% if slot.start %}
-        <time datetime="{{ slot.start | toISODate }}">
-          {{ slot.start | dateFormat("EEEE, MM/dd") }}
-        </time>
-      {% endif %}
-    </p>
+    {% if talk.slots.length %}
+      <p class="weight-bold">
+        {% set slot = talk.slots[0] %}
+        {{ slot.room.name.en }},
+        {% if slot.start %}
+          <time datetime="{{ slot.start | toISODate }}">
+            {{ slot.start | dateFormat("EEEE, MM/dd") }}
+          </time>
+        {% endif %}
+      </p>
+    {% endif %}
     <div class="wrapper-s shadow-box stack-400 my-stack-space-600">
       {% for video in videos %}
         {% if video.submission == talk.code %}
@@ -56,8 +58,10 @@
       <div class="wrapper-s">
         {% if year < years.currentYear %}
           <a href="/archive/{{year}}" class="uppercase weight-bold text-peach">&#60; Back to archive</a>
-        {% else %}
+        {% elif hasSchedule %}
           <a href="/{{year}}/schedule" class="uppercase weight-bold text-peach">&#60; Back to schedule</a>
+        {% else %}
+          <a href="/{{year}}/talk-list" class="uppercase weight-bold text-peach">&#60; Back to featured talks</a>
         {% endif %}
       </div>
 
