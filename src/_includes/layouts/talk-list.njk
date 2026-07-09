@@ -5,8 +5,12 @@
   <section>
     <div class="wrapper-l | stack-700">
       <h1 class="leading-tight uppercase text-800-major weight-black text-peach">
-      Talk List {{ year }}!
+      {{ title or "Talk List" }} {{ year }}
     </h1>
+
+      {% if intro %}
+        <p class="text-400-500">{{ intro }}</p>
+      {% endif %}
 
       <div class="stack-100">
         {% for talk in talks %}
