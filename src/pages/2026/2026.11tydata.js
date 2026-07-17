@@ -4,14 +4,12 @@ import Cache from "@11ty/eleventy-cache-assets";
 /**
  * OSFC 2026 event data from Pretalx.
  *
- * Pre-schedule phase: the full schedule is not published yet, so we surface the
- * "featured" talks (is_featured) as a teaser. Talks and speakers are fetched
- * independently of the schedule/breaks/videos, and those schedule-dependent
- * pieces are guarded so a missing (404) schedule export cannot empty the talk
- * list. When the schedule is live:
- *   1. set "hasSchedule": true in 2026.json,
- *   2. add schedule.md / talks.md (copy from a previous year),
- *   3. widen the talk filter (e.g. state === "confirmed").
+ * Talks are the confirmed submissions — the published schedule export contains
+ * exactly these. Talks/speakers are fetched independently of the schedule and
+ * those pieces are guarded so a transient failure can't empty the talk list.
+ * Note: this instance's schedules/latest endpoint no longer returns a `breaks`
+ * array, so breaks default to [] (the schedule grid renders talks without break
+ * rows); videos appear post-conference.
  */
 
 const EVENT = "osfc-2026";
@@ -46,11 +44,9 @@ export default async () => {
 
   try {
     const submissions = await fetchAllSubmissions();
-    // Featured talks only, until the full schedule is published. Guard against a
-    // talk that is still flagged featured but has since been pulled.
-    const HIDDEN_STATES = ["withdrawn", "canceled", "cancelled", "rejected", "deleted"];
+    // Confirmed talks — the published schedule export contains exactly these.
     talks = submissions
-      .filter((talk) => talk.is_featured && !HIDDEN_STATES.includes(talk.state))
+      .filter((talk) => talk.state === "confirmed")
       .sort((a, b) => (a.title > b.title ? 1 : -1));
 
     const speakerData = await Cache(
@@ -58,18 +54,19 @@ export default async () => {
       jsonAuth("1m")
     );
 
-    // Only include speakers who actually have a featured talk.
-    const featuredSpeakerCodes = new Set(
+    // Only include speakers who have a confirmed talk.
+    const talkSpeakerCodes = new Set(
       talks.flatMap((talk) => (talk.speakers || []).map((speaker) => speaker.code))
     );
     speakers = (speakerData.results || [])
-      .filter((speaker) => speaker.name && featuredSpeakerCodes.has(speaker.code))
+      .filter((speaker) => speaker.name && talkSpeakerCodes.has(speaker.code))
       .sort((a, b) => (a.name > b.name ? 1 : -1));
   } catch (error) {
     console.error("[osfc-2026] could not load talks/speakers:", error.message);
   }
 
-  // Schedule-dependent data — guarded so its absence never empties the talk list.
+  // Schedule-dependent data — guarded so a transient failure never empties the
+  // talk list. breaks default to [] (endpoint no longer exposes a breaks array).
   let schedule = { days: [], rooms: [] };
   let breaks = [];
   const videos = [];
@@ -81,9 +78,9 @@ export default async () => {
       `${BASE}/${EVENT}/schedules/latest/?format=json`,
       jsonAuth("1d")
     );
-    breaks = breakData.breaks;
+    breaks = breakData.breaks || [];
   } catch (error) {
-    console.warn("[osfc-2026] schedule not published yet — schedule/breaks skipped.");
+    console.warn("[osfc-2026] schedule/breaks fetch failed:", error.message);
   }
 
   return { talks, speakers, schedule, breaks, videos };
