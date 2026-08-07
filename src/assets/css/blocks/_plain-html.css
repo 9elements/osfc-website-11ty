@@ -11,4 +11,20 @@
   * + h2 {
     margin-top: 1.5em;
   }
+
+  blockquote {
+    border-left: 4px solid var(--color-light-gray);
+    padding-left: var(--space-300);
+    margin-left: var(--space-300);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  hr {
+    margin-block: var(--space-700);
+    border: none;
+    border-top: 2px solid var(--color-light-gray);
+  }
 }
