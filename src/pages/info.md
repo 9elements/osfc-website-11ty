@@ -5,7 +5,7 @@ transparentHeader: true
 permalink: "/info/index.html"
 ---
 
-## **About** The **Open Source Firmware Conference**
+## About The Open Source Firmware Conference
 
 The **Open Source Firmware Conference (OSFC)** is the leading event for open-source firmware, low-level engineering and platform security. Since 2018, OSFC has connected the global firmware community to exchange knowledge, share innovation and build lasting collaborations.
 Our mission is simple:
@@ -17,14 +17,15 @@ OSFC brings together professionals from across the firmware ecosystem, including
 
 ---
 
-## **OSFC 2026 – The Key Facts**
+## OSFC 2026 – The Key Facts
 
-**📅 Date:** September 15–17, 2026
-**📍 Location:** Amsterdam, The Netherlands
-**🏛 Venue:** Pakhuis de Zwijger
-**🎟 Tickets:** [tickets.osfc.io](https://tickets.osfc.io/) \***\*🎤 **Schedule:\*\* [https://talks.osfc.io/osfc-2026/schedule/](https://talks.osfc.io/osfc-2026/schedule/)
+- **📅 Date:** September 15–17, 2026
+- **📍 Location:** Amsterdam, The Netherlands
+- **🏛 Venue:** Pakhuis de Zwijger, Piet Heinkade 179 1019 HC Amsterdam Netherlands
+- **🎟 Tickets:** [tickets.osfc.io](https://tickets.osfc.io/)
+- **🎤 Schedule:** [https://talks.osfc.io/osfc-2026/schedule/](https://talks.osfc.io/osfc-2026/schedule/)
 
-## **The Dates**
+## The Dates
 
 ### Call for Proposals (CfP)
 
@@ -68,7 +69,7 @@ See you on board :)
 
 ---
 
-## **Stay Up To Date**
+## Stay Up To Date
 
 We may occasionally adjust timelines as the event approaches. All important updates will be communicated via:
 
@@ -78,7 +79,7 @@ We may occasionally adjust timelines as the event approaches. All important upda
 
 We recommend subscribing to stay up to date on announcements, program updates and ticket availability.
 
-## **Travel Information**
+## Travel Information
 
 Amsterdam is easy to reach via international rail, Amsterdam Schiphol Airport (AMS) and European bus connections. The venue is well connected by public transport.
 
@@ -122,15 +123,16 @@ Amsterdam is easy to reach via international rail, Amsterdam Schiphol Airport (A
 
 ---
 
-## **Visa Support**
+## Visa Support
 
 If you require a visa invitation letter, our crew is happy to support you. Just drop us a mail!
 
 📩 [info@osfc.io](mailto:info@osfc.io)
 
-## **More Than A Conference**
+## More Than A Conference
 
 OSFC is more than an event. It’s a community of engineers building the open foundations of modern infrastructure.
+
 **Join the people moving open firmware forward.**
 
 ## 🎟 Tickets:
