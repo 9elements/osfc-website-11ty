@@ -25,6 +25,18 @@ OSFC brings together professionals from across the firmware ecosystem, including
 - **🎟 Tickets:** [tickets.osfc.io](https://tickets.osfc.io/)
 - **🎤 Schedule:** [https://talks.osfc.io/osfc-2026/schedule/](https://talks.osfc.io/osfc-2026/schedule/)
 
+## 🎤 Open Mic
+
+The mic is yours!
+We've got a super cool opportunity for all you spontaneous thinkers out there.
+
+So, on Thursday, September 17, the third day of the conference, we've got some open slots just waiting to be filled with your brilliant ideas. Yes, you heard that right - it's time for the Open-Mic session, and we want YOU to grab the mic and share your thoughts!
+
+If we receive more proposals than we have slots, the attendees will vote for their favorites.
+
+Submission-Deadline: **Day 2 (Wednesday, September 16), after lunch break**
+[Submit your proposal](https://openmic.osfc.io/osfc26-open-mic/cfp)
+
 ## The Dates
 
 ### Call for Proposals (CfP)
