@@ -206,7 +206,7 @@ Do this a few weeks after the event, once the recordings are linked in Pretalx.
    - Every Pretalx list endpoint (submissions, speakers) is fetched with `fetchAllPages` from `src/utils/build/fetch-all-pages.js`. Pretalx returns at most 50 items per page, so a single request silently drops the rest.
 2. Copy `archive.md` from the previous year inside `src/pages/{year}`
 3. Inside `src/_data/years.json`, add the year to the array of `years` and increment `currentYear` by one. Do this in the same commit as step 2: `currentYear` switches the talk pages' back link to the archive. It does **not** change the logo on the landing page, that is a hardcoded include in `src/_includes/layouts/home.njk`.
-4. Inside `src/_data/navigation.json`, remove the event items (tickets, speaker area, schedule, info) and add a `Talks {year}` item linking to `/archive/{year}/`. Point `Archive` to the year before. Use trailing slashes, otherwise the active state doesn't match.
+4. Inside `src/_data/navigation.json`, remove the event items (tickets, speaker area, schedule, info) and add a `Talks {year}` item linking to `/archive/{year}/`. Point `Archive` to `/archive/{year}/` as well. Use trailing slashes, otherwise the active state doesn't match.
 5. Landing page (`src/_includes/layouts/home.njk`): replace the ticket/CfP buttons with a button to `/archive/{year}/`, write the venue text in past tense. Logo, venue and sponsors stay until the next year's kickoff.
 6. Turn `src/pages/info.md` into a short recap and remove hotel discount codes and travel guide images.
 7. Run `npm run production` and check:
@@ -218,7 +218,7 @@ Do this a few weeks after the event, once the recordings are linked in Pretalx.
 
 ### Kickoff of the next year
 
-1. Navigation: remove `Talks {year}`, point `Archive` to `/archive/{year}/` and add the event items again.
+1. Navigation: remove `Talks {year}` and add the event items again.
 2. Landing page: swap the logo (year-less or new year), update the venue, remove the recordings button.
 3. Move the sponsors that don't return from `src/pages/sponsors/current/` to `src/pages/sponsors/sponsors/` and update the organizers.
 4. Create the new year's folder by copying the previous one (without `archive.md`) and point its data file to the new Pretalx event with a token scoped to it.
