@@ -1,5 +1,6 @@
 // @ts-check
 import Cache from "@11ty/eleventy-cache-assets";
+import { fetchAllPages } from "../../utils/build/fetch-all-pages.js";
 
 /**
  * OSFC 2026 event data from Pretalx.
@@ -9,7 +10,7 @@ import Cache from "@11ty/eleventy-cache-assets";
  * those pieces are guarded so a transient failure can't empty the talk list.
  * Note: this instance's schedules/latest endpoint no longer returns a `breaks`
  * array, so breaks default to [] (the schedule grid renders talks without break
- * rows); videos appear post-conference.
+ * rows). Videos are the recordings linked in Pretalx's Vimeo plugin.
  */
 
 const EVENT = "osfc-2026";
@@ -27,15 +28,47 @@ const jsonAuth = (duration) => ({
 
 /** Page through the paginated submissions endpoint. */
 async function fetchAllSubmissions() {
-  const all = [];
-  let url = `${BASE}/${EVENT}/submissions/?format=json&limit=200&expand=speakers,slots,slots.room,resources`;
-  while (url) {
-    const page = await Cache(url, jsonAuth("1m"));
-    all.push(...(page.results || []));
-    url = page.next;
-  }
+  const all = await fetchAllPages(
+    `${BASE}/${EVENT}/submissions/?format=json&limit=200&expand=speakers,slots,slots.room,resources`,
+    jsonAuth("1m")
+  );
   // De-dupe by code (defensive against overlapping pages).
   return Array.from(all.reduce((m, t) => m.set(t.code, t), new Map()).values());
+}
+
+/** Approximates the `slugify` filter used for the speaker page permalinks. */
+const slugKey = (name) =>
+  name
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+/**
+ * Merge speakers that would share a page (same name, separate Pretalx
+ * accounts) — otherwise the build fails on a duplicate permalink.
+ */
+function mergeSpeakersByName(speakers) {
+  const merged = new Map();
+  for (const speaker of speakers) {
+    const key = slugKey(speaker.name);
+    const existing = merged.get(key);
+    if (!existing) {
+      merged.set(key, speaker);
+      continue;
+    }
+    merged.set(key, {
+      ...existing,
+      biography:
+        (speaker.biography || "").length > (existing.biography || "").length
+          ? speaker.biography
+          : existing.biography,
+      avatar_url: existing.avatar_url || speaker.avatar_url,
+      submissions: [...new Set([...existing.submissions, ...speaker.submissions])],
+    });
+  }
+  return Array.from(merged.values());
 }
 
 export default async () => {
@@ -49,7 +82,7 @@ export default async () => {
       .filter((talk) => talk.state === "confirmed")
       .sort((a, b) => (a.title > b.title ? 1 : -1));
 
-    const speakerData = await Cache(
+    const speakerData = await fetchAllPages(
       `${BASE}/${EVENT}/speakers/?format=json&limit=200`,
       jsonAuth("1m")
     );
@@ -58,9 +91,11 @@ export default async () => {
     const talkSpeakerCodes = new Set(
       talks.flatMap((talk) => (talk.speakers || []).map((speaker) => speaker.code))
     );
-    speakers = (speakerData.results || [])
-      .filter((speaker) => speaker.name && talkSpeakerCodes.has(speaker.code))
-      .sort((a, b) => (a.name > b.name ? 1 : -1));
+    speakers = mergeSpeakersByName(
+      speakerData.filter(
+        (speaker) => speaker.name && talkSpeakerCodes.has(speaker.code)
+      )
+    ).sort((a, b) => (a.name > b.name ? 1 : -1));
   } catch (error) {
     console.error("[osfc-2026] could not load talks/speakers:", error.message);
   }
@@ -69,7 +104,7 @@ export default async () => {
   // talk list. breaks default to [] (endpoint no longer exposes a breaks array).
   let schedule = { days: [], rooms: [] };
   let breaks = [];
-  const videos = [];
+  let videos = [];
 
   try {
     const scheduleData = await Cache(SCHEDULE_EXPORT, jsonAuth("1d"));
@@ -81,6 +116,20 @@ export default async () => {
     breaks = breakData.breaks || [];
   } catch (error) {
     console.warn("[osfc-2026] schedule/breaks fetch failed:", error.message);
+  }
+
+  try {
+    const videoData = await Cache(`${BASE}/${EVENT}/p/vimeo/`, jsonAuth("1d"));
+    videos = (videoData.results || [])
+      .filter((video) => video.vimeo_link)
+      .map((video) => ({
+        ...video,
+        vimeo_id: video.vimeo_link.substring(
+          video.vimeo_link.lastIndexOf("/") + 1
+        ),
+      }));
+  } catch (error) {
+    console.warn("[osfc-2026] video fetch failed:", error.message);
   }
 
   return { talks, speakers, schedule, breaks, videos };
