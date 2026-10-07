@@ -1,6 +1,6 @@
 <div class="speaker-card {% if sepakerCardCondensed %}speaker-card--condensed{% endif %} | bg-white">
   <a class="speaker-card__image" href="/{{year}}/speakers/{{ speaker.name | slugify }}">
-    {% avatar src = speaker.avatar,
+    {% avatar src = speaker.avatar or speaker.avatar_url,
     name = speaker.name,
     size = "224" %}
   </a>
