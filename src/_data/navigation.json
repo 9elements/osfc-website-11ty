@@ -1,23 +1,8 @@
 {
   "items": [
     {
-      "text": "Info",
-      "url": "/info/"
-    },
-    {
-      "text": "Tickets",
-      "url": "https://tickets.osfc.io",
-      "target": "_blank"
-    },
-    {
-      "text": "Speaker Area",
-      "url": "https://talks.osfc.io/osfc-2026/me/submissions/",
-      "target": "_blank"
-    },
-    {
-      "text": "Schedule",
-      "url": "https://talks.osfc.io/osfc-2026/schedule/",
-      "target": "_blank"
+      "text": "Talks 2026",
+      "url": "/archive/2026/"
     },
     {
       "text": "Team",
@@ -29,7 +14,7 @@
     },
     {
       "text": "Archive",
-      "url": "/archive/2025"
+      "url": "/archive/2025/"
     }
   ]
 }
