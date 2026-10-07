@@ -1,4 +1,5 @@
 import Cache from "@11ty/eleventy-cache-assets";
+import { fetchAllPages } from "../../utils/build/fetch-all-pages.js";
 
 /**
  * Grabs the event data from pretalx
@@ -20,7 +21,7 @@ export default async () => {
       },
     );
 
-    const talks = await Cache(
+    const talks = await fetchAllPages(
       `https://pretalx.com/api/events/osfc2019/submissions/?format=json&limit=200&expand=speakers,slots,slots.room,resources`,
       {
         duration: "1d", // 1 day
@@ -34,12 +35,12 @@ export default async () => {
       },
     );
 
-    const confirmedTalks = talks.results.filter(
+    const confirmedTalks = talks.filter(
       (talk) => talk.state === "confirmed",
       // (talk) => talk.state === "confirmed" && talk.is_featured
     );
 
-    let speakers = await Cache(
+    let speakers = await fetchAllPages(
       `https://pretalx.com/api/events/osfc2019/speakers/?format=json&limit=200`,
       {
         duration: "1d", // 1 day
@@ -53,7 +54,7 @@ export default async () => {
       },
     );
 
-    speakers.results.sort((a, b) => (a.name > b.name ? 1 : -1));
+    speakers.sort((a, b) => (a.name > b.name ? 1 : -1));
 
     const videos = await Cache(
       `https://cfp.osfc.io/api/events/osfc2019/p/vimeo/`,
@@ -81,7 +82,7 @@ export default async () => {
     return {
       schedule: schedule.schedule.conference,
       talks: confirmedTalks,
-      speakers: speakers.results,
+      speakers: speakers,
       videos: newVideos,
     };
   } catch (error) {
