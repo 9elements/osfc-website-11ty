@@ -5,6 +5,7 @@ export const avatarShortcode = (avatar) => {
   let size = "";
   let classes = "";
   let alt = "alt = ''";
+  let optional = "";
   if (avatar.src) {
     source = avatar.src;
     if (source.includes("https://www.gravatar.com")) {
@@ -14,6 +15,8 @@ export const avatarShortcode = (avatar) => {
     if (avatar.name) {
       alt = `alt="${avatar.name}"`;
     }
+    // Remote image: keep the original URL instead of failing the build if it can't be fetched
+    optional = `eleventy:optional="keep"`;
   } else {
     hidden = `aria-hidden="true"`;
   }
@@ -24,6 +27,6 @@ export const avatarShortcode = (avatar) => {
     classes = " " + avatar.classlist;
   }
 
-  return `<img loading="lazy" decoding="async" class="avatar${classes}" src="${source}" ${alt} ${hidden} ${size} />
+  return `<img loading="lazy" decoding="async" class="avatar${classes}" src="${source}" ${alt} ${hidden} ${size} ${optional} />
   `;
 };

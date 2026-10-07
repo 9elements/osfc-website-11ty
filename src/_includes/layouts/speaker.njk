@@ -10,8 +10,8 @@
         {{ speaker.name }}
       </h1>
       <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-        {% if speaker.avatar %}
-          {% avatar src = speaker.avatar,
+        {% if speaker.avatar or speaker.avatar_url %}
+          {% avatar src = speaker.avatar or speaker.avatar_url,
           name = speaker.name,
           size = 280 %}
         {% endif %}
