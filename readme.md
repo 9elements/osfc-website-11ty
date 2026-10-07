@@ -199,6 +199,26 @@ This separation ensures that font styling is managed independently from other st
 
 ## How to archive a year
 
-1. Copy `archive.md` from the previous year inside `src/pages/{year}`
-2. Inside `src/_data/years.json`, add the year to the array of `years` and increment `currentYear` by one
-3. Inside `src/_data/navigation.json`, adjust the year inside the `url` path of the link to the archive. You can update/remove the other nav items as you like.
+Do this a few weeks after the event, once the recordings are linked in Pretalx.
+
+1. Check the year's data file `src/pages/{year}/{year}.11tydata.js`:
+   - Videos are fetched from the Pretalx Vimeo plugin (`https://talks.osfc.io/api/events/{event}/p/vimeo/`) and mapped to `vimeo_id`.
+   - Every Pretalx list endpoint (submissions, speakers) is fetched with `fetchAllPages` from `src/utils/build/fetch-all-pages.js`. Pretalx returns at most 50 items per page, so a single request silently drops the rest.
+2. Copy `archive.md` from the previous year inside `src/pages/{year}`
+3. Inside `src/_data/years.json`, add the year to the array of `years` and increment `currentYear` by one. Do this in the same commit as step 2: `currentYear` switches the talk pages' back link to the archive. It does **not** change the logo on the landing page, that is a hardcoded include in `src/_includes/layouts/home.njk`.
+4. Inside `src/_data/navigation.json`, remove the event items (tickets, speaker area, schedule, info) and add a `Talks {year}` item linking to `/archive/{year}/`. Point `Archive` to the year before. Use trailing slashes, otherwise the active state doesn't match.
+5. Landing page (`src/_includes/layouts/home.njk`): replace the ticket/CfP buttons with a button to `/archive/{year}/`, write the venue text in past tense. Logo, venue and sponsors stay until the next year's kickoff.
+6. Turn `src/pages/info.md` into a short recap and remove hotel discount codes and travel guide images.
+7. Run `npm run production` and check:
+   - the build log has no fetch errors — the data files catch them, so a failed fetch builds empty pages without failing the build
+   - `ls -d dist/{year}/talks/*/ | wc -l` and `ls -d dist/{year}/speakers/*/ | wc -l` match the confirmed talks and speakers in Pretalx
+   - `grep -l player.vimeo.com dist/{year}/talks/*/index.html | wc -l` matches the number of recordings
+   - the other years' archive pages still list their talks
+8. Pretalx data is only fetched at build time: rebuild and deploy when more recordings are added in Pretalx.
+
+### Kickoff of the next year
+
+1. Navigation: remove `Talks {year}`, point `Archive` to `/archive/{year}/` and add the event items again.
+2. Landing page: swap the logo (year-less or new year), update the venue, remove the recordings button.
+3. Move the sponsors that don't return from `src/pages/sponsors/current/` to `src/pages/sponsors/sponsors/` and update the organizers.
+4. Create the new year's folder by copying the previous one (without `archive.md`) and point its data file to the new Pretalx event with a token scoped to it.
