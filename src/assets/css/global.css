@@ -82,6 +82,12 @@ h4 {
   font-weight: var(--weight-bold);
 }
 
+pre {
+  overflow-x: auto;
+  padding: 0.5rem;
+  background-color: var(--color-light-gray);
+}
+
 /* High contrast selection because it can help visually-impaired */
 /* folks read the text easier */
 ::selection {
