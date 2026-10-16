@@ -6,3 +6,7 @@
     height: 100%;
   }
 }
+
+.video--full {
+  max-width: none;
+}

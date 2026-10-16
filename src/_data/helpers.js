@@ -6,16 +6,17 @@ export default {
    *
    * @param {String} itemUrl The link in question
    * @param {String} pageUrl The page context
+   * @param {String} [matchUrl] Optional prefix that marks the link as active
    * @returns {String} The attributes or empty
    */
-  getLinkActiveState(itemUrl, pageUrl) {
+  getLinkActiveState(itemUrl, pageUrl, matchUrl = itemUrl) {
     let response = "";
 
     if (itemUrl === pageUrl) {
       response = ' aria-current="page"';
     }
 
-    if (itemUrl.length > 1 && pageUrl.indexOf(itemUrl) === 0) {
+    if (matchUrl.length > 1 && pageUrl.indexOf(matchUrl) === 0) {
       response += ' data-state="active"';
     }
 
