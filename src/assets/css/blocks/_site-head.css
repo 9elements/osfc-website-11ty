@@ -104,7 +104,6 @@
 
   &[aria-current="page"] {
     color: var(--color-peach);
-    pointer-events: none;
   }
 
   &[data-state="active"] {

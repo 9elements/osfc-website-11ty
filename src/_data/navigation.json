@@ -1,6 +1,11 @@
 {
   "items": [
     {
+      "text": "Aftermovies",
+      "url": "/aftermovies/2026/",
+      "match": "/aftermovies/"
+    },
+    {
       "text": "Talks 2026",
       "url": "/archive/2026/"
     },
@@ -14,7 +19,8 @@
     },
     {
       "text": "Archive",
-      "url": "/archive/2026/"
+      "url": "/archive/2026/",
+      "match": "/archive/"
     }
   ]
 }
